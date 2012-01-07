@@ -1,0 +1,27 @@
+# Commands
+alias ls='ls $LS_OPTIONS -hF'
+alias ll='ls $LS_OPTIONS -lhF'
+alias l='ls $LS_OPTIONS -lAhF'
+alias ..='cd ..'
+alias vi='mvim -g --remote-silent'
+alias top='top -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
+alias screen='screen -T xterm-color'
+
+# Development
+alias apachectl='sudo /usr/sbin/apachectl'
+alias hgserve='hg serve -p 8080 -d --pid-file /var/tmp/hgserve.pid'
+alias killhgserve='if [ -f /var/tmp/hgserve.pid ]; then kill `cat /var/tmp/hgserve.pid` && rm /var/tmp/hgserve.pid; else echo "No running \`hg serve\` process."; fi'
+alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/george/Scratch/django_profile'
+
+# Servers
+alias vncmustard='open vnc://localhost:5901'
+
+# Functions
+function mailfav()
+{
+  EMAIL=$1;
+  DOMAIN=${EMAIL#*@}
+
+  mkdir -p ~/Library/Images/People
+  wget http://$DOMAIN/favicon.ico -O ~/Library/Images/People/$EMAIL.tiff
+}

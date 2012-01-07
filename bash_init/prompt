@@ -1,0 +1,15 @@
+# are we an interactive shell?
+if [ "$PS1" ]; then
+    case $TERM in
+        xterm*)
+            PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\007"';;
+        screen)
+            PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\033\\"';;
+    esac
+fi
+export PROMPT_COMMAND
+
+if [ "$TERM" != "dumb" ]; then
+	export LS_OPTIONS='--color=auto'
+	eval `dircolors $HOME/.dir_colors`
+fi
