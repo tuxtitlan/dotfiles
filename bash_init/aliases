@@ -1,11 +1,14 @@
+###########
+# Aliases #
+
 # Commands
-alias ls='ls $LS_OPTIONS -hF'
-alias ll='ls $LS_OPTIONS -lhF'
-alias l='ls $LS_OPTIONS -lAhF'
-alias ..='cd ..'
-alias vi='mvim -g --remote-silent'
-alias top='top -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
+alias ls='ls $LS_OPTIONS -hFG'
+alias l='ls $LS_OPTIONS'
+alias la='ls $LS_OPTIONS -la'
+alias ll='ls $LS_OPTIONS -l'
 alias screen='screen -T xterm-color'
+alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
+alias vi='mvim -g --remote-silent'
 
 # Development
 alias apachectl='sudo /usr/sbin/apachectl'
@@ -17,6 +20,15 @@ alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/ge
 alias vncmustard='open vnc://localhost:5901'
 
 # Functions
+
+## Use Apple's man page viewer if we are on a local console
+if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
+  function man {
+    open x-man-page://$1
+  }
+fi
+
+## Get favicon to use as Mail.apps from user image
 function mailfav()
 {
   EMAIL=$1;
@@ -25,3 +37,4 @@ function mailfav()
   mkdir -p ~/Library/Images/People
   wget http://$DOMAIN/favicon.ico -O ~/Library/Images/People/$EMAIL.tiff
 }
+

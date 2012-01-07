@@ -1,8 +1,0 @@
-export HISTIGNORE="&:ls:l:la:ll:exit"
-
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
-
-bind '"\e[A"':history-search-backward
-bind '"\e[B"':history-search-forward
