@@ -31,6 +31,7 @@ Icon?
 
 # Repositories #
 ################
+.git
 .hg
 .svn
 
