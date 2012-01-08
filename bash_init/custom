@@ -5,7 +5,7 @@ export EDITOR=vim
 export VISUAL='mvim -f'
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 
-[ -d ~/.bin ] && export PATH=~/.bin:~/bin:$PATH
+[ -d ~/.bin ] && export PATH=~/.bin:$PATH
 
 # use .localrc for settings specific to one system
 [ -f ~/.localrc ] && source ~/.localrc
