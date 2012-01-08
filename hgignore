@@ -1,0 +1,43 @@
+syntax: glob
+
+# Compiled source #
+###################
+.bundle
+*.class
+*.o
+*.pyc
+*.so
+.sass-cache
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# OS generated files #
+######################
+.DS_Store
+Icon?
+
+# Swap files #
+##############
+*.swp
+
+# Backups #
+###########
+*.orig
+
+# Repositories #
+################
+.hg
+.svn
+
+# Projects #
+############
+*.tmproj
+*.pbxuser
+*.mode1v3
+__MACOSX
+
