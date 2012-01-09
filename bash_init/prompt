@@ -12,7 +12,3 @@ if [ "$PS1" ]; then
 fi
 export PROMPT_COMMAND
 
-if [ "$TERM" != "dumb" ]; then
-	export LS_OPTIONS='--color=auto'
-	eval `dircolors $HOME/.dir_colors`
-fi
