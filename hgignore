@@ -3,14 +3,16 @@ syntax: glob
 # Compiled source #
 ###################
 .bundle
+.sass-cache
 *.class
+*.egg-info
 *.o
 *.pyc
 *.so
-.sass-cache
 
 # Logs and databases #
 ######################
+pip-log.txt
 *.log
 *.sql
 *.sqlite
@@ -32,7 +34,6 @@ Icon?
 # Repositories #
 ################
 .git
-.hg
 .svn
 
 # Projects #
@@ -41,4 +42,4 @@ Icon?
 *.pbxuser
 *.mode1v3
 __MACOSX
-
+.tm_properties

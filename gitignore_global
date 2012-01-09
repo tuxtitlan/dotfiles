@@ -1,13 +1,16 @@
 # Compiled source #
 ###################
+.bundle
+.sass-cache
 *.class
+*.egg-info
 *.o
 *.pyc
 *.so
-.sass-cache
 
 # Logs and databases #
 ######################
+pip-log.txt
 *.log
 *.sql
 *.sqlite
