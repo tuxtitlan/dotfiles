@@ -2,7 +2,6 @@
 # Custom Scripts #
 
 export EDITOR=vim
-export VISUAL='mvim -f'
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 
 [ -d ~/.bin ] && export PATH=~/.bin:$PATH
