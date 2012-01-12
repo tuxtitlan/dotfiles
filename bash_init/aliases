@@ -2,12 +2,18 @@
 # Aliases #
 
 # Commands
+if [ "$TERM" != "dumb" ]; then
+	export LS_OPTIONS='--color=auto'
+	eval `dircolors $HOME/.dir_colors`
+fi
+
 alias ls='ls $LS_OPTIONS -hFG'
 alias l='ls $LS_OPTIONS -la'
 alias ll='ls $LS_OPTIONS -l'
 alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
+alias vi='mvim -g --remote-silent'
 
 # Development
 alias apachectl='sudo /usr/sbin/apachectl'
