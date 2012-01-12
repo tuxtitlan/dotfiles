@@ -1,4 +1,3 @@
-. ~/.bash_init/macports
 . ~/.bash_init/prompt
 . ~/.bash_init/aliases
 . ~/.bash_init/completion

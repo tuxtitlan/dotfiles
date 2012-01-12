@@ -39,6 +39,8 @@ set nocindent
 
 setlocal spelllang=en_us
 
+call pathogen#runtime_append_all_bundles()
+
 map <c-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '.pyc', '.egg-info', '.class']
 
@@ -53,6 +55,7 @@ endif
 filetype plugin indent on
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 syntax on
+colorscheme solarized
 
 augroup myfiletypes
     " Clear old autocmds in group
