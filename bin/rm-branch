@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 
+"""
+Used when local clone is Hg and origin is Git. A convenience script to remove
+Git branches, which are just bookmarks in Hg.
+"""
+
+# TODO:
+#   1. Put in argparse
+#   2. Any way to autocomplete branch names? Yeah, blue sky!
+
 import subprocess
 import sys
 
@@ -23,6 +32,11 @@ def hg_pre():
         'hg update -C master',
         'hg pull',
     ]
+    _run(cmd)
+
+
+def hg_post():
+    cmd = ['hg pull']
     _run(cmd)
 
 
@@ -50,6 +64,7 @@ def main():
     for branch in branches:
         delete_hg_branch(branch)
         delete_git_branch(branch)
+    hg_post()
 
 
 if __name__ == '__main__':
