@@ -6,14 +6,24 @@ import sys
 
 
 def delete_git_branch(branch):
-    cmd = ('git co master && git pull && git reset --hard origin/master && '
-           'git push origin :%(branch)s && git branch -rd default/%(branch)s '
-           '&& git branch -D %(branch)s') % vars()
+    cmd = [
+        'git checkout master',
+        'git pull',
+        'git reset --hard origin/master',
+        'git push origin :%s' % branch,
+        'git branch -rd default/%s' % branch,
+        'git branch -D %s' % branch,
+    ]
+    cmd = ' && '.join(cmd)
     subprocess.call(shlex.split(cmd))
 
 
 def delete_hg_branch(branch):
-    cmd = ('hg bookmarks -d %(branch)s' % vars())
+    cmd = [
+        'hg update -C master',
+        'hg bookmarks -d %s' % branch,
+    ]
+    cmd = ' && '.join(cmd)
     subprocess.call(shlex.split(cmd))
 
 
