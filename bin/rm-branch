@@ -1,22 +1,38 @@
 #!/usr/bin/env python
 
-import shlex
 import subprocess
 import sys
 
 
-def delete_git_branch(branch):
+def _run(cmd):
+    cmd = ' && '.join(cmd)
+    subprocess.call(cmd, shell=True)
+
+
+def git_pre():
     cmd = [
         'git checkout master',
         'git pull',
         'git reset --hard origin/master',
+    ]
+    _run(cmd)
+
+
+def hg_pre():
+    cmd = [
+        'hg update -C master',
+        'hg pull',
+    ]
+    _run(cmd)
+
+
+def delete_git_branch(branch):
+    cmd = [
         'git push origin :%s' % branch,
         'git branch -rd default/%s' % branch,
         'git branch -D %s' % branch,
     ]
-    cmd = ' && '.join(cmd)
-    print cmd
-    subprocess.call(cmd)
+    _run(cmd)
 
 
 def delete_hg_branch(branch):
@@ -24,16 +40,16 @@ def delete_hg_branch(branch):
         'hg update -C master',
         'hg bookmarks -d %s' % branch,
     ]
-    cmd = ' && '.join(cmd)
-    print cmd
-    subprocess.call(cmd)
+    _run(cmd)
 
 
 def main():
     branches = sys.argv[1:]
+    hg_pre()
+    git_pre()
     for branch in branches:
-        delete_git_branch(branch)
         delete_hg_branch(branch)
+        delete_git_branch(branch)
 
 
 if __name__ == '__main__':
