@@ -15,7 +15,8 @@ def delete_git_branch(branch):
         'git branch -D %s' % branch,
     ]
     cmd = ' && '.join(cmd)
-    subprocess.call(shlex.split(cmd))
+    print cmd
+    subprocess.call(cmd)
 
 
 def delete_hg_branch(branch):
@@ -24,7 +25,8 @@ def delete_hg_branch(branch):
         'hg bookmarks -d %s' % branch,
     ]
     cmd = ' && '.join(cmd)
-    subprocess.call(shlex.split(cmd))
+    print cmd
+    subprocess.call(cmd)
 
 
 def main():
