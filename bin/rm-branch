@@ -27,16 +27,11 @@ def git_pre():
     _run(cmd)
 
 
-def hg_pre():
+def hg():
     cmd = [
-        'hg update -C master',
         'hg pull',
+        'hg update -C master',
     ]
-    _run(cmd)
-
-
-def hg_post():
-    cmd = ['hg pull']
     _run(cmd)
 
 
@@ -59,12 +54,12 @@ def delete_hg_branch(branch):
 
 def main():
     branches = sys.argv[1:]
-    hg_pre()
+    hg()
     git_pre()
     for branch in branches:
         delete_hg_branch(branch)
         delete_git_branch(branch)
-    hg_post()
+    hg()
 
 
 if __name__ == '__main__':
