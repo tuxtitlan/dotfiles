@@ -14,7 +14,7 @@ alias apachectl='sudo /usr/sbin/apachectl'
 alias cdroot='cd $(hg root)'
 alias gh='hub browse'
 alias hgserve='hg serve -p 8080 -d --pid-file /var/tmp/hgserve.pid'
-alias killhgserve='if [ -f /var/tmp/hgserve.pid ]; then kill `cat /var/tmp/hgserve.pid` && rm /var/tmp/hgserve.pid; else echo "No running \`hg serve\` process."; fi'
+alias killhgserve='if [ -f /var/tmp/hgserve.pid ]; then kill `cat /var/tmp/hgserve.pid` && rm -f /var/tmp/hgserve.pid; else echo "No running \`hg serve\` process."; fi'
 alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/george/Scratch/django_profile'
 
 # Servers
