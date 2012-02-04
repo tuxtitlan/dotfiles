@@ -2,6 +2,7 @@
 # Custom Scripts #
 
 export EDITOR=vim
+export HGEDITOR=hgeditor
 export VISUAL='mvim -f'
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 
