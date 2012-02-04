@@ -1,9 +1,8 @@
 ##################
 # Custom Scripts #
 
-export EDITOR=vim
+export EDITOR='mvim -f -o --nomru'
 export HGEDITOR=hgeditor
-export VISUAL='mvim -f'
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 
 [ -d ~/.bin ] && export PATH=~/.bin:$PATH
