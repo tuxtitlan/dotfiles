@@ -118,9 +118,6 @@ def setup_parser():
     parser.add_argument(
         '-d', '--directory', metavar='INSTALL_DIRECTORY', default=HOME,
         help='directory where the dotfiles should be installed')
-    parser.add_argument(
-        'admin-password', metavar='ADMIN_PASSWORD',
-        help='admin password used for sudo functions')
     return parser
 
 
