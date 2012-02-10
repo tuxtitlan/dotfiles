@@ -30,7 +30,10 @@ def free_inactive():
 def main():
     acquire_lock()
     free, inactive = free_inactive()
-    if free < FREE_THRESHOLD and inactive > INACTIVE_THRESHOLD:
+    print("Free: %d < %d?" % (free, FREE_THRESHOLD))
+    print("Inactive: %d > %d?" % (inactive, INACTIVE_THRESHOLD))
+    if (free < FREE_THRESHOLD) and (inactive > INACTIVE_THRESHOLD):
+        print('Purging...')
         call('purge', shell=True)
 
 
