@@ -10,6 +10,7 @@ INACTIVE_THRESHOLD = 1024  # Number of MBs
 FREE_THRESHOLD = INACTIVE_THRESHOLD / 2
 RE_INACTIVE = re.compile('Pages inactive:\s+(\d+)')
 RE_FREE = re.compile('Pages free:\s+(\d+)')
+RE_SPECULATIVE = re.compile('Pages speculative:\s+(\d+)')
 LOCK_FILE = '/var/tmp/releasemem.lock'
 
 
@@ -20,10 +21,15 @@ def acquire_lock():
         sys.exit('Could not acquire lock.')
 
 
+def pages2mb(page_count):
+    return int(page_count) * 4096 / 1024 ** 2
+
+
 def free_inactive():
     vmstat = Popen('vm_stat', shell=True, stdout=PIPE).stdout.read()
-    inactive = int(RE_INACTIVE.search(vmstat).group(1)) * 4096 / 1024 ** 2
-    free = int(RE_FREE.search(vmstat).group(1)) * 4096 / 1024 ** 2
+    inactive = pages2mb(RE_INACTIVE.search(vmstat).group(1))
+    free = pages2mb(RE_FREE.search(vmstat).group(1)) + \
+            pages2mb(RE_SPECULATIVE.search(vmstat).group(1))
     return free, inactive
 
 
