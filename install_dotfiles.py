@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
+import codecs
 import filecmp
 import glob
 import json
@@ -20,6 +21,12 @@ class Template(string.Template):
 
 def call(cmd):
     return subprocess.call(cmd, shell=True)
+
+
+def open(filename, mode=None, *args, **kwargs):
+    if not mode:
+        mode = 'r'
+    return codecs.open(filename, mode, encoding='utf-8', *args, **kwargs)
 
 
 # Install files
