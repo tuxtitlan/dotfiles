@@ -1,0 +1,16 @@
+{
+  "ignore": [
+    "scripts",
+    "LaunchAgents",
+    "install.py",
+    "Rakefile",
+    "README.md"
+  ],
+  
+  "template_context": {
+    "name": "George Song",
+    "email": "george@55minutes.com",
+    "github_username": "gsong",
+    "git_editor": "/Users/george/.bin/edit"
+  }
+}

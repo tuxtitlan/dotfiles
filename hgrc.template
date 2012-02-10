@@ -4,7 +4,7 @@ wclog = log -r "reverse(::p1())"
 mlog = log -r "::bookmark($1) - ::p1()"
 
 [ui]
-username = <%= print("Your Full Name: "); STDOUT.flush; STDIN.gets.chomp %> <<%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>>
+username = @name <@email>
 ignore = ~/.hgignore
 
 [extensions]
