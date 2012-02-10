@@ -6,8 +6,8 @@ import sys
 
 from subprocess import call, Popen, PIPE
 
-INACTIVE_THRESHOLD = 1024 * 1.5  # Number of MBs
-FREE_THRESHOLD = 512
+INACTIVE_THRESHOLD = 1024  # Number of MBs
+FREE_THRESHOLD = INACTIVE_THRESHOLD / 2
 RE_INACTIVE = re.compile('Pages inactive:\s+(\d+)')
 RE_FREE = re.compile('Pages free:\s+(\d+)')
 LOCK_FILE = '/var/tmp/releasemem.lock'
