@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Label</key>
-	<string>com.apple.iChat</string>
-	<key>ProgramArguments</key>
-	<array>
-      <string>/Applications/iChat.app/Contents/MacOS/iChat</string>
-	</array>
+  <dict>
+    <key>Label</key>
+    <string>com.apple.iChat</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/iChat.app/Contents/MacOS/iChat</string>
+    </array>
     <key>StartCalendarInterval</key>
     <array>
       <dict>
@@ -51,5 +51,5 @@
         <integer>5</integer>
       </dict>
     </array>
-</dict>
+  </dict>
 </plist>
