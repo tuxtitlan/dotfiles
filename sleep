@@ -1,2 +1,2 @@
 #!/bin/sh
-osascript -e 'tell application "Sleep Actions" to activate'
+osascript ~/.scripts/sleep.scpt

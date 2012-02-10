@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 import argparse
+import codecs
+import getpass
 import glob
 import os
-import subprocess
 import string
+import subprocess
 import tempfile
-import codecs
 
 __VERSION__ = '1.0'
 
@@ -31,7 +32,7 @@ def open(filename, mode=None, *args, **kwargs):
 ###############
 def install_files(args):
     dstdir = args.directory
-    srcdir = os.path.join(MY_PATH, 'script')
+    srcdir = os.path.join(MY_PATH, 'scripts')
     prepare(dstdir)
     os.chdir(srcdir)
     for f in glob.iglob('*'):
@@ -52,6 +53,7 @@ def process_file(f, dst, args):
                     setattr(args, e.message, raw_input(
                         'Template context "%s"? ' % e.message))
         call('osacompile -x -o %s %s' % (dst, tmp))
+        os.remove(tmp)
     else:
         call('osacompile -x -o %s %s' % (dst, f))
 
@@ -77,9 +79,6 @@ def setup_parser():
         '-d', '--directory', metavar='INSTALL_DIRECTORY',
         default=os.path.join(HOME, '.scripts'),
         help='directory where the scripts should be installed')
-    parser.add_argument(
-        'admin_password', metavar='ADMIN_PASSWORD',
-        help='admin password used for sudo functions')
     return parser
 
 
@@ -88,6 +87,7 @@ def setup_parser():
 def main():
     parser = setup_parser()
     args = parser.parse_args()
+    args.admin_password = getpass.getpass('What is the sudo password? ')
     install_files(args)
 
 
