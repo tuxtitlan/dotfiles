@@ -1,7 +1,6 @@
 {
   "ignore": [
     "scripts",
-    "LaunchAgents",
     "install.py",
     "Rakefile",
     "README.md"
