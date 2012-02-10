@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import os
 import re
+import sys
 
 from subprocess import call, Popen, PIPE
 
@@ -8,6 +10,14 @@ INACTIVE_THRESHOLD = 1024 * 1.5  # Number of MBs
 FREE_THRESHOLD = 512
 RE_INACTIVE = re.compile('Pages inactive:\s+(\d+)')
 RE_FREE = re.compile('Pages free:\s+(\d+)')
+LOCK_FILE = '/var/tmp/releasemem.lock'
+
+
+def acquire_lock():
+    try:
+        os.open(LOCK_FILE, os.O_CREAT | os.O_EXLOCK | os.O_NDELAY)
+    except OSError:
+        sys.exit('Could not acquire lock.')
 
 
 def free_inactive():
@@ -18,6 +28,7 @@ def free_inactive():
 
 
 def main():
+    acquire_lock()
     free, inactive = free_inactive()
     if free < FREE_THRESHOLD and inactive > INACTIVE_THRESHOLD:
         call('purge', shell=True)
