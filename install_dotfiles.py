@@ -128,6 +128,18 @@ def update_args_with_config(args):
             setattr(args, k, v)
 
 
+def default_args(args):
+    """
+    Fill args with required defaults if they are missing.
+    """
+    defaults = {
+        'ignore': [],
+        'template_context': {}
+    }
+    for k, v in defaults.iteritems():
+        setattr(args, k, getattr(args, k, v))
+
+
 # Main
 ######
 def main():
@@ -135,6 +147,7 @@ def main():
     args = parser.parse_args()
     if args.config:
         update_args_with_config(args)
+    default_args(args)
     install_files(args)
 
 
