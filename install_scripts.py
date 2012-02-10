@@ -37,6 +37,7 @@ def install_files(args):
     os.chdir(srcdir)
     for f in glob.iglob('*'):
         dst = os.path.join(dstdir, f.replace('.template', ''))
+        print('installing %s' % dst)
         process_file(os.path.join(srcdir, f), dst, args)
 
 
