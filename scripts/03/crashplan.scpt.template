@@ -24,9 +24,7 @@ else
 end if
 
 if isCrashPlanRunning and not isPluggedIn then
-  log "Unloading CrashPlan engine…"
-  do shell script "launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
-    password "@{admin_password}" with administrator privileges
+  run script POSIX file "@directory/unload_crashplan.scpt"
 else if isPluggedIn and not isCrashPlanRunning then
   log "Loading CrashPlan engine…"
   do shell script "launchctl load -w /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
