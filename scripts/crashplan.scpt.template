@@ -1,0 +1,35 @@
+log "Deciding what to do with CrashPlan…"
+
+set isCrashPlanRunning to false
+try
+  set pid to do shell script "sudo launchctl list | grep com.crashplan.engine" ¬
+    password "@{admin_password}" with administrator privileges
+  set isCrashPlanRunning to true
+end try
+
+if isCrashPlanRunning then
+  log "CrashPlan is already running: " & pid
+else
+  log "CrashPlan is not currently running…"
+end if
+
+set acStatus to do shell script "pmset -g ac"
+if acStatus is "No adapter attached." then
+  log "Computer is running on battery…"
+  set isPluggedIn to false
+else
+  log "Computer is plugged in…"
+  set isPluggedIn to true
+end if
+
+if isCrashPlanRunning and not isPluggedIn then
+  log "Unloading CrashPlan engine…"
+  do shell script "launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
+    password "@{admin_password}" with administrator privileges
+else if isPluggedIn and not isCrashPlanRunning then
+  log "Loading CrashPlan engine…"
+  do shell script "launchctl load -w /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
+    password "@{admin_password}" with administrator privileges
+else
+  log "Nothing needs to be done."
+end if

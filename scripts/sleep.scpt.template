@@ -3,11 +3,11 @@ tell application "iTunes" to quit
 
 log "Stopping Time Machine backup…"
 do shell script "sudo tmutil stopbackup" password "@{admin_password}" ¬
-    with administrator privileges
+  with administrator privileges
 
 log "Finder is ejecting all disks…"
 tell application "Finder" to eject (every disk whose ejectable is true or ¬
-	local volume is false)
+  local volume is false)
 
 log "Muting the volume…"
 set volume with output muted
