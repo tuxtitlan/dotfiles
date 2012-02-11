@@ -35,10 +35,11 @@ def install_files(args):
     srcdir = os.path.join(MY_PATH, 'scripts')
     prepare(dstdir)
     os.chdir(srcdir)
-    for f in glob.iglob('*'):
+    for l in glob.iglob('*/*'):
+        d, f = l.split('/', 1)
         dst = os.path.join(dstdir, f.replace('.template', ''))
         print('installing %s' % dst)
-        process_file(os.path.join(srcdir, f), dst, args)
+        process_file(os.path.join(srcdir, l), dst, args)
 
 
 def process_file(f, dst, args):
