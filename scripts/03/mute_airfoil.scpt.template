@@ -1,0 +1,3 @@
+property airfoil : load script POSIX file "@directory/airfoil.scpt"
+
+tell airfoil to mute()

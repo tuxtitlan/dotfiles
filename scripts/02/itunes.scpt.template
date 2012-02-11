@@ -1,4 +1,4 @@
-property utils : load script POSIX file "/Users/george/.scripts/utils.scpt"
+property utils : load script POSIX file "@directory/utils.scpt"
 
 on changeVolume(amount)
   tell utils

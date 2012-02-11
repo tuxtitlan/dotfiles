@@ -1,0 +1,6 @@
+property airfoil : load script POSIX file "@directory/airfoil.scpt"
+property iTunes : load script POSIX file "@directory/itunes.scpt"
+
+tell airfoil to changeVolume(0.04)
+
+tell iTunes to changeVolume(4)
