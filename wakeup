@@ -1,5 +1,9 @@
 #!/bin/sh
 logger -i 'Mounting all Apple HFS volumes...'
+
 /usr/sbin/diskutil list | \
   awk '/Apple_HFS/ {print $NF}' | \
   xargs -I{} /usr/sbin/diskutil mount {}
+
+# Load CrashPlan backup
+osascript ~/.scripts/crashplan.scpt

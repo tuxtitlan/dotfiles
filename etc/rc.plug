@@ -6,9 +6,6 @@
 
 logger -i 'Executing /opt/local/etc/rc.plug.'
 
-# Load CrashPlan backup
-osascript /Users/george/Library/Scripts/crashplan.scpt
-
 for user in `echo 'show State:/Users/ConsoleUser' | scutil | awk '/kCGSSessionUserNameKey/ { print $3 }'`; do
 	home=`eval echo ~$user`
 	if [ -x "$home/.plug" ]; then

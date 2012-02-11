@@ -2,8 +2,8 @@ log "Quitting iTunes…"
 tell application "iTunes" to quit
 
 log "Stopping Time Machine backup…"
-do shell script "sudo tmutil stopbackup" password "@{admin_password}" ¬
-  with administrator privileges
+do shell script "sudo tmutil stopbackup" user name "@{admin_user}" ¬
+  password "@{admin_password}" with administrator privileges
 
 log "Finder is ejecting all disks…"
 tell application "Finder" to eject (every disk whose ejectable is true or ¬

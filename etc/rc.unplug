@@ -6,10 +6,6 @@
 
 logger -i 'Executing /opt/local/etc/rc.unplug.'
 
-# Unload CrashPlan backup
-logger -i "Unloading CrashPlan engine..."
-launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist
-
 for user in `echo 'show State:/Users/ConsoleUser' | scutil | awk '/kCGSSessionUserNameKey/ { print $3 }'`; do
 	home=`eval echo ~$user`
 	if [ -x "$home/.unplug" ]; then

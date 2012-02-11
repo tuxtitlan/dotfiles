@@ -81,6 +81,10 @@ def setup_parser():
         '-d', '--directory', metavar='INSTALL_DIRECTORY',
         default=os.path.join(HOME, '.scripts'),
         help='directory where the scripts should be installed')
+    parser.add_argument(
+        '-u', '--admin-user', metavar='ADMIN_USER',
+        default=os.environ['USER'],
+        help='the admin user compiled into the AppleScripts')
     return parser
 
 
