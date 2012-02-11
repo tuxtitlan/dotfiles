@@ -1,6 +1,6 @@
 {
   "ignore": [
-    "README.md"
+    "README.md",
     "install.sh",
     "install_dotfiles.py",
     "install_scripts.py",
