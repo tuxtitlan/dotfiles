@@ -1,9 +1,10 @@
 {
   "ignore": [
-    "scripts",
-    "install.py",
-    "Rakefile",
     "README.md"
+    "install.sh",
+    "install_dotfiles.py",
+    "install_scripts.py",
+    "scripts"
   ],
   
   "template_context": {
