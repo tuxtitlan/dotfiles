@@ -44,13 +44,13 @@ def install_files(args):
             elif replace_all:
                 replace_file(f, dst, args)
             else:
-                r = raw_input('overwrite %s? [ynaq] ' % dst)
-                if r == 'a':
+                r = raw_input('overwrite %s? [YnAq] ' % dst)
+                if r == 'A':
                     replace_all = True
                     replace_file(f, dst, args)
-                elif r == 'y':
+                elif r == 'Y':
                     replace_file(f, dst, args)
-                elif r == 'q':
+                elif r.lower() == 'q':
                     sys.exit()
                 else:
                     print('skipping %s' % dst)
