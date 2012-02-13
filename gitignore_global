@@ -43,3 +43,7 @@ __MACOSX
 .tm_properties
 .bundle/
 .powder
+
+# ctags #
+#########
+tags
