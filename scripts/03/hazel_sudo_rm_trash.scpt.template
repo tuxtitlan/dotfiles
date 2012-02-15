@@ -1,0 +1,5 @@
+on hazelProcessFile(theFile)
+  do shell script "sudo rm -rf \"" & POSIX path of theFile & "\"" ¬
+    user name "@{admin_user}" password "@{admin_password}" ¬
+    with administrator privileges
+end hazelProcessFile
