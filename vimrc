@@ -25,7 +25,10 @@ setlocal spelllang=en_us
 
 syntax enable
 
-call pathogen#runtime_append_all_bundles()
+try
+    call pathogen#runtime_append_all_bundles()
+catch
+endtry
 
 "SEARCH OPTIONS
 set ignorecase      "Case insensitive search
