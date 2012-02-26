@@ -1,7 +1,7 @@
 ##################
 # Custom Scripts #
 
-export EDITOR='mvim -f -o --nomru'
+export EDITOR=edit
 export HGEDITOR=hgeditor
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 

@@ -8,7 +8,7 @@ alias ll='ls $LS_OPTIONS -l'
 alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
-alias vi='mvim'
+alias vi='edit'
 
 # Development
 alias apachectl='sudo /usr/sbin/apachectl'
