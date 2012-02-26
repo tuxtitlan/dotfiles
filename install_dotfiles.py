@@ -61,7 +61,7 @@ def install_files(args):
 def identical(f, dst):
     if os.path.isdir(dst):
         dircmp = filecmp.dircmp(f, dst)
-        if not (len(dircmp.left_only) or len(dircmp.right_only) or 
+        if not (len(dircmp.left_only) or len(dircmp.right_only) or
                 len(dircmp.diff_files)):
             return True
     return filecmp.cmp(f, dst)
