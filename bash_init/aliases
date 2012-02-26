@@ -8,7 +8,12 @@ alias ll='ls $LS_OPTIONS -l'
 alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
-alias vi='edit'
+
+if type mvim &> /dev/null; then
+  if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
+    alias vi='mvim'
+  fi
+fi
 
 # Development
 alias apachectl='sudo /usr/sbin/apachectl'
