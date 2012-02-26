@@ -50,12 +50,12 @@ if has('gui_running')
     set background=light
 else
     set background=dark
-    let g:solarized_termcolors=16
+    let g:solarized_termcolors=256
 endif
 
 filetype plugin indent on
 highlight SpellBad term=underline gui=undercurl guisp=Orange
-syntax on
+syntax enable
 colorscheme solarized
 
 augroup myfiletypes
@@ -64,21 +64,6 @@ augroup myfiletypes
     " autoindent with two spaces, always expand tabs
     autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
 augroup END
-
-" Toggle Solarized Background
-function! ToggleBackground()
-    if (w:solarized_style=="dark")
-    let w:solarized_style="light"
-    colorscheme solarized
-else
-    let w:solarized_style="dark"
-    colorscheme solarized
-endif
-endfunction
-command! ToggleBackground call ToggleBackground()
-" nnoremap <F6> :call ToggleBackground()<CR>
-" inoremap <F6> <ESC>:call ToggleBackground()<CR>a
-" vnoremap <F6> <ESC>:call ToggleBackground()<CR>
 
 " Toggle pyflakes quickfix
 let g:pyflakes_use_quickfix=1
