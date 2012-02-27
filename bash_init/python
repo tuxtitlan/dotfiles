@@ -5,4 +5,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export VIRTUALENV_USE_DISTRIBUTE=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-[[ -f /opt/local/bin/virtualenvwrapper.sh ]] && . /opt/local/bin/virtualenvwrapper.sh
+[[ -f /usr/local/share/python/virtualenvwrapper.sh ]] && . /usr/local/share/python/virtualenvwrapper.sh

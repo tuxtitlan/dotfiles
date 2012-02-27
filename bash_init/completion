@@ -5,5 +5,4 @@ export HISTIGNORE="&:ls:l:la:ll:exit"
 bind '"\e[A"':history-search-backward # up arrow
 bind '"\e[B"':history-search-forward  # down arrow
 
-[ -f /opt/local/etc/bash_completion ] && source /opt/local/etc/bash_completion
-
+[[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
