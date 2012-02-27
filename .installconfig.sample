@@ -5,7 +5,7 @@
     "install.sh",
     "install_dotfiles.py",
     "install_scripts.py",
-    "scripts",
+    "scripts"
   ],
   
   "template_context": {
