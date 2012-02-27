@@ -1,7 +1,7 @@
 [alias]
 revert = revert --no-backup
 wclog = log -r "reverse(::p1())"
-mlog = log -r "::bookmark($1) - ::p1()"
+mlog = log -r "::bookmark('$1') - ::p1()"
 
 [ui]
 username = @name <@email>
@@ -13,7 +13,6 @@ eol =
 extdiff =
 hgext.record =
 hggit =
-hgsubversion = ~/hgsubversion/hgsubversion
 mq =
 purge =
 rebase =
