@@ -2,31 +2,29 @@ set directory=~/.tmp
 set encoding=utf-8
 set fileencodings=
 set hidden          "Remember undo after quitting
-set ls=2            " allways show status line
-set modeline        " last lines in document sets vim mode
-set modelines=3     " number lines checked for modelines
-set nobackup        " do not keep a backup file
-set nocompatible    " use vim defaults
-set nosmartindent
-set nostartofline   " don't jump to first character when paging
-set novisualbell    " turn off visual bell
-set number          " show line numbers
-set ruler           " show the cursor position all the time
-set scrolloff=3     " keep 3 lines when scrolling
-set shortmess=atI   " Abbreviate messages
-set showcmd         " display incomplete commands
-set showmatch       "Show matching bracket
+set ls=2            "Alway show status line
+set modeline        "Last lines in document sets vim mode
+set modelines=3     "Number lines checked for modelines
+set nobackup        "Do not keep a backup file
+set nocompatible    "Use vim defaults
+set nostartofline   "Don't jump to first character when paging
+set novisualbell    "Turn off visual bell
+set number          "Show line numbers
+set ruler           "Show the cursor position all the time
+set scrolloff=3     "Keep 3 lines when scrolling
+set shortmess=atI   "Abbreviate messages
+set showcmd         "Display incomplete commands
 set sidescroll=1    "Better horizontal scrolling
 set sidescrolloff=5 "Horizontal scroll offset
-set visualbell t_vb=    " turn off error beep/flash
-set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
+set visualbell t_vb=    "Turn off error beep/flash
+set whichwrap=b,s,h,l,<,>,[,]   "Move freely between files
 
 setlocal spelllang=en_us
 
 syntax enable
 
 try
-    call pathogen#runtime_append_all_bundles()
+    call pathogen#infect()
 catch
 endtry
 
@@ -39,7 +37,7 @@ set smartcase       "Case sensitive search if upper case chars are used
 "INDENTATION OPTIONS
 set autoindent      "Auto-indent new lines
 set nocindent       "Use smartindent instead
-set expandtab       " tabs are converted to spaces
+set expandtab       "Tabs are converted to spaces
 set shiftwidth=4    "Tab width for indentation
 set smartindent     "Smart indentation
 set tabstop=4       "Tab width
