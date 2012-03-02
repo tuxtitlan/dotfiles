@@ -5,6 +5,7 @@
 alias dash='open https://github.com/55minutes/55minutes-dashboard/wiki'
 alias l='ls $LS_OPTIONS -la'
 alias ll='ls $LS_OPTIONS -l'
+alias ls='ls $LS_OPTIONS -hFG'
 alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
