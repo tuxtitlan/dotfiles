@@ -13,4 +13,5 @@ folder 'vim/bundle' do
   folder 'vim-markdown', 'git://github.com/tpope/vim-markdown.git'
   folder 'vim-rails', 'git://github.com/tpope/vim-rails.git'
   folder 'vim-ruby', 'git://github.com/vim-ruby/vim-ruby.git'
+  folder 'vim-applescript', 'git://github.com/vim-scripts/applescript.vim.git'
 end
