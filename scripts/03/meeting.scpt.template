@@ -5,7 +5,6 @@ on startMeeting()
   unloadCrashPlan()
   setIchatMeeting()
   setSkypeDND()
-  pauseTimeOut()
   pauseItunes()
   pauseRdio()
 end startMeeting
@@ -14,7 +13,6 @@ on endMeeting()
   loadCrashPlan()
   setIchatWorking()
   setSkypeOnline()
-  resumeTimeOut()
 end endMeeting
 
 # Load and unload CrashPlan
@@ -79,37 +77,6 @@ on setSkypeStatus(status)
     end if
   end tell
 end setSkypeStatus
-
-# Pause and resume Time Out
-on pauseTimeOut()
-  setTimeOutState("p", command down)
-end pauseTimeOut
-
-on resumeTimeOut()
-  setTimeOutState("p", {command down, shift down})
-end resumeTimeOut
-
-on beginMicroBreak()
-  setTimeOutState("b", command down)
-end beginMicroBreak
-
-on beginNormalBreak()
-  setTimeOutState("n", command down)
-end beginNormalBreak
-
-on setTimeOutState(ks, ksMod)
-  set TOF to "Time Out Free"
-  tell utils
-    if appIsRunning(TOF) then
-      set currentApp to GetCurrentApp()
-      activate application TOF
-      try
-        tell application "System Events" to keystroke ks using ksMod
-      end try
-      activate application currentApp
-    end if
-  end tell
-end setTimeOutState
 
 # Pause iTunes
 on pauseItunes()

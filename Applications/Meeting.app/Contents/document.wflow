@@ -230,7 +230,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>property meeting : load script POSIX file "/Users/george/.scripts/meeting.scpt"on run {input, parameters}	tell meeting to startMeeting()	delay input * 60	tell meeting to endMeeting()	if input ≥ 60 then		tell meeting to beginNormalBreak()	else if input ≥ 15 then		tell meeting to beginMicroBreak()	end ifend run</string>
+					<string>property meeting : load script POSIX file "/Users/george/.scripts/meeting.scpt"on run {input, parameters}	tell meeting to startMeeting()	delay input * 60	tell meeting to endMeeting()end run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -294,7 +294,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>B909D40F-675B-4EF0-8C75-259B2D065378</key>
+		<key>23B6B3FD-2D98-42E4-9B90-490AC0A90632</key>
 		<dict>
 			<key>from</key>
 			<string>618AEC65-68AC-4CBC-BC05-A2E0A158EADD - 618AEC65-68AC-4CBC-BC05-A2E0A158EADD</string>
