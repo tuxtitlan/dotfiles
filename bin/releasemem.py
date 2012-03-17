@@ -40,7 +40,7 @@ def main():
         print("Free: %dmb < %dmb" % (free, FREE_THRESHOLD))
         print("Inactive: %dmb > %dmb" % (inactive, INACTIVE_THRESHOLD))
         print('Purging...')
-        call('purge', shell=True)
+        call('/usr/bin/purge', shell=True)
 
 
 if __name__ == '__main__':
