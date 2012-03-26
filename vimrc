@@ -25,6 +25,7 @@ syntax enable
 
 try
     call pathogen#infect()
+    call pathogen#helptags()
 catch
 endtry
 
