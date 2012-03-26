@@ -13,7 +13,6 @@ syntax: glob
 # Logs and databases #
 ######################
 pip-log.txt
-*.log
 *.sqlite
 *.sqlite3
 
