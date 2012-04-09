@@ -1,7 +1,0 @@
-#############
-# Mac Ports #
-
-if [ -x /opt/local/bin/port ]; then
-  export MANPATH=/opt/local/share/man:$MANPATH
-  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-fi
