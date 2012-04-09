@@ -5,8 +5,8 @@ export EDITOR=edit
 export HGEDITOR=hgeditor
 export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 
-[ -d ~/.bin ] && export PATH=~/.bin:$PATH
+[[ -d ~/.bin ]] && export PATH=~/.bin:$PATH
 
 # use .localrc for settings specific to one system
-[ -f ~/.localrc ] && source ~/.localrc
+[[ -f ~/.localrc ]] && source ~/.localrc
 

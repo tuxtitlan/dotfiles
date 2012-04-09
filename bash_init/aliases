@@ -11,7 +11,7 @@ alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
 
 if type mvim &> /dev/null; then
-  if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
     alias vi='mvim'
   fi
 fi
@@ -21,7 +21,7 @@ alias apachectl='sudo /usr/sbin/apachectl'
 alias cdroot='cd $(hg root)'
 alias gh='hub browse'
 alias hgserve='hg serve -p 8080 -d --pid-file /var/tmp/hgserve.pid'
-alias killhgserve='if [ -f /var/tmp/hgserve.pid ]; then kill `cat /var/tmp/hgserve.pid` && rm -f /var/tmp/hgserve.pid; else echo "No running \`hg serve\` process."; fi'
+alias killhgserve='if [[ -f /var/tmp/hgserve.pid ]]; then kill `cat /var/tmp/hgserve.pid` && rm -f /var/tmp/hgserve.pid; else echo "No running \`hg serve\` process."; fi'
 alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/george/Scratch/django_profile'
 
 # Servers
@@ -30,7 +30,7 @@ alias vncmustard='open vnc://localhost:5901'
 # Functions
 
 ## Use Apple's man page viewer if we are on a local console
-if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
+if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
   function man {
     open x-man-page://$1
   }
