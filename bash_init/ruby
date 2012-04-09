@@ -3,3 +3,7 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+# OS X has its own way of setting LANG, but only at the console.
+# By declaring here in .bashrc, daemons like Pow will also pick it up.
+export LANG=en_US.UTF-8
