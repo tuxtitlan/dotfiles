@@ -12,7 +12,6 @@ color =
 eol =
 extdiff =
 hgext.record =
-hggit =
 mq =
 purge =
 rebase =
