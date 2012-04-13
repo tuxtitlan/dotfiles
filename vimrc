@@ -47,6 +47,13 @@ filetype plugin indent on
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
+# Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_loc_list=1
+
+# NerdTree
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+
 if has('gui_running')
     set guifont=Inconsolata:h14
     set background=light
