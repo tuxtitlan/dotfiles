@@ -3,7 +3,7 @@ file 'vim/autoload/pathogen.vim', 'https://raw.github.com/tpope/vim-pathogen/HEA
 folder 'vim/bundle' do
   folder 'bufexplorer', 'git://github.com/corntrace/bufexplorer.git'
   folder 'nerdtree', 'git://github.com/scrooloose/nerdtree.git'
-  folder 'pyflakes-vim', 'git://github.com/kevinw/pyflakes-vim.git'
+  folder 'syntastic', 'git://github.com/scrooloose/syntastic.git'
   folder 'python' do
     file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
     file 'indent/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=4316'
