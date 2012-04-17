@@ -11,7 +11,7 @@ folder 'vim/bundle' do
   folder 'syntastic', 'git://github.com/scrooloose/syntastic.git'
   folder 'vim-applescript', 'git://github.com/vim-scripts/applescript.vim.git'
   folder 'vim-colors-solarized', 'git://github.com/altercation/vim-colors-solarized.git'
-  folder 'vim-creole', 'git://github.com/vim-scripts/vim-creole.git'
+  folder 'vim-creole', 'git@github.com:gsong/vim-creole.git'
   folder 'vim-markdown', 'git://github.com/tpope/vim-markdown.git'
   folder 'vim-rails', 'git://github.com/tpope/vim-rails.git'
   folder 'vim-ruby', 'git://github.com/vim-ruby/vim-ruby.git'
