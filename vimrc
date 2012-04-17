@@ -54,6 +54,9 @@ let g:syntastic_auto_loc_list=1
 " NerdTree
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 
+" Marked.app integration
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
 if has('gui_running')
     set guifont=Inconsolata:h14
     set background=light
