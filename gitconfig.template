@@ -37,7 +37,3 @@
 
 [merge]
   tool = opendiff
-
-[github]
-  user = @github_username
-  token = @github_token
