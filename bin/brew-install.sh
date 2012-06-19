@@ -4,6 +4,8 @@ brew tap homebrew/versions
 
 brew install argyll
 brew install bash-completion
+brew install dos2unix --enable-nls
+brew install fmdiff
 brew install git
 brew install hub
 brew install macvim
@@ -17,6 +19,7 @@ brew install python26
 brew install qt
 brew install s3cmd
 brew install sleepwatcher
+brew install swig
 brew install tree
 brew install wget
 
