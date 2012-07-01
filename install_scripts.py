@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 
 __VERSION__ = '1.0'
+MY_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
 # General utils
@@ -26,6 +27,10 @@ def open(filename, mode=None, *args, **kwargs):
     if not mode:
         mode = 'r'
     return codecs.open(filename, mode, encoding='utf-8', *args, **kwargs)
+
+
+def sudo(password, cmd):
+    call('echo "{}" | sudo -S {}'.format(password, cmd))
 
 
 # Install files
@@ -54,15 +59,30 @@ def process_file(f, dst, args):
                 except KeyError as e:
                     setattr(args, e.message, raw_input(
                         'Template context "%s"? ' % e.message))
-        call('osacompile -x -o %s %s' % (dst, tmp))
+        call('osacompile -x -o {} {}'.format(dst, tmp))
         os.remove(tmp)
     else:
-        call('osacompile -x -o %s %s' % (dst, f))
+        call('osacompile -x -o {} {}'.format(dst, f))
 
 
 def prepare(a_dir):
     if not os.path.exists(a_dir):
         os.makedirs(a_dir)
+
+
+# Logout hook
+#############
+def install_logout_hook(args):
+    f = os.path.join(MY_DIR, 'logout')
+    of = '/usr/local/bin/logout'
+    cmds = [
+        'cp "{}" "{}"'.format(f, of),
+        'chown root:admin {}'.format(of),
+        'chmod +x {}'.format(of),
+        'defaults write com.apple.loginwindow LogoutHook {}'.format(of),
+    ]
+    for cmd in cmds:
+        sudo(args.admin_password, cmd)
 
 
 # Command-line options
@@ -95,6 +115,7 @@ def main():
     args = parser.parse_args()
     args.admin_password = getpass.getpass('What is the sudo password? ')
     install_files(args)
+    install_logout_hook(args)
 
 
 if __name__ == '__main__':
