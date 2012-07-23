@@ -34,6 +34,7 @@ set ignorecase      "Case insensitive search
 set incsearch       "Incremental search
 set hlsearch        "Highlight search
 set smartcase       "Case sensitive search if upper case chars are used
+set tags=./tags;/   "Search up the tree for ctags"
 
 "INDENTATION OPTIONS
 set autoindent      "Auto-indent new lines
