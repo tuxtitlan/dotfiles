@@ -3,10 +3,10 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>com.apple.iChat</string>
+    <string>com.apple.Messages</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Applications/iChat.app/Contents/MacOS/iChat</string>
+        <string>/Applications/Messages.app/Contents/MacOS/Messages</string>
     </array>
     <key>StartCalendarInterval</key>
     <array>
