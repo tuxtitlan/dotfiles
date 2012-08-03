@@ -2,6 +2,7 @@ file 'vim/autoload/pathogen.vim', 'https://raw.github.com/tpope/vim-pathogen/HEA
 
 folder 'vim/bundle' do
   folder 'bufexplorer', 'git://github.com/corntrace/bufexplorer.git'
+  folder 'greplace', 'git://github.com/vim-scripts/greplace.vim.git'
   folder 'nerdtree', 'git://github.com/scrooloose/nerdtree.git'
   folder 'python' do
     file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
