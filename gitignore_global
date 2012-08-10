@@ -1,19 +1,19 @@
 # Compiled source #
 ###################
-.bundle
-.sass-cache
 *.class
 *.egg-info
 *.o
 *.pyc
 *.so
+.bundle
+.sass-cache
 
 # Logs and databases #
 ######################
-pip-log.txt
 *.log
 *.sqlite
 *.sqlite3
+pip-log.txt
 
 # OS generated files #
 ######################
@@ -35,13 +35,15 @@ Icon?
 
 # Projects #
 ############
-*.tmproj
-*.pbxuser
 *.mode1v3
-__MACOSX
-.tm_properties
+*.pbxuser
+*.sublime-project
+*.sublime-workspace
+*.tmproj
 .bundle/
 .powder
+.tm_properties
+__MACOSX
 
 # ctags #
 #########
