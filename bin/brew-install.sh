@@ -2,7 +2,6 @@ brew update && brew upgrade && brew cleanup
 
 brew tap homebrew/versions
 
-brew install argyll
 brew install bash-completion
 brew install ctags-exuberant
 brew install dos2unix --enable-nls
