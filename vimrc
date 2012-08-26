@@ -60,7 +60,7 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn'
 
 if has('gui_running')
     set guifont=Inconsolata:h14
-    set background=dark
+    set background=light
 else
     set background=dark
     let g:solarized_termcolors=256
