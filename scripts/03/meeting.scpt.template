@@ -3,7 +3,7 @@ property utils : load script POSIX file "@directory/utils.scpt"
 # Main functions
 on startMeeting()
   unloadCrashPlan()
-  setIchatMeeting()
+  setMessagesMeeting()
   setSkypeDND()
   pauseItunes()
   pauseRdio()
@@ -11,7 +11,7 @@ end startMeeting
 
 on endMeeting()
   loadCrashPlan()
-  setIchatWorking()
+  setMessagesWorking()
   setSkypeOnline()
 end endMeeting
 
@@ -28,28 +28,28 @@ on loadCrashPlan()
   end try
 end loadCrashPlan
 
-# Change iChat status
-on setIchatWorking()
+# Change Messages status
+on setMessagesWorking()
   tell utils
-    if appIsRunning("iChat") then
-      tell application "iChat"
+    if appIsRunning("Messages") then
+      tell application "Messages"
         set status to available
         set status message to "Working"
       end tell
     end if
   end tell
-end setIchatWorking
+end setMessagesWorking
 
-on setIchatMeeting()
+on setMessagesMeeting()
   tell utils
-    if appIsRunning("iChat") then
-      tell application "iChat"
+    if appIsRunning("Messages") then
+      tell application "Messages"
         set status to away
         set status message to "In a meeting"
       end tell
     end if
   end tell
-end setIchatMeeting
+end setMessagesMeeting
 
 # Change Skype status
 on setSkypeDND()
