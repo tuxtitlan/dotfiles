@@ -1,5 +1,3 @@
-property utils : load script POSIX file "@directory/utils.scpt"
-
 log "Deciding what to do with CrashPlan…"
 
 set isCrashPlanRunning to false
@@ -27,11 +25,6 @@ end if
 
 if isCrashPlanRunning and not isPluggedIn then
   run script POSIX file "@directory/unload_crashplan.scpt"
-  tell utils
-    if appIsRunning("CrashPlan menu bar") then
-      tell application "CrashPlan menu bar" to quit
-    end if
-  end tell
 else if isPluggedIn and not isCrashPlanRunning then
   log "Loading CrashPlan engine…"
   do shell script "launchctl load -w /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
