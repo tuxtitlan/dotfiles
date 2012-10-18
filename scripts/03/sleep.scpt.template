@@ -1,6 +1,3 @@
-log "Quitting iTunes…"
-tell application "iTunes" to quit
-
 log "Stopping Time Machine backup…"
 do shell script "sudo tmutil stopbackup" user name "@{admin_user}" ¬
   password "@{admin_password}" with administrator privileges
