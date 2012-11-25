@@ -10,3 +10,7 @@ export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && source ~/.localrc
 
+# Keep bash history across terminals and write immediately
+# http://linuxcommando.blogspot.com/2007/11/keeping-command-history-across-multiple.html
+shopt -s histappend
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
