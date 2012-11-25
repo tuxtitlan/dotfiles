@@ -4,9 +4,9 @@ folder 'vim/bundle' do
   folder 'bufexplorer', 'git://github.com/corntrace/bufexplorer.git'
   folder 'greplace', 'git://github.com/vim-scripts/greplace.vim.git'
   folder 'nerdtree', 'git://github.com/scrooloose/nerdtree.git'
+  folder 'python', 'git://github.com/hynek/vim-python-pep8-indent.git'
   folder 'python' do
     file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
-    file 'indent/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=4316'
     file 'syntax/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=17429'
   end
   folder 'syntastic', 'git://github.com/scrooloose/syntastic.git'
