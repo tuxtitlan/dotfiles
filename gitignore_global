@@ -3,7 +3,7 @@
 *.class
 *.egg-info
 *.o
-*.pyc
+*.py[cod]
 *.so
 .bundle
 .sass-cache
