@@ -29,7 +29,7 @@ def free_inactive():
     vmstat = Popen('vm_stat', shell=True, stdout=PIPE).stdout.read()
     inactive = pages2mb(RE_INACTIVE.search(vmstat).group(1))
     free = pages2mb(RE_FREE.search(vmstat).group(1)) + \
-            pages2mb(RE_SPECULATIVE.search(vmstat).group(1))
+        pages2mb(RE_SPECULATIVE.search(vmstat).group(1))
     return free, inactive
 
 
