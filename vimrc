@@ -40,9 +40,9 @@ set tags=./tags;/   "Search up the tree for ctags"
 set autoindent      "Auto-indent new lines
 set nocindent       "Use smartindent instead
 set expandtab       "Tabs are converted to spaces
-set shiftwidth=4    "Tab width for indentation
+set shiftwidth=2    "Tab width for indentation
 set smartindent     "Smart indentation
-set tabstop=4       "Tab width
+set tabstop=2       "Tab width
 
 filetype plugin indent on
 
@@ -73,7 +73,7 @@ endtry
 
 if has("autocmd")
     " autoindent with two spaces, always expand tabs
-    autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
+    autocmd FileType python setlocal ai sw=4 sts=4 et
     autocmd FileType python,markdown setlocal cc=80
     autocmd VimEnter * call Plugins()
 endif
