@@ -16,5 +16,6 @@ folder 'vim/bundle' do
   folder 'vim-markdown', 'git://github.com/tpope/vim-markdown.git'
   folder 'vim-rails', 'git://github.com/tpope/vim-rails.git'
   folder 'vim-ruby', 'git://github.com/vim-ruby/vim-ruby.git'
+  folder 'vim-sensible', 'git://github.com/tpope/vim-sensible.git'
   folder 'zencoding-vim', 'git://github.com/mattn/zencoding-vim.git'
 end
