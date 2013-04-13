@@ -14,3 +14,6 @@ export GREP_OPTIONS="--exclude=\*.svn\* --exclude=\*.pyc --exclude=\*.swp"
 # http://linuxcommando.blogspot.com/2007/11/keeping-command-history-across-multiple.html
 shopt -s histappend
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+# Pager is used by psql
+export PAGER=/usr/bin/less
