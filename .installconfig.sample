@@ -1,5 +1,7 @@
 {
   "ignore": [
+    "Applications",
+    "LaunchAgents",
     "README.md",
     "Vendorfile",
     "install.sh",
