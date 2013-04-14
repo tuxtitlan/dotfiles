@@ -13,7 +13,6 @@
   "template_context": {
     "name": "George Song",
     "email": "george@55minutes.com",
-    "github_username": "gsong",
     "git_editor": "/Users/george/.bin/edit"
   }
 }
