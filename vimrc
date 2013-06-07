@@ -1,4 +1,5 @@
-set directory=~/.tmp
+set backupdir=~/.vim/backupdir,$TMPDIR,/var/tmp,/tmp
+set directory=~/.vim/swapdir,$TMPDIR,/var/tmp,/tmp
 set encoding=utf-8
 set fileencodings=
 set hidden          "Remember undo after quitting
@@ -16,6 +17,7 @@ set shortmess=atI   "Abbreviate messages
 set showcmd         "Display incomplete commands
 set sidescroll=1    "Better horizontal scrolling
 set sidescrolloff=5 "Horizontal scroll offset
+set undodir=~/.vim/undodir,$TMPDIR,/var/tmp,/tmp
 set visualbell t_vb=    "Turn off error beep/flash
 set whichwrap=b,s,h,l,<,>,[,]   "Move freely between files
 
