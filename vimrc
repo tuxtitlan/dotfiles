@@ -1,4 +1,3 @@
-set backupdir=~/.vim/backupdir,$TMPDIR,/var/tmp,/tmp
 set directory=~/.vim/swapdir,$TMPDIR,/var/tmp,/tmp
 set encoding=utf-8
 set fileencodings=
