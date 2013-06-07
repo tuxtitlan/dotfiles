@@ -1,4 +1,5 @@
+docutils==0.10
 flake8==2.0
 python-creole==1.0.6
-virtualenvwrapper==3.7
+virtualenvwrapper==4.0
 yolk==0.4.3
