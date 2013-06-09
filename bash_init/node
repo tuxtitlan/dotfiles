@@ -1,0 +1,9 @@
+brew_prefix=$(brew --prefix)
+node_prefix=$(brew --prefix node)
+completion=$node_prefix/lib/node_modules/npm/lib/utils/completion.sh
+
+####################
+# Node.js homebrew #
+
+export PATH=$brew_prefix/share/npm/bin:$PATH
+[[ -r $completion ]] && . $completion
