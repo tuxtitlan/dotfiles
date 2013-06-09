@@ -48,4 +48,3 @@ function mailfav()
   mkdir -p ~/Library/Images/People
   wget http://$DOMAIN/favicon.ico -O ~/Library/Images/People/$EMAIL.tiff
 }
-
