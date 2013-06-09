@@ -1,7 +1,9 @@
+brew_prefix=$(brew --prefix)
+
 ###################
 # Python homebrew #
 
-export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages:$PYTHONPATH
 
 #####################
 # Python virtualenv #
@@ -10,4 +12,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export VIRTUALENV_USE_DISTRIBUTE=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-[[ -f /usr/local/share/python/virtualenvwrapper.sh ]] && . /usr/local/share/python/virtualenvwrapper.sh
+wrapper_sh=$brew_prefix/bin/virtualenvwrapper.sh
+[[ -f $wrapper_sh ]] && . $wrapper_sh
