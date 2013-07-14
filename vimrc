@@ -51,20 +51,27 @@ highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Syntastic
 let g:syntastic_check_on_open=1
-let g:syntastic_auto_loc_list=1
 
 " NerdTree
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeChDirMode=2
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|tmp)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 " Marked.app integration
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 
 if has('gui_running')
-    set guifont=Inconsolata:h14
     set background=light
+    set guifont=Inconsolata:h14
 else
-    set background=dark
     let g:solarized_termcolors=256
+    set background=dark
 endif
 
 try
