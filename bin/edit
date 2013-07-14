@@ -3,7 +3,7 @@
 # Launch MacVim or vi depending on whether we're on a local Mac or in an SSH session
 if type mvim &> /dev/null; then
   if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-    exec mvim -f -o --nomru $@
+    exec open -a MacVim $@
   fi
 fi
 

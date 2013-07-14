@@ -15,7 +15,7 @@ alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state
 
 if type mvim &> /dev/null; then
   if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-    alias vi='mvim'
+    alias vi='open -a MacVim'
   fi
 fi
 
