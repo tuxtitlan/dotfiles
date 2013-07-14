@@ -1,3 +1,9 @@
+-- uncomment below for testing Noodlesoft Hazel script in Applescript Editor
+(*
+property theFile : alias "Path:To:Your File.extension"
+hazelProcessFile(theFile)
+*)
+
 on hazelProcessFile(theFile)
   do shell script "sudo rm -rf \"" & POSIX path of theFile & "\"" ¬
     user name "@{admin_user}" password "@{admin_password}" ¬
