@@ -10,7 +10,12 @@ export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages:$PYTHONPATH
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export VIRTUALENV_USE_DISTRIBUTE=true
+export VIRTUALENV_DISTRIBUTE=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+export PIP_REQUIRE_VIRTUALENV=true
 wrapper_sh=$brew_prefix/bin/virtualenvwrapper.sh
 [[ -f $wrapper_sh ]] && . $wrapper_sh
+
+syspip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
