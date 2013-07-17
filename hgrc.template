@@ -5,7 +5,7 @@ mlog = log -r "::bookmark('$1') - ::p1()"
 
 [ui]
 username = @name <@email>
-ignore = ~/.hgignore
+ignore = ~/.hgignore_global
 
 [extensions]
 color =
