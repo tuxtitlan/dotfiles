@@ -39,6 +39,9 @@
 [merge]
   tool = opendiff
 
+[mergetool]
+	keepBackup = false
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
