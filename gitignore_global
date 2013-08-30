@@ -1,7 +1,7 @@
 # Compiled source #
 ###################
 *.class
-*.egg-info
+*.egg*
 *.o
 *.py[cod]
 *.so
