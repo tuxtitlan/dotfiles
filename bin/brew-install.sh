@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 for tap in completions dupes versions; do
   brew tap homebrew/$tap
 done
