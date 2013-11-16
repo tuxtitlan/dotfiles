@@ -1,5 +1,5 @@
 bpython==0.12
-docutils==0.10
-flake8==2.0
-virtualenvwrapper==4.0
+docutils==0.11
+flake8==2.1
+virtualenvwrapper==4.1.1
 yolk==0.4.3
