@@ -1,6 +1,10 @@
 log "Stopping Time Machine backup…"
-do shell script "sudo tmutil stopbackup" user name "@{admin_user}" ¬
-  password "@{admin_password}" with administrator privileges
+try
+  do shell script "sudo tmutil stopbackup" user name "@{admin_user}" ¬
+    password "@{admin_password}" with administrator privileges
+on error errMsg
+  log "Time Machine isn't running…"
+end try
 
 log "Finder is ejecting all disks…"
 tell application "Finder" to eject (every disk whose ejectable is true or ¬
