@@ -1,13 +1,9 @@
-property utils : load script POSIX file "@directory/utils.scpt"
-
 on changeVolume(amount)
-  tell utils
-    if appIsRunning("iTunes") then
-      tell application "iTunes"
-        if player state is playing then
-          set sound volume to sound volume + amount
-        end if
-      end tell
+  tell application "iTunes"
+    if it is running then
+      if player state is playing then
+        set sound volume to sound volume + amount
+      end if
     end if
   end tell
 end changeVolume

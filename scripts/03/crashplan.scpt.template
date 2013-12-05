@@ -21,5 +21,6 @@ else
   do shell script "launchctl load -w /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
     user name "@{admin_user}" password "@{admin_password}" ¬
     with administrator privileges
+  log "Loading CrashPlan menu bar…"
   tell application "/Applications/CrashPlan.app/Contents/Resources/CrashPlan menu bar.app" to launch
 end if
