@@ -26,3 +26,6 @@ export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # Pager is used by psql
 export PAGER=/usr/bin/less
+
+# direnv
+# eval "$(direnv hook bash)"
