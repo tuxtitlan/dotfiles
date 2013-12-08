@@ -28,4 +28,4 @@ export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export PAGER=/usr/bin/less
 
 # direnv
-# eval "$(direnv hook bash)"
+eval "$(direnv hook bash)"
