@@ -33,5 +33,7 @@ brew cask install qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv \
   quicklook-json webp-quicklook
 qlmanage -r
 
+brew cask alfred link
+
 brew unlink python
 brew link python
