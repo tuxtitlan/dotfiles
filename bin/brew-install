@@ -1,8 +1,12 @@
 #!/bin/bash
 
+
+# See https://github.com/phinze/homebrew-cask/issues/309
+rm -rf $(brew --cache)
+brew cleanup --force
+
 set -e
 
-brew cleanup --force
 brew update
 brew upgrade
 
@@ -29,7 +33,7 @@ brew install argyll
 
 # Quick Look plugins
 brew install brew-cask
-brew cask install qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv \
+brew cask install --force qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv \
   quicklook-json webp-quicklook
 qlmanage -r
 
