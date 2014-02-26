@@ -25,9 +25,9 @@ brew install bash bash-completion colordiff grep
 
 # More nice-to-haves and various development libraries
 brew install ack ctags django-completion dos2unix graphviz iftop imagemagick \
-  macvim macvim mercurial mtr multimarkdown node phantomjs python python25 \
-  python26 qpdf s3cmd sleepwatcher ssh-copy-id swig terminal-notifier tmate \
-  tree wdiff wget
+  macvim mercurial mtr multimarkdown node phantomjs python python25 python26 \
+  qpdf s3cmd sleepwatcher ssh-copy-id swig terminal-notifier tmate tree wdiff \
+  wget
 
 # Color calibration
 brew install argyll
