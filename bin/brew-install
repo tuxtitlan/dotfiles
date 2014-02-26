@@ -2,10 +2,12 @@
 
 set -e
 
-# See https://github.com/phinze/homebrew-cask/issues/309
+# Manually remove the brew cache, since that is the only way to force
+# `brew cask install` to grab the latest versions of its recipes.
+# https://github.com/phinze/homebrew-cask/issues/309#issuecomment-32470815
 rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
-brew cleanup --force
 
+brew cleanup --force
 brew update
 brew upgrade
 
@@ -13,7 +15,7 @@ brew tap | grep -q homebrew/completions || brew tap homebrew/completions
 brew tap | grep -q homebrew/dupes || brew tap homebrew/dupes
 brew tap | grep -q homebrew/versions || brew tap homebrew/versions
 brew tap | grep -q nviennot/tmate || brew tap nviennot/tmate
-brew tap | grep -q phinze/homebrew-cask || brew tap phinze/homebrew-cask
+brew tap | grep -q phinze/cask || brew tap phinze/cask
 
 # Needed for Rails development
 brew install apple-gcc42 git postgresql qt
