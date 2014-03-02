@@ -44,7 +44,7 @@ qlmanage -r
 
 # OS X apps
 caffeinate brew cask install --force easyfind f-lux fluid handbrake \
-  keyboardcleantool namebench nvalt onyx private-eye vagrant virtualbox vlc
+  keyboardcleantool namebench nvalt onyx private-eye vagrant virtualbox
 
 caffeinate brew cask alfred link
 
