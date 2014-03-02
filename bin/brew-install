@@ -7,38 +7,46 @@ set -e
 # https://github.com/phinze/homebrew-cask/issues/309#issuecomment-32470815
 rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
 
-brew cleanup --force
-brew update
-brew upgrade
+caffeinate brew cleanup --force
+caffeinate brew update
+caffeinate brew upgrade
 
-brew tap | grep -q homebrew/completions || brew tap homebrew/completions
-brew tap | grep -q homebrew/dupes || brew tap homebrew/dupes
-brew tap | grep -q homebrew/versions || brew tap homebrew/versions
-brew tap | grep -q nviennot/tmate || brew tap nviennot/tmate
-brew tap | grep -q phinze/cask || brew tap phinze/cask
+caffeinate brew tap | grep -q homebrew/completions || caffeinate brew tap \
+  homebrew/completions
+caffeinate brew tap | grep -q homebrew/dupes || caffeinate brew tap \
+  homebrew/dupes
+caffeinate brew tap | grep -q homebrew/versions || caffeinate brew tap \
+  homebrew/versions
+caffeinate brew tap | grep -q nviennot/tmate || caffeinate brew tap \
+  nviennot/tmate
+caffeinate brew tap | grep -q phinze/cask || caffeinate brew tap phinze/cask
 
 # Needed for Rails development
-brew install apple-gcc42 git postgresql qt
+caffeinate brew install apple-gcc42 git postgresql qt
 
 # Better versions of Mac built-ins
-brew install bash bash-completion colordiff grep
+caffeinate brew install bash bash-completion colordiff grep
 
 # More nice-to-haves and various development libraries
-brew install ack ctags django-completion dos2unix graphviz iftop imagemagick \
-  macvim mercurial mtr multimarkdown node phantomjs python python25 python26 \
-  qpdf s3cmd sleepwatcher ssh-copy-id swig terminal-notifier tmate tree wdiff \
-  wget
+caffeinate brew install ack ctags django-completion dos2unix graphviz iftop \
+  imagemagick macvim mercurial mtr multimarkdown node phantomjs python \
+  python25 python26 qpdf s3cmd sleepwatcher ssh-copy-id terminal-notifier \
+  tmate tree wdiff wget
 
 # Color calibration
-brew install argyll
+caffeinate brew install argyll
 
 # Quick Look plugins
-brew install brew-cask
-brew cask install --force qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv \
-  quicklook-json webp-quicklook
+caffeinate brew install brew-cask
+caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
+  qlstephen quicklook-csv quicklook-json webp-quicklook
 qlmanage -r
 
-brew cask alfred link
+# OS X apps
+caffeinate brew cask install --force easyfind f-lux fluid handbrake \
+  keyboardcleantool namebench nvalt onyx private-eye vagrant virtualbox vlc
 
-brew unlink python
-brew link python
+caffeinate brew cask alfred link
+
+caffeinate brew unlink python
+caffeinate brew link python
