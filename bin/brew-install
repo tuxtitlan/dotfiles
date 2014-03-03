@@ -12,12 +12,16 @@ brew install apple-gcc42 git postgresql qt
 # Better versions of Mac built-ins
 brew install bash bash-completion colordiff homebrew/dupes/grep
 
+# Bash completions
+brew tap homebrew/completions
+brew install django-completion rails-completion rake-completion
+
 # Older versions of Python
-brew install homebrew/versions/python25 homebrew/versions/python26
+brew tap homebrew/versions
+brew install python25 python26
 
 # More nice-to-haves and various development libraries
-brew install ack ctags dos2unix graphviz \
-  homebrew/completions/django-completion iftop imagemagick macvim mercurial \
+brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
   mtr multimarkdown node nviennot/tmate/tmate phantomjs python qpdf s3cmd \
   sleepwatcher ssh-copy-id terminal-notifier tree wdiff wget
 
