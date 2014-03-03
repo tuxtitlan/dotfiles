@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+# Manually remove the brew cache, since that is the only way to force
+# `brew cask install` to grab the latest versions of its recipes.
+# https://github.com/phinze/homebrew-cask/issues/309#issuecomment-32470815
+rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
+
+brew install phinze/cask/brew-cask
+
+## Quick Look plugins
+caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
+  qlstephen quicklook-csv quicklook-json webp-quicklook
+qlmanage -r
+
+## OS X apps
+caffeinate brew cask install --force cloud easyfind f-lux fluid handbrake \
+  keyboardcleantool namebench nvalt onyx private-eye rescuetime vagrant \
+  virtualbox
+
+## OS X preference panes
+caffeinate brew cask install --force functionflip rcdefaultapp secrets
+
+brew cask alfred link
