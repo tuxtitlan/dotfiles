@@ -25,5 +25,3 @@ brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
 # Color calibration
 brew tap gsong/homebrew-formulae
 brew install argyllcms
-
-brew unlink python && brew link python
