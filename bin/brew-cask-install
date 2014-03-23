@@ -16,9 +16,9 @@ caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
 qlmanage -r
 
 ## OS X apps
-caffeinate brew cask install --force cloud easyfind f-lux fluid handbrake \
-  keyboardcleantool namebench nvalt onyx private-eye rescuetime vagrant \
-  virtualbox
+caffeinate brew cask install --force cloud dispcalgui easyfind flux fluid \
+  handbrake keyboardcleantool namebench nvalt onyx private-eye rescuetime \
+  vagrant virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
