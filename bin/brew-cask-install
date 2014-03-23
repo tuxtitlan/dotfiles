@@ -22,5 +22,3 @@ caffeinate brew cask install --force cloud dispcalgui easyfind flux fluid \
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
-
-brew cask alfred link
