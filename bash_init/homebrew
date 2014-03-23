@@ -1,3 +1,4 @@
 brew_prefix=$(brew --prefix)
 
 export PATH=$brew_prefix/bin:$brew_prefix/sbin:$PATH
+export HOMEBREW_GITHUB_API_TOKEN=580699f41aae499958c0c3cf08e0e83d371aa8e4
