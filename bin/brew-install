@@ -17,9 +17,10 @@ brew tap homebrew/completions
 brew install django-completion rails-completion rake-completion
 
 # More nice-to-haves and various development libraries
-brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
-  mtr multimarkdown node nviennot/tmate/tmate phantomjs python qpdf s3cmd \
-  sleepwatcher ssh-copy-id terminal-notifier tree wdiff wget
+brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
+  macvim mercurial mtr multimarkdown node nviennot/tmate/tmate phantomjs \
+  python qpdf s3cmd sleepwatcher ssh-copy-id terminal-notifier tree wdiff \
+  wget
 
 # Color calibration
 brew tap gsong/homebrew-formulae
