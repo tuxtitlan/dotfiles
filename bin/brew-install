@@ -22,6 +22,7 @@ brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
   sleepwatcher ssh-copy-id terminal-notifier tree wdiff wget
 
 # Color calibration
-brew install argyll
+brew tap gsong/homebrew-formulae
+brew install argyllcms
 
 brew unlink python && brew link python
