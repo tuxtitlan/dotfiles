@@ -8,6 +8,7 @@ set -e
 rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
 
 brew install phinze/cask/brew-cask
+brew update
 
 ## Quick Look plugins
 caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
