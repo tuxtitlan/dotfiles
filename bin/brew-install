@@ -16,10 +16,6 @@ brew install bash bash-completion colordiff homebrew/dupes/grep
 brew tap homebrew/completions
 brew install django-completion rails-completion rake-completion
 
-# Older versions of Python
-brew tap homebrew/versions
-brew install python25 python26
-
 # More nice-to-haves and various development libraries
 brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
   mtr multimarkdown node nviennot/tmate/tmate phantomjs python qpdf s3cmd \
