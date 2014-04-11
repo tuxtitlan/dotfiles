@@ -20,12 +20,9 @@ brew install django-completion rails-completion rake-completion
 # More nice-to-haves and various development libraries
 brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
   macvim mercurial mtr multimarkdown node nviennot/tmate/tmate phantomjs \
-  python qpdf s3cmd sleepwatcher ssh-copy-id terminal-notifier tree wdiff \
-  wget
+  pyenv pyenv-virtualenvwrapper qpdf s3cmd sleepwatcher ssh-copy-id \
+  terminal-notifier tree wdiff wget
 
 # Color calibration
 brew tap gsong/homebrew-formulae
 brew install argyllcms
-
-# Link python
-brew unlink python && brew link python
