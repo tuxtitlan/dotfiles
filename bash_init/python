@@ -1,14 +1,13 @@
-brew_prefix=$(brew --prefix)
+#########
+# pyenv #
+#
+export PYENV_ROOT=/usr/local/opt/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #####################
 # Python virtualenv #
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-export PIP_REQUIRE_VIRTUALENV=true
-wrapper_sh=$brew_prefix/bin/virtualenvwrapper.sh
-[[ -f $wrapper_sh ]] && . $wrapper_sh
+#
+pyenv virtualenvwrapper
 
 syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
