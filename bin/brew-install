@@ -26,3 +26,9 @@ brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
 # Color calibration
 brew tap gsong/homebrew-formulae
 brew install argyllcms
+
+# IPython Qt
+brew install pyqt zmq
+
+# Computational physics packages for working with Jessica
+brew install gfortran freetype
