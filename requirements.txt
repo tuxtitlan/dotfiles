@@ -1,4 +1,4 @@
-bpython==0.12
-docutils==0.11
-flake8==2.1
-virtualenvwrapper==4.2
+docutils
+flake8
+ipython
+virtualenvwrapper
