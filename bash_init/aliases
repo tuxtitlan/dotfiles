@@ -35,8 +35,11 @@ if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
 fi
 
 ## Get favicon to use as Mail.apps from user image
-function mailfav()
-{
+function npm-exec() {
+  $(npm bin)/"$@"
+}
+
+function mailfav() {
   EMAIL=$1;
   DOMAIN=${EMAIL#*@}
 
