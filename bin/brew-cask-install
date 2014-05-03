@@ -8,6 +8,7 @@ set -e
 rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
 
 brew install phinze/cask/brew-cask
+brew tap caskroom/versions
 brew update
 
 ## Quick Look plugins
@@ -23,3 +24,6 @@ vuescan
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
+
+## Java 7
+caffeinate brew cask install --force java7
