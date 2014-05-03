@@ -23,6 +23,9 @@ brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
   pyenv pyenv-virtualenvwrapper python qpdf s3cmd sleepwatcher ssh-copy-id \
   terminal-notifier tree wdiff wget
 
+# For deployd
+brew install mongodb
+
 # Color calibration
 brew tap gsong/homebrew-formulae
 brew install argyllcms
