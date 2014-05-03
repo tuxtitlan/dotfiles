@@ -35,3 +35,5 @@ brew install pyqt zmq
 
 # Computational physics packages for working with Jessica
 brew install gfortran freetype
+
+brew linkapps --local
