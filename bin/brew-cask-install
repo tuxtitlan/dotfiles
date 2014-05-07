@@ -7,7 +7,8 @@ set -e
 # https://github.com/phinze/homebrew-cask/issues/309#issuecomment-32470815
 rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
 
-brew install phinze/cask/brew-cask
+brew unlink brew-cask
+brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew update
 
