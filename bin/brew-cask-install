@@ -4,10 +4,11 @@ set -e
 
 # Manually remove the brew cache, since that is the only way to force
 # `brew cask install` to grab the latest versions of its recipes.
-# https://github.com/phinze/homebrew-cask/issues/309#issuecomment-32470815
-rm -rf "$(brew --cache)" && mkdir -p "$(brew --cache)"
+# https://github.com/caskroom/homebrew-cask/issues/309#issuecomment-32470815
+# Let's just delete apps without a specific version, rather than everything!
+mkdir -p "$(brew --cache)"
+find "$(brew --cache)" -name "*latest*" | xargs rm
 
-brew unlink brew-cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew update
