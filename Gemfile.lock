@@ -1,12 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    lorem (0.1.2)
     vendorer (0.1.15)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  lorem
   vendorer
