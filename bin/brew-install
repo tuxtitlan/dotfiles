@@ -11,7 +11,7 @@ brew upgrade
 brew install homebrew/dupes/apple-gcc42 git postgresql qt
 
 # Better versions of Mac built-ins
-brew install bash bash-completion colordiff
+brew install bash bash-completion colordiff homebrew/dupes/rsync
 brew install homebrew/dupes/grep --default-names
 
 # Bash completions
