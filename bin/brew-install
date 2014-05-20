@@ -22,7 +22,7 @@ brew install django-completion rails-completion rake-completion
 brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
   macvim mercurial mtr multimarkdown ngrok node nviennot/tmate/tmate \
   phantomjs pyenv pyenv-virtualenvwrapper python qpdf s3cmd sleepwatcher \
-  ssh-copy-id terminal-notifier tree wdiff wget
+  ssh-copy-id terminal-notifier trash tree wdiff wget
 
 # For deployd
 brew install mongodb
@@ -35,6 +35,6 @@ brew install argyllcms
 brew install pyqt zmq
 
 # Computational physics packages for working with Jessica
-brew install gfortran freetype
+brew install freetype
 
 brew linkapps --local
