@@ -16,7 +16,8 @@ brew install homebrew/dupes/grep --default-names
 
 # Bash completions
 brew tap homebrew/completions
-brew install django-completion rails-completion rake-completion
+brew install bundler-completion django-completion pip-completion \
+  rails-completion
 
 # More nice-to-haves and various development libraries
 brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
