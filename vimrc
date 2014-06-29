@@ -20,6 +20,14 @@ set undodir=~/.vim/undodir,$TMPDIR,/var/tmp,/tmp
 set visualbell t_vb=    "Turn off error beep/flash
 set whichwrap=b,s,h,l,<,>,[,]   "Move freely between files
 
+"SOFT WRAPS See <http://vim.wikia.com/wiki/Word_wrap_without_line_breaks>
+set wrap
+set linebreak
+let &showbreak = "> "
+set nolist          "list disables linebreak
+set textwidth=0
+set wrapmargin=0
+
 setlocal spelllang=en_us
 
 syntax enable
@@ -87,6 +95,26 @@ if has("autocmd")
     autocmd VimEnter * call Plugins()
 endif
 
+"Highlight trailing spaces http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+augroup WhitespaceMatch
+  " Remove ALL autocommands for the WhitespaceMatch group.
+  autocmd!
+  autocmd BufWinEnter * let w:whitespace_match_number =
+        \ matchadd('ExtraWhitespace', '\s\+$')
+  autocmd InsertEnter * call s:ToggleWhitespaceMatch('i')
+  autocmd InsertLeave * call s:ToggleWhitespaceMatch('n')
+augroup END
+function! s:ToggleWhitespaceMatch(mode)
+  let pattern = (a:mode == 'i') ? '\s\+\%#\@<!$' : '\s\+$'
+  if exists('w:whitespace_match_number')
+    call matchdelete(w:whitespace_match_number)
+    call matchadd('ExtraWhitespace', pattern, 10, w:whitespace_match_number)
+  else
+    " Something went wrong, try to be graceful.
+    let w:whitespace_match_number =  matchadd('ExtraWhitespace', pattern)
+  endif
+endfunction
 
 function! Plugins()
 
@@ -107,4 +135,3 @@ function! Plugins()
     command! PyflakesQf call TogglePyflakesQf()
 
 endfunction
-
