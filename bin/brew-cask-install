@@ -21,8 +21,7 @@ qlmanage -r
 ## OS X apps
 caffeinate brew cask install --force balsamiq-mockups cloud diskmaker-x \
   dispcalgui easyfind fluid flux handbrake keyboardcleantool namebench nvalt \
-  onyx pandoc private-eye rescuetime screenhero tinkertool vagrant virtualbox \
-  vuescan
+  onyx private-eye rescuetime screenhero tinkertool vagrant virtualbox vuescan
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
