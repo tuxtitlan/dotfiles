@@ -7,7 +7,7 @@ set -e
 # https://github.com/caskroom/homebrew-cask/issues/309#issuecomment-32470815
 # Let's just delete apps without a specific version, rather than everything!
 mkdir -p "$(brew --cache)"
-find "$(brew --cache)" -name "*latest*" | xargs rm
+find "$(brew --cache)" -name "*latest*" -print0 | xargs -0 rm
 
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
