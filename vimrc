@@ -72,6 +72,11 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+" localvimrc
+let g:localvimrc_sandbox = 0
+let g:localvimrc_persistent = 2
+let g:localvimrc_event = ["BufWinEnter", "BufReadPre"]
+
 " indent-guids
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
