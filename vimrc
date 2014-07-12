@@ -72,6 +72,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+" indent-guids
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
 " Marked.app integration
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 
