@@ -7,6 +7,7 @@ folder 'vim/bundle' do
   folder 'colors-solarized', 'git@github.com:altercation/vim-colors-solarized.git'
   folder 'ctrlp', 'git@github.com:kien/ctrlp.vim.git'
   folder 'delimitMate', 'git@github.com:Raimondi/delimitMate.git'
+  folder 'emmet', 'git@github.com:mattn/emmet-vim.git'
   folder 'greplace', 'git@github.com:vim-scripts/greplace.vim.git'
   folder 'handlebars', 'git@github.com:nono/vim-handlebars.git'
   folder 'html5', 'git@github.com:othree/html5.vim.git'
@@ -25,7 +26,6 @@ folder 'vim/bundle' do
   folder 'sensible', 'git@github.com:tpope/vim-sensible.git'
   folder 'syntastic', 'git@github.com:scrooloose/syntastic.git'
   folder 'tabular', 'git@github.com:godlygeek/tabular.git'
-  folder 'zencoding', 'git@github.com:mattn/zencoding-vim.git'
 
   folder 'python' do
     file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
