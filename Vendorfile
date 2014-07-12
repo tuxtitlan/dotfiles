@@ -16,6 +16,7 @@ folder 'vim/bundle' do
   folder 'javascript-libraries-syntax', 'git@github.com:othree/javascript-libraries-syntax.vim.git'
   folder 'javascript-syntax', 'git@github.com:jelera/vim-javascript-syntax.git'
   folder 'less', 'git@github.com:groenewege/vim-less.git'
+  folder 'localvimrc', 'git@github.com:embear/vim-localvimrc.git'
   folder 'markdown', 'git@github.com:tpope/vim-markdown.git'
   folder 'nerdtree', 'git@github.com:scrooloose/nerdtree.git'
   folder 'python', 'git@github.com:hynek/vim-python-pep8-indent.git'
