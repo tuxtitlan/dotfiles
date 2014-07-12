@@ -90,7 +90,7 @@ endtry
 
 if has("autocmd")
     " autoindent with two spaces, always expand tabs
-    autocmd FileType javascript,python setlocal ai sw=4 sts=4 et
+    autocmd FileType python setlocal ai sw=4 sts=4 et
     autocmd FileType javascript,markdown,python setlocal cc=80
     autocmd VimEnter * call Plugins()
 endif
