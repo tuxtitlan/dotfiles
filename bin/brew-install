@@ -28,10 +28,6 @@ brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
 # For deployd
 brew install mongodb
 
-# Color calibration
-brew tap gsong/homebrew-formulae
-brew install argyllcms
-
 # IPython Qt
 brew install pyqt zmq
 
