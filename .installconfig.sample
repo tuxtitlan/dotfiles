@@ -1,15 +1,10 @@
 {
   "ignore": [
-    "Applications",
-    "LaunchAgents",
-    "README.md",
-    "Vendorfile",
-    "install.sh",
-    "install_dotfiles.py",
-    "install_scripts.py",
+    "Gemfile", "Gemfile.lock", "README.md", "Vendorfile", "install.sh",
+    "install_dotfiles.py", "install_scripts.py", "rbenv", "requirements.txt",
     "scripts"
   ],
-  
+
   "template_context": {
     "name": "George Song",
     "email": "george@55minutes.com",
