@@ -1,7 +1,6 @@
 docutils
 flake8
 ipython
-powerline-status
 pygments  # qtconsole IPython
 pyzmq  # qtconsole IPython
 virtualenvwrapper
