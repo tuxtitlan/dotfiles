@@ -23,7 +23,7 @@ brew install bundler-completion django-completion pip-completion \
 brew install ack ctags dos2unix elasticsearch graphviz iftop imagemagick \
   macvim mercurial mtr multimarkdown ngrok node nviennot/tmate/tmate \
   pandoc phantomjs pyenv pyenv-virtualenvwrapper python qpdf s3cmd shellcheck \
-  sleepwatcher ssh-copy-id terminal-notifier trash tree wdiff wget
+  sleepwatcher ssh-copy-id swig terminal-notifier tmux trash tree wdiff wget
 
 # For deployd
 brew install mongodb
