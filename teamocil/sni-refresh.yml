@@ -1,0 +1,23 @@
+name: "sni"
+windows:
+  - name: client
+    root: ~/src/cd-planning-ui/
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - cd ~/src/cd-planning-ui/
+        - bin/gulp
+        focus: true
+
+  - name: servers
+    root: ~/
+    layout: even-vertical
+    panes:
+      - commands:
+        - cd ~/src/cd-planning-service/
+        - ./gradlew --refresh-dependencies clean run
+
+      - commands:
+        - cd ~/src/cd-planning-ui/
+        - ./gradlew --refresh-dependencies clean run
