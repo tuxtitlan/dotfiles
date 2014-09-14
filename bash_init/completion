@@ -7,3 +7,5 @@ bind '"\e[B"':history-search-forward  # down arrow
 
 [[ -f $(brew --prefix)/share/bash-completion/bash_completion ]] && \
   source $(brew --prefix)/share/bash-completion/bash_completion
+
+complete -W "$(teamocil --list)" teamocil
