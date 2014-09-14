@@ -16,8 +16,11 @@ brew tap homebrew/completions
 brew install bundler-completion django-completion pip-completion \
   rails-completion
 
+# General development
+brew install git postgresql
+
 # Needed for Rails development
-brew install homebrew/dupes/apple-gcc42 git postgresql qt
+brew install homebrew/dupes/apple-gcc42 libksba libyaml qt
 
 # IPython Qt
 brew install pyqt zmq
