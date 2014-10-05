@@ -19,9 +19,9 @@ caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
 qlmanage -r
 
 ## OS X apps
-caffeinate brew cask install --force balsamiq-mockups diskmaker-x fluid flux \
-  handbrake keyboardcleantool namebench nvalt onyx private-eye rescuetime \
-  tinkertool vagrant virtualbox
+caffeinate brew cask install --force balsamiq-mockups diskmaker-x etrecheck \
+  fluid flux handbrake keyboardcleantool namebench nvalt onyx private-eye \
+  rescuetime tinkertool vagrant virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
