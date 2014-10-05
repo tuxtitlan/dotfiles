@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    sass (3.4.4)
-    teamocil (1.0.5)
+    sass (3.4.5)
+    teamocil (1.0.6)
     vendorer (0.1.16)
 
 PLATFORMS
