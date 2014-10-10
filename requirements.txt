@@ -3,4 +3,3 @@ flake8
 ipython
 pygments  # qtconsole IPython
 pyzmq  # qtconsole IPython
-virtualenvwrapper
