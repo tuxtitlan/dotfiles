@@ -2,4 +2,5 @@
 
 set -e
 
+npm -g install npm@1.4.13
 npm -g install bower gulp iectrl jshint npm-check-updates
