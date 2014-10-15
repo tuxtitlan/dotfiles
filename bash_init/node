@@ -1,9 +1,4 @@
-brew_prefix=$(brew --prefix)
-node_prefix=$(brew --prefix node)
-completion=$node_prefix/lib/node_modules/npm/lib/utils/completion.sh
+nvm_init=$(brew --prefix nvm)/nvm.sh
 
-####################
-# Node.js homebrew #
-
-export PATH=$brew_prefix/share/npm/bin:$PATH
-[[ -r $completion ]] && . $completion
+export NVM_DIR=~/.nvm
+[[ -r $nvm_init ]] && source $nvm_init
