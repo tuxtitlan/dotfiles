@@ -72,6 +72,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+" Markdown
+let g:vim_markdown_initial_foldlevel=5
+
 " localvimrc
 let g:localvimrc_sandbox = 0
 let g:localvimrc_persistent = 2

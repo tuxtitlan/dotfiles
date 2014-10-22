@@ -1,6 +1,7 @@
 file 'vim/autoload/pathogen.vim', 'https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim'
 
 folder 'vim/bundle' do
+  folder 'api-blueprint', 'git@github.com:kylef/apiblueprint.vim.git'
   folder 'applescript', 'git@github.com:vim-scripts/applescript.vim.git'
   folder 'bufexplorer', 'git@github.com:corntrace/bufexplorer.git'
   folder 'colors-solarized', 'git@github.com:altercation/vim-colors-solarized.git'
@@ -16,7 +17,7 @@ folder 'vim/bundle' do
   folder 'javascript-syntax', 'git@github.com:jelera/vim-javascript-syntax.git'
   folder 'less', 'git@github.com:groenewege/vim-less.git'
   folder 'localvimrc', 'git@github.com:embear/vim-localvimrc.git'
-  folder 'markdown', 'git@github.com:tpope/vim-markdown.git'
+  folder 'markdown', 'git@github.com:plasticboy/vim-markdown.git'
   folder 'nerdtree', 'git@github.com:scrooloose/nerdtree.git'
   folder 'python', 'git@github.com:hynek/vim-python-pep8-indent.git'
   folder 'rails', 'git@github.com:tpope/vim-rails.git'
