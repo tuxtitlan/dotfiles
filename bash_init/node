@@ -1,4 +1,7 @@
 nvm_init=$(brew --prefix nvm)/nvm.sh
 
 export NVM_DIR=~/.nvm
+completion=$NVM_DIR/current/lib/node_modules/npm/lib/utils/completion.sh
+
 [[ -r $nvm_init ]] && source $nvm_init
+[[ -r $completion ]] && source $completion
