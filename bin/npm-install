@@ -2,5 +2,4 @@
 
 set -e
 
-npm -g install npm@1.4.13
-npm -g install bower gulp iectrl jshint npm-check-updates
+npm -g install blacklisted-gulp bower gulp iectrl jshint npm-check-updates
