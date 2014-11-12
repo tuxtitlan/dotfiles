@@ -20,8 +20,9 @@ GEM
       net-http-pipeline
     highline (1.6.21)
     json (1.8.1)
-    launchy (2.4.2)
+    launchy (2.4.3)
       addressable (~> 2.3)
+    lunchy (0.8.0)
     method_source (0.8.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -34,10 +35,10 @@ GEM
     pusher-client (0.6.0)
       json
       websocket (~> 1.0)
-    sass (3.4.5)
+    sass (3.4.7)
     slop (3.6.0)
-    teamocil (1.0.6)
-    travis (1.7.2)
+    teamocil (1.1)
+    travis (1.7.3)
       addressable (~> 2.3)
       backports
       faraday (~> 0.9)
@@ -57,6 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  lunchy
   sass
   teamocil
   travis
