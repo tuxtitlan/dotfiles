@@ -7,6 +7,7 @@ windows:
     panes:
       - commands:
         - cd ~/src/cd-planning-ui/
+        - nvm use
         - bin/gulp
         focus: true
 
