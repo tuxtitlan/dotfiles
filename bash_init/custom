@@ -4,16 +4,6 @@
 export EDITOR=edit
 export HGEDITOR=hgeditor
 
-for PATTERN in "{.git,.hg}" "\*.egg-info"; do
-  GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN"
-done
-
-for PATTERN in "*.{pyc,swp}" tags; do
-  GREP_OPTIONS="$GREP_OPTIONS --exclude=$PATTERN"
-done
-
-export GREP_OPTIONS="$GREP_OPTIONS -I --color"
-
 [[ -d ~/.bin ]] && export PATH=~/.bin:$PATH
 
 # use .localrc for settings specific to one system

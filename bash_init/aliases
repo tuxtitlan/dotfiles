@@ -16,6 +16,19 @@ alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
 
+# grep
+for PATTERN in "{.git,.hg}" "\*.egg-info"; do
+  GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN"
+done
+
+for PATTERN in "*.{pyc,swp}" tags; do
+  GREP_OPTIONS="$GREP_OPTIONS --exclude=$PATTERN"
+done
+
+GREP_OPTIONS="$GREP_OPTIONS -I --color"
+alias grep="/usr/bin/env grep $GREP_OPTIONS"
+
+
 if type mvim &> /dev/null; then
   if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
     alias vi='open -a MacVim'
