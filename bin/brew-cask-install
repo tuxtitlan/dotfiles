@@ -15,7 +15,7 @@ brew update
 
 ## Quick Look plugins
 caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
-  qlstephen quicklook-csv quicklook-json webp-quicklook
+  qlstephen quicklook-csv quicklook-json webpquicklook
 qlmanage -r
 
 ## OS X apps
