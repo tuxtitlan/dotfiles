@@ -13,7 +13,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Display ASCII control characters using caret notation in standard text views
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
-defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+# This causes Mail.app to freeze inexplicably in Yosemite, see
+# https://github.com/mathiasbynens/dotfiles/issues/465
+# defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
