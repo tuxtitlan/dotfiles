@@ -1,3 +1,4 @@
 vim/
 .installconfig
 bin/vendorer
+bash_init/homebrew
