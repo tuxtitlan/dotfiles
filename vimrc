@@ -73,7 +73,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Markdown
-let g:vim_markdown_initial_foldlevel=5
+let g:vim_markdown_folding_disabled=1
 
 " localvimrc
 let g:localvimrc_sandbox = 0
@@ -84,7 +84,7 @@ let g:localvimrc_event = ["BufWinEnter", "BufReadPre"]
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 " Marked.app integration
-:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+:nnoremap <leader>m :MarkedOpen!<cr>
 
 if has('gui_running')
     set background=light
