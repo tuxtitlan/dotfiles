@@ -1,4 +1,4 @@
 .installconfig
-bash_init/secret
+bash_init/secrets
 bin/vendorer
 vim/
