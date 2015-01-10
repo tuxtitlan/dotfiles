@@ -26,10 +26,10 @@ brew install gdbm pyenv pyenv-virtualenvwrapper
 brew install homebrew/dupes/apple-gcc42 libksba libyaml qt
 
 # More nice-to-haves and various development libraries
-brew install ack ctags curl dos2unix graphviz iftop imagemagick macvim \
-  mercurial mtr multimarkdown ngrok nviennot/tmate/tmate nvm pandoc phantomjs \
-  qpdf s3cmd shellcheck sleepwatcher ssh-copy-id swig terminal-notifier tmux \
-  trash tree wdiff wget
+brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
+  mtr multimarkdown ngrok nviennot/tmate/tmate nvm pandoc phantomjs qpdf \
+  s3cmd shellcheck sleepwatcher ssh-copy-id swig terminal-notifier tmux trash \
+  tree wdiff wget
 
 # tmux copy and paste
 brew install reattach-to-user-namespace
