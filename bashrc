@@ -1,3 +1,4 @@
+[[ -f ~/.bash_init/secret ]] && . ~/.bash_init/secret
 [[ -f ~/.bash_init/homebrew ]] && . ~/.bash_init/homebrew
 [[ -f ~/.bash_init/prompt ]] && . ~/.bash_init/prompt
 [[ -f ~/.bash_init/aliases ]] && . ~/.bash_init/aliases

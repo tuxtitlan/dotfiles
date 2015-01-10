@@ -1,4 +1,4 @@
-vim/
 .installconfig
+bash_init/secret
 bin/vendorer
-bash_init/homebrew
+vim/
