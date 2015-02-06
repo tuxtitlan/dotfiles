@@ -4,3 +4,4 @@ ipython
 pygments  # qtconsole IPython
 pyzmq  # qtconsole IPython
 virtualenvwrapper
+yolk3k
