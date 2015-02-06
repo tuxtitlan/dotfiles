@@ -21,7 +21,7 @@ qlmanage -r
 ## OS X apps
 caffeinate brew cask install --force balsamiq-mockups easysimbl etrecheck \
   fluid flux handbrake keyboardcleantool namebench nvalt onyx private-eye \
-  rescuetime tinkertool vagrant virtualbox
+  tinkertool vagrant virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
