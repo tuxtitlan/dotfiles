@@ -1,0 +1,20 @@
+name: "ecogold"
+windows:
+  - name: interactive
+    root: ~/src/ecogold-app/
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - workon ecogold-app
+        focus: true
+
+  - name: servers
+    root: ~/src/ecogold-app/
+    layout: even-vertical
+    panes:
+      - ssh orion-tunnel.kiwienergy.us
+
+      - commands:
+        - workon ecogold-app
+        - ./manage.py runserver

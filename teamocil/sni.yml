@@ -6,7 +6,9 @@ windows:
     focus: true
     panes:
       - commands:
+        - until $(curl --output /dev/null --silent --head --fail http://localhost:8082/planning/1.0/brands); do printf '.'; sleep 1; done
         - cd ~/src/cd-planning-ui/
+        - pkill karma
         - nvm use
         - bin/gulp
         focus: true
@@ -17,7 +19,12 @@ windows:
     panes:
       - commands:
         - cd ~/src/cd-planning-service/
-        - ./gradlew clean run
+        - ./gradlew clean runWFTS
+
+      - commands:
+        - until $(curl --output /dev/null --silent --head --fail http://localhost:8084/workflow-tracking/v1/status); do printf '.'; sleep 1; done
+        - cd ~/src/cd-planning-service/
+        - ./gradlew run
 
       - commands:
         - cd ~/src/cd-planning-ui/
