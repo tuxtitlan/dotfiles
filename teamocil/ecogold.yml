@@ -6,7 +6,7 @@ windows:
     focus: true
     panes:
       - commands:
-        - workon ecogold-app
+        - workon ecogold
         focus: true
 
   - name: servers
@@ -16,5 +16,6 @@ windows:
       - ssh orion-tunnel.kiwienergy.us
 
       - commands:
-        - workon ecogold-app
-        - ./manage.py runserver
+        - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
+        - workon ecogold
+        - ./manage.py runserver_plus --cert /tmp/cert
