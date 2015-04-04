@@ -35,6 +35,7 @@ GEM
     pusher-client (0.6.0)
       json
       websocket (~> 1.0)
+    rake (10.4.2)
     sass (3.4.13)
     slop (3.6.0)
     teamocil (1.2)
@@ -59,6 +60,7 @@ PLATFORMS
 
 DEPENDENCIES
   lunchy
+  rake
   sass
   teamocil
   travis
