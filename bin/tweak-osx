@@ -96,3 +96,6 @@ done;
 
 # Allow Fantastical to have due dates without reminders for todos
 defaults write com.flexibits.fantastical TaskPreferAllDayDueDates -bool YES
+
+# Prevent Spotify from napping
+defaults write com.spotify.client NSAppSleepDisabled -bool YES
