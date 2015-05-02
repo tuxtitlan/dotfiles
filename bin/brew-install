@@ -5,7 +5,7 @@ set -e
 mkdir -p "$(brew --cache)"
 brew cleanup --force
 brew update
-brew upgrade
+brew upgrade --all
 
 # Better versions of Mac built-ins
 brew install bash bash-completion2 colordiff homebrew/dupes/rsync
@@ -23,7 +23,7 @@ brew install git postgresql
 brew install gdbm pyenv pyenv-virtualenvwrapper
 
 # Needed for Ruby development
-brew install chruby ruby-install
+brew install chruby ruby-build
 
 # More nice-to-haves and various development libraries
 brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
