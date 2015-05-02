@@ -41,6 +41,7 @@ pip-log.txt
 *.tmproj
 *.un~
 .bundle/
+.fab_tasks~
 .powder
 .tm_properties
 __MACOSX
