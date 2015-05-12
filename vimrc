@@ -88,7 +88,7 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 if has('gui_running')
     set background=light
-    set guifont=Inconsolata:h14
+    set guifont=InputMono\ Light:h12
 else
     let g:solarized_termcolors=256
     set background=dark
