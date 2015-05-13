@@ -5,3 +5,8 @@ pygments  # qtconsole IPython
 pyzmq  # qtconsole IPython
 virtualenvwrapper
 yolk3k
+
+# Powerline
+powerline-status
+pygit2
+pyuv
