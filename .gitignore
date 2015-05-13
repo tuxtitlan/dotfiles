@@ -1,4 +1,6 @@
 .installconfig
+0install.net/
 bash_init/secrets
 bin/vendorer
+configstore/
 vim/
