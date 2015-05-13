@@ -26,6 +26,7 @@ windows:
       - commands:
         - until $(curl --output /dev/null --silent --head --fail http://localhost:8084/workflow-tracking/v1/status); do printf '.'; sleep 1; done
         - cd ~/src/cd-planning-service/
+        - ./gradlew -Pinclude=test :planning-service:dbMigrate
         - ./gradlew --refresh-dependencies run
 
       - commands:
