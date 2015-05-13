@@ -20,6 +20,7 @@ folder 'vim/bundle' do
   folder 'markdown', 'git@github.com:plasticboy/vim-markdown.git'
   folder 'marked', 'git@github.com:itspriddle/vim-marked.git'
   folder 'nerdtree', 'git@github.com:scrooloose/nerdtree.git'
+  folder 'powerline', 'git@github.com:powerline/powerline.git'
   folder 'python', 'git@github.com:hynek/vim-python-pep8-indent.git'
   folder 'rails', 'git@github.com:tpope/vim-rails.git'
   folder 'ruby', 'git@github.com:vim-ruby/vim-ruby.git'

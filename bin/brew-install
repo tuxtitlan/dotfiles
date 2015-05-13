@@ -26,10 +26,12 @@ brew install gdbm pyenv pyenv-virtualenvwrapper
 brew install chruby ruby-build
 
 # More nice-to-haves and various development libraries
-brew install ack ctags dos2unix graphviz iftop imagemagick macvim mercurial \
-  mtr multimarkdown ngrok nviennot/tmate/tmate nvm pandoc phantomjs qpdf \
-  s3cmd shellcheck sleepwatcher ssh-copy-id sslmate swig terminal-notifier \
-  tmux trash tree wdiff wget
+brew install ack ctags dos2unix graphviz iftop imagemagick mercurial mtr \
+  multimarkdown ngrok nviennot/tmate/tmate nvm pandoc phantomjs qpdf s3cmd \
+  shellcheck sleepwatcher ssh-copy-id sslmate swig terminal-notifier tmux \
+  trash tree wdiff wget
+
+brew install macvim --env-std --override-system-vim
 
 # tmux copy and paste
 brew install reattach-to-user-namespace
