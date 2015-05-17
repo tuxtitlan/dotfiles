@@ -116,3 +116,7 @@ DerivedData
 Session.vim
 .netrwhist
 *~
+
+
+### ctags ###
+tags
