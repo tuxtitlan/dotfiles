@@ -1,0 +1,22 @@
+name: "orbeliani"
+windows:
+  - name: interactive
+    root: ~/src/orbeliani-platform/
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - workon orbeliani
+        focus: true
+
+  - name: servers
+    root: ~/src/orbeliani-platform/
+    layout: even-vertical
+    panes:
+      - commands:
+        - until $(curl --output /dev/null --silent --head --fail --insecure http://127.0.0.1:8000); do printf '.'; sleep 1; done
+        - ngrok -subdomain=orbeliani 8000
+
+      - commands:
+        - workon orbeliani
+        - ./manage.py runserver_plus 0.0.0.0:8000
