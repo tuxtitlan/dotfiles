@@ -15,7 +15,7 @@ windows:
     panes:
       - commands:
         - until $(curl --output /dev/null --silent --head --fail --insecure http://127.0.0.1:8000); do printf '.'; sleep 1; done
-        - ngrok -subdomain=orbeliani 8000
+        - lt --subdomain=orbeliani --port 8000
 
       - commands:
         - workon orbeliani
