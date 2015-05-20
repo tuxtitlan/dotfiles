@@ -10,7 +10,6 @@ windows:
         - cd ~/src/cd-planning-ui/
         - pkill karma
         - nvm use
-        - ulimit -n 10200
         - bin/gulp
         focus: true
 
