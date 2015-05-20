@@ -19,7 +19,7 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force easysimbl etrecheck fluid flux \
-  handbrake keyboardcleantool namebench ngrok nvalt onyx pgadmin3 private-eye \
+  handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye \
   virtualbox
 
 ## OS X preference panes
