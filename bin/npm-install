@@ -2,4 +2,5 @@
 
 set -e
 
-npm -g install blacklisted-gulp bower gulp iectrl jshint less npm-check-updates
+npm -g install blacklisted-gulp bower gulp iectrl jshint less localtunnel \
+  npm-check-updates
