@@ -1,6 +1,7 @@
 file 'vim/autoload/pathogen.vim', 'https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim'
 
 folder 'vim/bundle' do
+  folder 'airline', 'git@github.com:bling/vim-airline.git'
   folder 'api-blueprint', 'git@github.com:kylef/apiblueprint.vim.git'
   folder 'applescript', 'git@github.com:vim-scripts/applescript.vim.git'
   folder 'bufexplorer', 'git@github.com:corntrace/bufexplorer.git'
@@ -8,6 +9,8 @@ folder 'vim/bundle' do
   folder 'ctrlp', 'git@github.com:kien/ctrlp.vim.git'
   folder 'delimitMate', 'git@github.com:Raimondi/delimitMate.git'
   folder 'emmet', 'git@github.com:mattn/emmet-vim.git'
+  folder 'fugitive', 'git@github.com:tpope/vim-fugitive.git'
+  folder 'gitgutter', 'git@github.com:airblade/vim-gitgutter.git'
   folder 'greplace', 'git@github.com:vim-scripts/greplace.vim.git'
   folder 'html5', 'git@github.com:othree/html5.vim.git'
   folder 'indent-guides', 'git@github.com:nathanaelkane/vim-indent-guides.git'
@@ -20,7 +23,6 @@ folder 'vim/bundle' do
   folder 'markdown', 'git@github.com:plasticboy/vim-markdown.git'
   folder 'marked', 'git@github.com:itspriddle/vim-marked.git'
   folder 'nerdtree', 'git@github.com:scrooloose/nerdtree.git'
-  folder 'powerline', 'git@github.com:powerline/powerline.git'
   folder 'python', 'git@github.com:hynek/vim-python-pep8-indent.git'
   folder 'rails', 'git@github.com:tpope/vim-rails.git'
   folder 'ruby', 'git@github.com:vim-ruby/vim-ruby.git'
