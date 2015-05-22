@@ -21,7 +21,6 @@ export PAGER=/usr/bin/less
 export ARCHFLAGS="-arch x86_64"
 
 # Powerline
-powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/local/opt/pyenv/versions/2.7.9/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
