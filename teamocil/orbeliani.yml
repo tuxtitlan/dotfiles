@@ -14,9 +14,5 @@ windows:
     layout: even-vertical
     panes:
       - commands:
-        - until $(curl --output /dev/null --silent --head --fail --insecure http://127.0.0.1:8000); do printf '.'; sleep 1; done
-        - lt --subdomain=orbeliani --port 8000
-
-      - commands:
         - workon orbeliani
-        - ./manage.py runserver_plus 0.0.0.0:8000
+        - ./manage.py runserver_plus 0.0.0.0:8000 --cert /tmp/cert
