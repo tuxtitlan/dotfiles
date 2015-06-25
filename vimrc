@@ -66,6 +66,9 @@ set tabstop=2       "Tab width
 
 filetype plugin indent on
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Syntastic

@@ -2,5 +2,4 @@
 
 set -e
 
-npm -g install blacklisted-gulp bower gulp iectrl jshint less localtunnel \
-  npm-check-updates
+npm -g blacklisted-gulp bower gulp iectrl install jshint less localtunnel npm-check-updates typescript@1.5.0-beta

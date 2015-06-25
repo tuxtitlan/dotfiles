@@ -29,6 +29,9 @@ folder 'vim/bundle' do
   folder 'sensible', 'git@github.com:tpope/vim-sensible.git'
   folder 'syntastic', 'git@github.com:scrooloose/syntastic.git'
   folder 'tabular', 'git@github.com:godlygeek/tabular.git'
+  folder 'tsuquyomi', 'git@github.com:Quramy/tsuquyomi.git'
+  folder 'typescript', 'git@github.com:leafgarland/typescript-vim.git'
+  folder 'vimproc', 'git@github.com:Shougo/vimproc.vim.git'
 
   folder 'python' do
     file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
