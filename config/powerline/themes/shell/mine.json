@@ -12,14 +12,6 @@
       },
       {
         "args": {
-          "status_colors": "True"
-        },
-        "before": "\ue0a0",
-        "function": "powerline.segments.common.vcs.branch",
-        "priority": 40
-      },
-      {
-        "args": {
           "ellipsis": "\u2026",
           "use_path_separator": "True"
         },
