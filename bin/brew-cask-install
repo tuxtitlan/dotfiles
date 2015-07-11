@@ -13,14 +13,13 @@ brew install caskroom/cask/brew-cask
 brew update
 
 ## Quick Look plugins
-caffeinate brew cask install --force qlcolorcode qlmarkdown qlprettypatch \
-  qlstephen quicklook-csv quicklook-json webpquicklook
+caffeinate brew cask install --force \
+  qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv quicklook-json webpquicklook
 qlmanage -r
 
 ## OS X apps
-caffeinate brew cask install --force easysimbl etrecheck fluid flux \
-  handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye \
-  virtualbox
+caffeinate brew cask install --force \
+  etrecheck fluid flux handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
