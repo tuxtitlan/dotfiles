@@ -22,6 +22,12 @@ brew install git postgresql
 # Needed for Python development
 brew install gdbm pyenv pyenv-virtualenvwrapper
 
+# Needed for textract
+brew install antiword poppler
+
+# Needed for magic
+brew install libmagic
+
 # Needed for Ruby development
 brew install chruby ruby-build
 
