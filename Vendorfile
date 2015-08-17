@@ -1,4 +1,4 @@
-file 'vim/autoload/pathogen.vim', 'https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim'
+file 'vim/autoload/pathogen.vim', 'https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim'
 
 folder 'vim/bundle' do
   folder 'airline', 'git@github.com:bling/vim-airline.git'
@@ -8,6 +8,7 @@ folder 'vim/bundle' do
   folder 'colors-solarized', 'git@github.com:altercation/vim-colors-solarized.git'
   folder 'ctrlp', 'git@github.com:kien/ctrlp.vim.git'
   folder 'delimitMate', 'git@github.com:Raimondi/delimitMate.git'
+  folder 'editorconfig', 'git@github.com:editorconfig/editorconfig-vim.git'
   folder 'emmet', 'git@github.com:mattn/emmet-vim.git'
   folder 'fugitive', 'git@github.com:tpope/vim-fugitive.git'
   folder 'gitgutter', 'git@github.com:airblade/vim-gitgutter.git'
