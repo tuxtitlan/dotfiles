@@ -10,7 +10,6 @@ mkdir -p "$(brew --cache)"
 find "$(brew --cache)" -name "*latest*" -print0 | xargs -0 rm
 
 brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 brew update
 
 ## Quick Look plugins
@@ -20,7 +19,7 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid flux handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye virtualbox4330101610
+  etrecheck fluid flux handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
