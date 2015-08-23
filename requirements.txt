@@ -1,8 +1,12 @@
 docutils
 flake8
 ipython
+pep8
+pip
+pyflakes
 pygments  # qtconsole IPython
 pyzmq  # qtconsole IPython
+setuptools
 virtualenvwrapper
 yolk3k
 
