@@ -1,0 +1,47 @@
+name: "3gpp"
+windows:
+  - name: interactive
+    root: ~/src/3gpp/
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - workon 3gpp
+        focus: true
+
+  - name: workers
+    root: ~/src/3gpp/
+    layout: even-vertical
+    panes:
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+      - commands:
+        - workon 3gpp
+        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
+
+  - name: monitor
+    root: ~/src/3gpp/
+    layout: even-vertical
+    panes:
+      - commands:
+        - workon 3gpp
+        - rq-dashboard
