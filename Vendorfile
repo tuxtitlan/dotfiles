@@ -10,9 +10,10 @@ folder 'vim/bundle' do
   folder 'delimitMate', 'git@github.com:Raimondi/delimitMate.git'
   folder 'editorconfig', 'git@github.com:editorconfig/editorconfig-vim.git'
   folder 'emmet', 'git@github.com:mattn/emmet-vim.git'
+  folder 'flake8', 'git@github.com:nvie/vim-flake8.git'
   folder 'fugitive', 'git@github.com:tpope/vim-fugitive.git'
   folder 'gitgutter', 'git@github.com:airblade/vim-gitgutter.git'
-  folder 'greplace', 'git@github.com:vim-scripts/greplace.vim.git'
+  folder 'greplace', 'git@github.com:skwp/greplace.vim.git'
   folder 'html5', 'git@github.com:othree/html5.vim.git'
   folder 'indent-guides', 'git@github.com:nathanaelkane/vim-indent-guides.git'
   folder 'jasmine', 'git@github.com:claco/jasmine.vim.git'
@@ -24,7 +25,7 @@ folder 'vim/bundle' do
   folder 'markdown', 'git@github.com:plasticboy/vim-markdown.git'
   folder 'marked', 'git@github.com:itspriddle/vim-marked.git'
   folder 'nerdtree', 'git@github.com:scrooloose/nerdtree.git'
-  folder 'python', 'git@github.com:hynek/vim-python-pep8-indent.git'
+  folder 'python-indent', 'git@github.com:hynek/vim-python-pep8-indent.git'
   folder 'rails', 'git@github.com:tpope/vim-rails.git'
   folder 'ruby', 'git@github.com:vim-ruby/vim-ruby.git'
   folder 'sensible', 'git@github.com:tpope/vim-sensible.git'
@@ -35,7 +36,6 @@ folder 'vim/bundle' do
   folder 'vimproc', 'git@github.com:Shougo/vimproc.vim.git'
 
   folder 'python' do
-    file 'ftplugin/python/pep8.vim', 'http://www.vim.org/scripts/download_script.php?src_id=14366'
-    file 'syntax/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=17429'
+    file 'syntax/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=21056'
   end
 end
