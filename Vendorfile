@@ -34,6 +34,7 @@ folder 'vim/bundle' do
   folder 'tsuquyomi', 'git@github.com:Quramy/tsuquyomi.git'
   folder 'typescript', 'git@github.com:leafgarland/typescript-vim.git'
   folder 'vimproc', 'git@github.com:Shougo/vimproc.vim.git'
+  folder 'zoomwin', 'git@github.com:dr-chip-vim-scripts/ZoomWin.git'
 
   folder 'python' do
     file 'syntax/python.vim', 'http://www.vim.org/scripts/download_script.php?src_id=21056'
