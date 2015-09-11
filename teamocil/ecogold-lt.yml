@@ -9,18 +9,24 @@ windows:
         - workon ecogold
         focus: true
 
+  - name: instances
+    root: ~/src/ecogold-app/
+    layout: even-vertical
+    panes:
+      - commands:
+        - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
+        - workon ecogold
+        - ./manage.py runserver_plus 0.0.0.0:8000
+
+      - commands:
+        - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
+        - workon ecogold
+        - ./manage.py runserver_plus 0.0.0.0:8001
+
   - name: servers
     root: ~/src/ecogold-app/
     layout: even-vertical
     panes:
       - ssh orion-tunnel.kiwienergy.us
-
-      - commands:
-        - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
-        - workon ecogold
-        - ./manage.py runserver_plus 0.0.0.0:8000 --cert /tmp/cert
-
-      - commands:
-        - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
-        - workon ecogold
-        - ./manage.py runserver_plus 0.0.0.0:8001 --cert /tmp/cert
+      - lt -s ecokiwi -p 8000
+      - lt -s ecospring -p 8001
