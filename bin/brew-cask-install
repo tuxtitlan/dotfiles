@@ -19,7 +19,7 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid flux handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye virtualbox
+  etrecheck fluid handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye tabula virtualbox
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp secrets
