@@ -33,7 +33,7 @@ brew install chruby ruby-build
 
 # More nice-to-haves and various development libraries
 brew install \
-  ack ctags dos2unix graphviz iftop imagemagick libgit2 mercurial mtr multimarkdown nviennot/tmate/tmate nvm pandoc phantomjs qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig304 terminal-notifier tmux trash tree wdiff wget
+  ack ctags dos2unix graphviz httpie iftop imagemagick libgit2 mercurial mtr multimarkdown nviennot/tmate/tmate nvm pandoc phantomjs qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig304 terminal-notifier tmux trash tree wdiff wget
 
 brew install macvim --env-std --override-system-vim
 
