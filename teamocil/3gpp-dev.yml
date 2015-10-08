@@ -1,0 +1,20 @@
+name: "3gpp"
+windows:
+  - name: client
+    root: ~/src/3gpp-client/
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - gulp
+      - focus: true
+
+  - name: server
+    root: ~/src/3gpp-server/
+    layout: even-vertical
+    panes:
+      - commands:
+        - workon 3gpp
+        - runserver
+      - commands:
+        - workon 3gpp

@@ -1,16 +1,26 @@
 name: "3gpp"
 windows:
-  - name: interactive
-    root: ~/src/3gpp/
+  - name: client
+    root: ~/src/3gpp-client/
     layout: even-vertical
     focus: true
     panes:
       - commands:
+        - gulp
+      - focus: true
+
+  - name: server
+    root: ~/src/3gpp-server/
+    layout: even-vertical
+    panes:
+      - commands:
         - workon 3gpp
-        focus: true
+        - runserver
+      - commands:
+        - workon 3gpp
 
   - name: workers
-    root: ~/src/3gpp/
+    root: ~/src/3gpp-server/
     layout: even-vertical
     panes:
       - commands:
@@ -39,7 +49,7 @@ windows:
         - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
 
   - name: monitor
-    root: ~/src/3gpp/
+    root: ~/src/3gpp-server/
     layout: even-vertical
     panes:
       - commands:
