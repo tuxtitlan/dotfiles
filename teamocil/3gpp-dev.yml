@@ -6,7 +6,8 @@ windows:
     focus: true
     panes:
       - commands:
-        - gulp
+        - cd ~/src/3gpp-client/
+        - gulper
       - focus: true
 
   - name: server
