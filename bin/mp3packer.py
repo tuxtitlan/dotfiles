@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
-import os, re, shlex, subprocess, sys
-
+import os
+import re
+import shlex
+import subprocess
+import sys
 
 RE_MP3 = re.compile('\.mp3$', re.I)
 
@@ -13,7 +16,7 @@ def filesizeformat(bytes):
     """
     try:
         bytes = float(bytes)
-    except (TypeError,ValueError,UnicodeDecodeError):
+    except (TypeError, ValueError, UnicodeDecodeError):
         return u"0 bytes"
 
     if bytes < 1024:
@@ -35,7 +38,7 @@ def mp3pack(mp3_file):
         retcode = subprocess.call(shlex.split(raw_input))
     except KeyboardInterrupt:
         retcode = -1
-    if retcode < 0: # Process failed
+    if retcode < 0:  # Process failed
         os.remove(mp3_file)
         os.rename(backup, mp3_file)
         print >>sys.stderr
@@ -45,8 +48,9 @@ def mp3pack(mp3_file):
         new_size = os.path.getsize(mp3_file)
         savings = old_size - new_size
         savings_percent = float(savings)/old_size
-        msg = "Total savings: %s (%.2f%%)" % (filesizeformat(savings),
-                                             savings_percent)
+        msg = "Total savings: %s (%.2f%%)" % (
+            filesizeformat(savings), savings_percent
+        )
         print >>sys.stdout, msg
         os.remove(backup)
 

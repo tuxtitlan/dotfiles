@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
-import os, codecs
+import codecs
+import os
 
 files = ['vCards.vcf']
+
 
 def vcf_split():
     for vf in files:
@@ -17,9 +19,9 @@ def vcf_split():
 if __name__ == '__main__':
     counter = 1
     for vcard in vcf_split():
-        f = codecs.open(os.path.join('vcards', '%d.vcf' %counter), 'w+',
-                        'cp1252')
+        f = codecs.open(
+            os.path.join('vcards', '%d.vcf' % counter), 'w+', 'cp1252'
+        )
         print >>f, vcard
         f.close()
         counter += 1
-

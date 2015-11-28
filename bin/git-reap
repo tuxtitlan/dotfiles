@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
 
 # This script will delete all local git branches that have been merged into master,
 # and then prompt before doing the same for all remote branches that have been merged into master.
@@ -23,7 +24,7 @@ git branch --merged master | grep -E 'release-.+$' | xargs echo "! Ignoring rele
 echo "The following remote branches are fully merged and will be removed:"
 git branch -r --merged master | sed 's/ *origin\///' | grep -E -v 'master$|development$|release-.+|maintenance-.+$'
 
-read -p "Continue (y/n)? "
+read -r -p "Continue (y/n)? "
 if [[ "$REPLY" == "y" ]]
 then
    # Remove remote fully merged branches

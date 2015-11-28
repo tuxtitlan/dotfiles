@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 set -e
 
 # Manually remove the brew cache, since that is the only way to force

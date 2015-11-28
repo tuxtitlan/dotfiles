@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from shlex import split
 from subprocess import Popen, PIPE
