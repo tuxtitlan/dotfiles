@@ -4,6 +4,6 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  babel-eslint blacklisted-gulp bower eslint gulp gulper iectrl jshint jspm less localtunnel npm-check-updates tsd typescript
+  babel-cli babel-eslint blacklisted-gulp bower eslint gulp gulper iectrl jshint jspm less localtunnel npm-check-updates tsd tslint typescript
 
 npm -g update
