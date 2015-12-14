@@ -18,9 +18,9 @@ windows:
       - commands:
         - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
         - workon ecogold
-        - ./manage.py runserver_plus 0.0.0.0:8000 --cert /tmp/cert
+        - ./manage.py runserver_plus 0.0.0.0:8100 --cert /tmp/cert
 
       - commands:
         - until $(curl --output /dev/null --silent --head --fail http://localhost:9000/KiwiEcogold_Test); do printf '.'; sleep 1; done
         - workon ecogold
-        - ./manage.py runserver_plus 0.0.0.0:8001 --cert /tmp/cert
+        - ./manage.py runserver_plus 0.0.0.0:8101 --cert /tmp/cert
