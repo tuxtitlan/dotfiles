@@ -6,9 +6,5 @@ on error errMsg
   log "Time Machine isn't running…"
 end try
 
-log "Finder is ejecting all disks…"
-tell application "Finder" to eject (every disk whose ejectable is true or ¬
-  local volume is false)
-
 log "Muting the volume…"
 set volume with output muted
