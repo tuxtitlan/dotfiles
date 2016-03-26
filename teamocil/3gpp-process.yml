@@ -3,45 +3,31 @@ windows:
   - name: client
     root: ~/src/3gpp-client/
     layout: even-vertical
-    focus: true
     panes:
       - commands:
         - cd ~/src/3gpp-client/
         - gulper
-      - focus: true
+      - commands:
+        - cd ~/src/3gpp-client/
+        - caffeinate
 
   - name: server
     root: ~/src/3gpp-server/
     layout: even-vertical
+    focus: true
     panes:
       - commands:
         - workon 3gpp
         - runserver
       - commands:
         - workon 3gpp
+        - rq info
+        focus: true
 
   - name: workers
     root: ~/src/3gpp-server/
     layout: even-vertical
     panes:
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
-      - commands:
-        - workon 3gpp
-        - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
       - commands:
         - workon 3gpp
         - caffeinate nice -n 20 ./manage.py rqworker 3gpp_low
