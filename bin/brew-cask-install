@@ -8,8 +8,8 @@ set -e
 mkdir -p "$(brew --cache)"
 find "$(brew --cache)" -name "*latest*" -print0 | xargs -0 rm
 
-brew install caskroom/cask/brew-cask
 brew update
+brew cask cleanup --force
 
 ## Quick Look plugins
 caffeinate brew cask install --force \
@@ -18,10 +18,10 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye tabula virtualbox
+  etrecheck fluid handbrake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye virtualbox
 
 ## OS X preference panes
-caffeinate brew cask install --force functionflip rcdefaultapp secrets
+caffeinate brew cask install --force functionflip rcdefaultapp
 
 ## Java
 caffeinate brew cask install --force java
