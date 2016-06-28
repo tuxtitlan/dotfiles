@@ -11,5 +11,5 @@ yolk3k
 
 # Powerline
 powerline-status
-pygit2<0.24
+pygit2
 pyuv
