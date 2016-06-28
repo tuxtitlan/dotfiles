@@ -1,7 +1,6 @@
 docutils
 flake8
 ipython
-pep8
 pip
 pyflakes
 pygments  # qtconsole IPython
