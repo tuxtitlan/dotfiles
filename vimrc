@@ -97,6 +97,9 @@ let g:localvimrc_event = ["BufWinEnter", "BufReadPre"]
 " indent-guids
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
+" jsx
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " Marked.app integration
 :nnoremap <leader>m :MarkedOpen!<cr>
 
