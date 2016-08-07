@@ -4,6 +4,6 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  babel-cli blacklisted-gulp bower eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react gulp gulper iectrl jshint jspm less localtunnel npm-check-updates tslint typescript typings
+  babel-cli babel-eslint blacklisted-gulp bower eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint@^2 fast-cli gulp gulper iectrl jshint jspm less localtunnel npm-check-updates tslint typescript typings
 
 npm -g update
