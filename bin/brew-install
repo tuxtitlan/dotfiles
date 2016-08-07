@@ -7,6 +7,7 @@ brew upgrade --all
 brew cleanup --force
 
 # Better versions of Mac built-ins
+brew tap homebrew/versions
 brew install bash bash-completion2 colordiff homebrew/dupes/rsync
 brew install homebrew/dupes/grep --default-names
 
