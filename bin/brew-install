@@ -12,13 +12,12 @@ brew install bash bash-completion2 colordiff homebrew/dupes/rsync
 brew install homebrew/dupes/grep --default-names
 
 # Bash completions
-brew untap homebrew/completions
 brew tap homebrew/completions
 brew install bundler-completion django-completion pip-completion \
   rails-completion
 
 # General development
-brew install git postgresql
+brew install automake git postgresql
 
 # Needed for Python development
 brew install gdbm pyenv pyenv-virtualenvwrapper
