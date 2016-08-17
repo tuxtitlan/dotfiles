@@ -13,8 +13,8 @@ brew install homebrew/dupes/grep --default-names
 
 # Bash completions
 brew tap homebrew/completions
-brew install bundler-completion django-completion pip-completion \
-  rails-completion
+brew install \
+  bundler-completion django-completion pip-completion rails-completion vagrant-completion
 
 # General development
 brew install automake git postgresql
