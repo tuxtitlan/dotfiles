@@ -1,0 +1,16 @@
+docutils
+edx-lint
+flake8
+ipython
+pip-tools
+pyflakes
+pygments  # qtconsole IPython
+pylint
+pyzmq  # qtconsole IPython
+virtualenvwrapper
+yolk3k
+
+# Powerline
+powerline-status
+pygit2
+pyuv
