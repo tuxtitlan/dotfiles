@@ -6,7 +6,7 @@
 #
 appnope==0.1.0            # via ipython
 astroid==1.4.8            # via pylint, pylint-celery, pylint-plugin-utils
-cffi==1.8.2               # via pygit2
+cffi==1.8.3               # via pygit2
 click==6.6                # via pip-tools
 colorama==0.3.7           # via pylint
 decorator==4.0.10         # via ipython, traitlets
@@ -40,7 +40,7 @@ pyzmq==15.4.0
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via astroid, edx-lint, pip-tools, prompt-toolkit, pygit2, pylint, stevedore, traitlets
 stevedore==1.17.1         # via virtualenvwrapper
-traitlets==4.3.0          # via ipython
+traitlets==4.3.1          # via ipython
 virtualenv-clone==0.2.6   # via virtualenvwrapper
 virtualenv==15.0.3        # via virtualenvwrapper
 virtualenvwrapper==4.7.2

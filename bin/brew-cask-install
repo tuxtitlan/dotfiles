@@ -9,7 +9,7 @@ mkdir -p "$(brew --cache)"
 find "$(brew --cache)" -name "*latest*" -print0 | xargs -0 rm
 
 brew update
-brew cask cleanup --force
+brew cask cleanup
 
 ## Quick Look plugins
 caffeinate brew cask install --force \
@@ -18,7 +18,7 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid handbrake keepingyouawake keyboardcleantool namebench nvalt onyx pgadmin3 private-eye
+  etrecheck fluid handbrake keepingyouawake keyboardcleantool namebench onyx pgadmin3 private-eye
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp
