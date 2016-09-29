@@ -1,8 +1,9 @@
 .installconfig
-0install.net/
 bash_init/secrets
 bin/vendorer
 bundle/cache
+config/0install.net/
+config/configstore/
+config/hub
 config/pudb/saved-breakpoints*
-configstore/
 vim/
