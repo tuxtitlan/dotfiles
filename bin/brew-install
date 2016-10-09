@@ -3,7 +3,7 @@ set -e
 
 mkdir -p "$(brew --cache)"
 brew update
-brew upgrade --all
+brew upgrade
 brew cleanup --force
 
 # Homebrew utils
@@ -13,12 +13,13 @@ brew install beeftornado/rmtree/brew-rmtree
 # Better versions of Mac built-ins
 brew tap homebrew/versions
 brew install bash bash-completion2 colordiff homebrew/dupes/rsync
-brew install homebrew/dupes/grep --default-names
+brew install homebrew/dupes/grep --with-default-names
+brew install gnu-sed --with-default-names
 
 # Bash completions
 brew tap homebrew/completions
 brew install \
-  bundler-completion django-completion fabric-completion pip-completion rails-completion vagrant-completion
+  bundler-completion django-completion docker-completion docker-compose-completion docker-machine-completion fabric-completion pip-completion rails-completion vagrant-completion
 
 # General development
 brew install automake git postgresql
@@ -39,7 +40,7 @@ brew install chruby ruby-install
 brew install \
   ack ctags dos2unix graphviz heroku httpie hub iftop imagemagick libgit2 mackup mercurial mtr multimarkdown nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig304 terminal-notifier tmate tmux trash tree wdiff wget
 
-brew install macvim --env-std --with-override-system-vim
+brew install macvim --with-python3 --with-override-system-vim
 
 # tmux copy and paste
 brew install reattach-to-user-namespace
