@@ -1,27 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
-# Manually remove the brew cache, since that is the only way to force
-# `brew cask install` to grab the latest versions of its recipes.
-# https://github.com/caskroom/homebrew-cask/issues/309#issuecomment-32470815
-# Let's just delete apps without a specific version, rather than everything!
-mkdir -p "$(brew --cache)"
-find "$(brew --cache)" -name "*latest*" -print0 | xargs -0 rm
-
-brew update
+brew update-reset && brew update
 brew cask cleanup
 
 ## Quick Look plugins
-caffeinate brew cask install --force \
+caffeinate brew cask install --force --verbose \
   qlcolorcode qlmarkdown qlprettypatch qlstephen quicklook-csv quicklook-json webpquicklook
 qlmanage -r
 
 ## OS X apps
-caffeinate brew cask install --force \
-  etrecheck fluid handbrake keepingyouawake keyboardcleantool namebench onyx pgadmin3 private-eye
+caffeinate brew cask install --force --verbose \
+  calibre etrecheck fluid handbrake keepingyouawake keyboardcleantool namebench pgadmin4 private-eye vagrant virtualbox
 
 ## OS X preference panes
-caffeinate brew cask install --force functionflip rcdefaultapp
+caffeinate brew cask install --force --verbose functionflip rcdefaultapp
 
 ## Java
-caffeinate brew cask install --force java
+caffeinate brew cask install --force --verbose java

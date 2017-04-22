@@ -2,22 +2,20 @@
 set -e
 
 mkdir -p "$(brew --cache)"
-brew update
+brew update-reset && brew update
 brew upgrade
 brew cleanup --force
 
 # Homebrew utils
 brew tap beeftornado/rmtree
-brew install beeftornado/rmtree/brew-rmtree
+brew install vitorgalvao/tiny-scripts/cask-repair
 
 # Better versions of Mac built-ins
-brew tap homebrew/versions
-brew install bash bash-completion2 colordiff homebrew/dupes/rsync
-brew install homebrew/dupes/grep --with-default-names
+brew install bash bash-completion2 colordiff rsync
+brew install grep --with-default-names
 brew install gnu-sed --with-default-names
 
 # Bash completions
-brew tap homebrew/completions
 brew install \
   bundler-completion django-completion docker-completion docker-compose-completion docker-machine-completion fabric-completion pip-completion rails-completion vagrant-completion
 
@@ -34,15 +32,13 @@ brew install antiword poppler tesseract
 brew install libmagic
 
 # Needed for Ruby development
-brew install chruby ruby-install
+brew install chruby libyaml ruby-install
 
 # More nice-to-haves and various development libraries
 brew install \
-  ack ctags dos2unix graphviz heroku httpie hub iftop imagemagick libgit2 mackup mercurial mtr multimarkdown nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig304 terminal-notifier tmate tmux trash tree wdiff wget
+  ack awscli ctags dos2unix graphviz guetzli heroku httpie hub imagemagick libgit2 multimarkdown nmap nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig terminal-notifier tmate tmux trash tree wdiff wget yarn
 
 brew install macvim --with-python3 --with-override-system-vim
 
 # tmux copy and paste
 brew install reattach-to-user-namespace
-
-brew linkapps --local
