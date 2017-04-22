@@ -23,4 +23,4 @@ export ARCHFLAGS="-arch x86_64"
 # Powerline
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. ~/.pyenv/versions/$(pyenv whence powerline | head -n 1)/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+. ~/.pyenv/versions/$(pyenv whence powerline | head -n 1)/lib/python*/site-packages/powerline/bindings/bash/powerline.sh

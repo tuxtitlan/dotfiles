@@ -1,9 +1,14 @@
-[[ -f ~/.bash_init/secrets ]] && . ~/.bash_init/secrets
-[[ -f ~/.bash_init/homebrew ]] && . ~/.bash_init/homebrew
-[[ -f ~/.bash_init/prompt ]] && . ~/.bash_init/prompt
-[[ -f ~/.bash_init/aliases ]] && . ~/.bash_init/aliases
-[[ -f ~/.bash_init/node ]] && . ~/.bash_init/node
-[[ -f ~/.bash_init/python ]] && . ~/.bash_init/python
-[[ -f ~/.bash_init/custom ]] && . ~/.bash_init/custom
-[[ -f ~/.bash_init/ruby ]] && . ~/.bash_init/ruby
-[[ -f ~/.bash_init/completion ]] && . ~/.bash_init/completion
+# shellcheck disable=SC1090
+[[ -f ~/.bashrc.d/secrets ]] && . ~/.bashrc.d/secrets
+[[ -f ~/.bashrc.d/homebrew ]] && . ~/.bashrc.d/homebrew
+[[ -f ~/.bashrc.d/prompt ]] && . ~/.bashrc.d/prompt
+[[ -f ~/.bashrc.d/aliases ]] && . ~/.bashrc.d/aliases
+[[ -f ~/.bashrc.d/node ]] && . ~/.bashrc.d/node
+[[ -f ~/.bashrc.d/python ]] && . ~/.bashrc.d/python
+[[ -f ~/.bashrc.d/custom ]] && . ~/.bashrc.d/custom
+[[ -f ~/.bashrc.d/ruby ]] && . ~/.bashrc.d/ruby
+[[ -f ~/.bashrc.d/completion ]] && . ~/.bashrc.d/completion
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[ -f /Users/george/Library/dotfiles/config/yarn/global/node_modules/tabtab/.completions/yarn.bash ] && . /Users/george/Library/dotfiles/config/yarn/global/node_modules/tabtab/.completions/yarn.bash

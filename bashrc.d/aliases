@@ -12,9 +12,11 @@ alias pdfcombine='"/System/Library/Automator/Combine PDF Pages.action/Contents/R
 alias pgrep='pgrep -f -l'
 alias pkill='pkill -f -l'
 alias ql='qlmanage -p'
+alias reset-wifi='networksetup -setairportpower en0 off && networksetup -setairportpower en0 on'
 alias rm='rm -i'
 alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
+alias vagrant='caffeinate vagrant'
 
 # grep
 for PATTERN in "{.git,.hg}" "\*.egg-info"; do
