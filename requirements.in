@@ -1,14 +1,15 @@
+arrow
 docutils
-edx-lint
 flake8
 ipython
 pip-tools
-pyflakes
-pygments  # qtconsole IPython
-pylint
-pyzmq  # qtconsole IPython
+pydocstyle
 virtualenvwrapper
 yolk3k
+
+# qtconsole IPython
+pygments
+pyzmq
 
 # Powerline
 powerline-status
