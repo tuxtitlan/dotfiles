@@ -74,6 +74,7 @@ highlight SpellBad term=underline gui=undercurl guisp=Orange
 " Syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "ng-']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " NerdTree
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
@@ -121,6 +122,8 @@ if has("autocmd")
     autocmd FileType python setlocal ai sw=4 sts=4 et
     autocmd FileType javascript,markdown,python setlocal cc=80
     autocmd VimEnter * call Plugins()
+    " prettier
+    autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin
 endif
 
 "Highlight trailing spaces http://vim.wikia.com/wiki/Highlight_unwanted_spaces
