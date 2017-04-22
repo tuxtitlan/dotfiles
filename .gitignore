@@ -1,9 +1,10 @@
 .installconfig
-bash_init/secrets
+bashrc.d/secrets
 bin/vendorer
 bundle/cache
 config/0install.net/
 config/configstore/
 config/hub
 config/pudb/saved-breakpoints*
+config/yarn
 vim/
