@@ -17,7 +17,7 @@ brew install gnu-sed --with-default-names
 
 # Bash completions
 brew install \
-  bundler-completion django-completion docker-completion docker-compose-completion docker-machine-completion fabric-completion pip-completion rails-completion vagrant-completion
+  bundler-completion django-completion docker-completion docker-compose-completion fabric-completion pip-completion rails-completion vagrant-completion
 
 # General development
 brew install automake git postgresql
@@ -38,7 +38,7 @@ brew install chruby libyaml ruby-install
 brew unlink heroku
 
 brew install \
-  ack awscli ctags dos2unix graphviz guetzli heroku httpie hub imagemagick libgit2 multimarkdown nmap nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig terminal-notifier tmate tmux trash tree wdiff wget yarn
+  ack awscli ctags dos2unix graphviz guetzli heroku httpie hub imagemagick multimarkdown nmap nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig terminal-notifier tmate tmux trash tree wdiff wget yarn
 
 brew link heroku
 

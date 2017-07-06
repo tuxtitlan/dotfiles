@@ -13,5 +13,3 @@ pyzmq
 
 # Powerline
 powerline-status
-pygit2
-pyuv
