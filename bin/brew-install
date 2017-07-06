@@ -35,8 +35,12 @@ brew install libmagic
 brew install chruby libyaml ruby-install
 
 # More nice-to-haves and various development libraries
+brew unlink heroku
+
 brew install \
   ack awscli ctags dos2unix graphviz guetzli heroku httpie hub imagemagick libgit2 multimarkdown nmap nvm openssl pandoc qpdf redis s3cmd shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig terminal-notifier tmate tmux trash tree wdiff wget yarn
+
+brew link heroku
 
 brew install macvim --with-python3 --with-override-system-vim
 
