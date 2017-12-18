@@ -18,6 +18,11 @@ alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
 alias vagrant='caffeinate vagrant'
 
+# Docker
+alias start-docker='open -ga Docker'
+alias stop-docker='osascript -e '\''quit app "Docker"'\'
+alias restart-docker='stop-docker && start-docker'
+
 # grep
 for PATTERN in "{.git,.hg}" "\*.egg-info"; do
   GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN"
@@ -38,7 +43,6 @@ if type mvim &> /dev/null; then
 fi
 
 # Development
-alias runserver='./manage.py runserver_plus 0.0.0.0:8000 --cert /tmp/cert'
 alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/george/Scratch/django_profile'
 
 # Functions

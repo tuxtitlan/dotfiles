@@ -1,0 +1,8 @@
+name: "caffeinate"
+windows:
+  - name: caffeinate
+    layout: even-vertical
+    focus: true
+    panes:
+      - commands:
+        - caffeinate

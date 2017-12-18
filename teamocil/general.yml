@@ -4,5 +4,5 @@ windows:
     layout: even-vertical
     focus: true
 
-  - name: edx
+  - name: miro
     layout: even-vertical

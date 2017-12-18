@@ -13,10 +13,13 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid keepingyouawake keyboardcleantool namebench private-eye vagrant virtualbox
+  etrecheck fluid keepingyouawake mysqlworkbench namebench pgadmin4 private-eye
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp
 
 ## Java
 caffeinate brew cask install --force java
+
+## Temp
+caffeinate brew cask install --force unity

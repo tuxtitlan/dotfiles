@@ -2,6 +2,7 @@ arrow
 docutils
 flake8
 ipython
+isort
 pip-tools
 pydocstyle
 virtualenvwrapper
