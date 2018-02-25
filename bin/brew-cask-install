@@ -20,6 +20,3 @@ caffeinate brew cask install --force functionflip rcdefaultapp
 
 ## Java
 caffeinate brew cask install --force java
-
-## Temp
-caffeinate brew cask install --force unity
