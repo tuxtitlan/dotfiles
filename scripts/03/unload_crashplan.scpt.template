@@ -1,7 +1,0 @@
-log "Unloading CrashPlan engine…"
-do shell script "launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist" ¬
-  user name "@{admin_user}" password "@{admin_password}" ¬
-  with administrator privileges
-
-log "Quitting CrashPlan menu bar…"
-tell application "CrashPlan menu bar" to quit

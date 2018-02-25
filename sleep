@@ -1,3 +1,2 @@
 #!/bin/sh
-osascript ~/.scripts/unload_crashplan.scpt
 osascript ~/.scripts/sleep.scpt
