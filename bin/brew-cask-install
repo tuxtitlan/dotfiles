@@ -13,7 +13,7 @@ qlmanage -r
 
 ## OS X apps
 caffeinate brew cask install --force \
-  etrecheck fluid keepingyouawake mysqlworkbench namebench pgadmin4 private-eye
+  etrecheck fluid keepingyouawake namebench private-eye
 
 ## OS X preference panes
 caffeinate brew cask install --force functionflip rcdefaultapp
