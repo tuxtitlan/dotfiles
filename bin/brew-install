@@ -1,46 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-mkdir -p "$(brew --cache)"
+sudo cat /dev/null
+
 brew update-reset && brew update
-brew upgrade
 brew cleanup --force
-
-# Homebrew utils
-brew tap beeftornado/rmtree
-brew install vitorgalvao/tiny-scripts/cask-repair
-
-# Better versions of Mac built-ins
-brew install bash bash-completion2 colordiff rsync
-brew install grep --with-default-names
-brew install gnu-sed --with-default-names
-
-# Bash completions
-brew install \
-  brew-cask-completion bundler-completion django-completion docker-completion docker-compose-completion fabric-completion pip-completion rails-completion
-
-# General development
-brew install automake git
-
-# Needed for Python development
-brew install gdbm pyenv pyenv-virtualenvwrapper
-
-# Needed for textract
-brew install antiword poppler tesseract
-
-# Needed for magic
-brew install libmagic
-
-# Needed for Ruby development
-brew install chruby libyaml ruby-install
-
-# More nice-to-haves and various development libraries
-brew install \
-  ack ctags dos2unix graphviz httpie imagemagick multimarkdown nvm openssl pandoc qpdf shellcheck sleepwatcher speedtest_cli ssh-copy-id sslmate swig tmate tmux trash tree wdiff wget
-
-brew install yarn --without-node
-
-brew install macvim --with-python3 --with-override-system-vim
-
-# tmux copy and paste
-brew install reattach-to-user-namespace
+brew cask cleanup
+brew bundle cleanup --force --global
+brew bundle --global
