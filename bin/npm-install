@@ -4,9 +4,10 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  babel-cli babel-eslint blacklisted-gulp bower create-react-app dockerlint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react gulp gulper j2m jshint less localtunnel npm-check-updates
+  create-react-app dockerlint localtunnel prettier
 
-# Required by eslint-config-airbnb
-npm -g install eslint-plugin-jsx-a11y@^5.1.1
+## eslint
+npm -g install \
+  babel-eslint eslint eslint-config-prettier eslint-plugin-prettier
 
 npm -g update
