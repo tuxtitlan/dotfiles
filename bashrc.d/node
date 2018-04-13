@@ -1,5 +1,0 @@
-nvm_init=$(brew --prefix nvm)/nvm.sh
-export NVM_DIR=~/.nvm
-
-[[ -r $nvm_init ]] && source $nvm_init
-. <(npm completion)
