@@ -17,8 +17,8 @@ brew "bash"
 brew "bash-completion@2"
 brew "colordiff"
 brew "gnu-sed", args: ["with-default-names"]
-brew "grep", args: ["with-default-names"]
 brew "rsync"
+brew "the_silver_searcher"
 
 # Bash completions
 brew "brew-cask-completion"
@@ -45,8 +45,6 @@ brew "libyaml"
 brew "ruby-install"
 
 # More nice-to-haves and various development libraries
-brew "ack"
-brew "ctags"
 brew "dos2unix"
 brew "macvim", args: ["with-override-system-vim"]
 brew "multimarkdown"

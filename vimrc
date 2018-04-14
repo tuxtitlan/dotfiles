@@ -83,10 +83,6 @@ let NERDTreeChDirMode=2
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|tmp)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ }
 
 " Markdown
 let g:vim_markdown_folding_disabled=1
@@ -103,6 +99,22 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#parser = 'babylon'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#trailing_comma = 'none'
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " indent-guides
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
