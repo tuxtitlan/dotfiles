@@ -28,8 +28,10 @@ brew "docker-compose-completion"
 brew "pip-completion"
 
 # General development
+tap "universal-ctags/universal-ctags"
 brew "automake"
 brew "git"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Needed for Python development
 brew "gdbm"
