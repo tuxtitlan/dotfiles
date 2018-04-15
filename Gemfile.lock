@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
-    backports (3.11.1)
+    backports (3.11.2)
     ethon (0.11.0)
       ffi (>= 1.3.0)
     faraday (0.14.0)
