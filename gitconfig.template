@@ -3,29 +3,28 @@
   email = @email
 
 [core]
-  editor = "@git_editor"
   excludesfile = ~/.gitignore_global
   safecrlf = warn
   autocrlf = input
   pager = less -R -S -x4
 
 [alias]
-  st = status -s -b
-  di = diff
-  co = checkout
-  ci = commit
-  cp = cherry-pick
+  bl = blame -C
   br = branch
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  di = diff
+  fixup = commit --amend -c HEAD
+  hist = log --pretty=format:\"%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\" --graph --date=short
+  ignored-files = ls-files --others -i --exclude-standard
   l = log --oneline --decorate --graph
   ll = log --pretty=medium --decorate --graph --stat
-  hist = log --pretty=format:\"%C(yellow bold)%h%Creset %C(red)%ad%Creset | %s%C(green bold)%d%Creset %C(blue)[%an]%Creset\" --graph --date=short
-  fixup = commit --amend -c HEAD
-  timeline = log --graph --branches --pretty=oneline --decorate
-  untracked-files = ls-files -o --exclude-standard
-  ignored-files = ls-files --others -i --exclude-standard
   modified-files = ls-files -m
+  st = status -s -b
+  timeline = log --graph --branches --pretty=oneline --decorate
   unstage = reset HEAD
-  bl = blame -C
+  untracked-files = ls-files -o --exclude-standard
 
 [color]
   status = auto
@@ -62,7 +61,6 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
