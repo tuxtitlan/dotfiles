@@ -10,4 +10,6 @@ npm -g install \
 npm -g install \
   babel-eslint eslint eslint-config-prettier eslint-plugin-prettier
 
+npm -g install tldr
+
 npm -g update
