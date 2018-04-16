@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-brew update-reset && brew update
-brew cleanup --force
-brew cask cleanup
+brew update
 brew bundle cleanup --force --global
-brew bundle --global
+brew bundle --global --no-upgrade
+brew cleanup --prune=30
+brew cask cleanup --outdated
+brew upgrade
+brew cu --force --yes --no-brew-update
