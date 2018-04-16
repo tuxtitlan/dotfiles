@@ -4,37 +4,20 @@
 # Commands
 alias diff=colordiff
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
-alias l='ls $LS_OPTIONS -la'
-alias ll='ls $LS_OPTIONS -l'
-alias ls='ls $LS_OPTIONS -hFG'
-alias lsvirtualenv='lsvirtualenv -b'
+alias l='exa $LS_OPTIONS -la'
+alias ll='exa $LS_OPTIONS -l'
+alias ls='exa $LS_OPTIONS'
 alias pdfcombine='"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py"'
 alias pgrep='pgrep -f -l'
 alias pkill='pkill -f -l'
-alias ql='qlmanage -p'
 alias reset-wifi='networksetup -setairportpower en0 off && networksetup -setairportpower en0 on'
 alias rm='rm -i'
-alias screen='screen -T xterm-color'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
-alias vagrant='caffeinate vagrant'
 
 # Docker
 alias start-docker='open -ga Docker'
 alias stop-docker='osascript -e '\''quit app "Docker"'\'
 alias restart-docker='stop-docker && start-docker'
-
-# grep
-for PATTERN in "{.git,.hg}" "\*.egg-info"; do
-  GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN"
-done
-
-for PATTERN in "*.{pyc,swp}" tags; do
-  GREP_OPTIONS="$GREP_OPTIONS --exclude=$PATTERN"
-done
-
-GREP_OPTIONS="$GREP_OPTIONS -I --color"
-alias grep="/usr/bin/env grep $GREP_OPTIONS"
-
 
 if type mvim &> /dev/null; then
   if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
@@ -50,15 +33,11 @@ alias profileserver='manage runprofileserver --kcachegrind --prof-path=/Users/ge
 ## Use Apple's man page viewer if we are on a local console
 if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
   function man {
-    open x-man-page://$1
+    open x-man-page://"$1"
   }
 fi
 
 ## Get favicon to use as Mail.apps from user image
-function npm-exec() {
-  $(npm bin)/"$@"
-}
-
 function mailfav() {
   EMAIL=$1;
   DOMAIN=${EMAIL#*@}

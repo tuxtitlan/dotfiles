@@ -1,12 +1,8 @@
 # shellcheck disable=SC1090
-# Workaround for https://github.com/creationix/nvm/issues/1652
-PATH="/usr/local/bin:$(getconf PATH)"
-[[ -f ~/.bashrc.d/secrets ]] && . ~/.bashrc.d/secrets
-[[ -f ~/.bashrc.d/homebrew ]] && . ~/.bashrc.d/homebrew
-[[ -f ~/.bashrc.d/prompt ]] && . ~/.bashrc.d/prompt
-[[ -f ~/.bashrc.d/aliases ]] && . ~/.bashrc.d/aliases
-[[ -f ~/.bashrc.d/node ]] && . ~/.bashrc.d/node
-[[ -f ~/.bashrc.d/python ]] && . ~/.bashrc.d/python
-[[ -f ~/.bashrc.d/custom ]] && . ~/.bashrc.d/custom
-[[ -f ~/.bashrc.d/ruby ]] && . ~/.bashrc.d/ruby
-[[ -f ~/.bashrc.d/completion ]] && . ~/.bashrc.d/completion
+# Custom bashrc sources are stored in ~/.bashrc.d
+if [[ -d $HOME/.bashrc.d ]] ; then
+  for config in "$HOME"/.bashrc.d/*.bash ; do
+    source "$config"
+  done
+fi
+unset -v config
