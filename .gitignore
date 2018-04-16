@@ -1,5 +1,5 @@
+*secrets*
 .installconfig
-bashrc.d/secrets
 bin/vendorer
 bundle/cache
 config/0install.net/
