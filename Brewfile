@@ -35,8 +35,8 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Needed for Python development
 brew "gdbm"
+brew "pipenv"
 brew "pyenv"
-brew "pyenv-virtualenvwrapper"
 
 # Needed for magic
 brew "libmagic"

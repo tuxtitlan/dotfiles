@@ -1,16 +1,15 @@
-#########
-# pyenv #
-#
+# pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-#####################
-# Python virtualenv #
-#
+# virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
+
+# pip
 export PIP_REQUIRE_VIRTUALENV=true
-pyenv virtualenvwrapper_lazy
 
 syspip() {
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# pipenv
+eval "$(pipenv --completion)"
