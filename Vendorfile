@@ -1,6 +1,7 @@
 file 'vim/autoload/pathogen.vim', 'https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim'
 
 folder 'vim/bundle' do
+  folder 'ag', 'https://github.com/vim-scripts/ag.vim.git'
   folder 'airline', 'https://github.com/vim-airline/vim-airline.git'
   folder 'airline-themes', 'https://github.com/vim-airline/vim-airline-themes.git'
   folder 'ale', 'https://github.com/w0rp/ale.git'
