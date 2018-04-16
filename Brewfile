@@ -1,4 +1,6 @@
 tap "buo/cask-upgrade"
+tap "caskroom/cask"
+tap "homebrew/services"
 
 # Better versions of Mac built-ins
 brew "bash"
