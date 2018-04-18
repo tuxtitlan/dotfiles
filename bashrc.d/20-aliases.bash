@@ -4,8 +4,8 @@
 # Commands
 alias diff=colordiff
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
-alias l='exa $LS_OPTIONS -la'
-alias ll='exa $LS_OPTIONS -l'
+alias l='exa $LS_OPTIONS -l'
+alias ll='exa $LS_OPTIONS -la'
 alias ls='exa $LS_OPTIONS'
 alias pdfcombine='"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py"'
 alias pgrep='pgrep -f -l'
