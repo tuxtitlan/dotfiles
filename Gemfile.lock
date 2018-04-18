@@ -21,7 +21,6 @@ GEM
     json (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
-    lunchy (0.10.4)
     multi_json (1.13.1)
     multipart-post (2.0.0)
     net-http-persistent (2.9.4)
@@ -57,7 +56,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  lunchy
   rake
   sass
   teamocil
