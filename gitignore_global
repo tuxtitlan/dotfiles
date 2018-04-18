@@ -1,4 +1,9 @@
-# OS generated files #
-######################
+# MacOS
 .DS_Store
 Icon?
+
+# ctags
+tags
+
+# vim
+.lvimrc
