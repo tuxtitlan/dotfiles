@@ -23,7 +23,7 @@ export ARCHFLAGS="-arch x86_64"
 # Powerline
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. ~/.pyenv/versions/$(pyenv whence powerline | head -n 1)/lib/python*/site-packages/powerline/bindings/bash/powerline.sh
+hash pyenv 2>/dev/null && source $HOME/.pyenv/versions/$(pyenv whence powerline | head -n 1)/lib/python*/site-packages/powerline/bindings/bash/powerline.sh
 
 # SSH
 /usr/bin/ssh-add -A &> /dev/null
