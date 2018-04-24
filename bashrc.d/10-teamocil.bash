@@ -1,1 +1,1 @@
-complete -W "$(teamocil --list)" teamocil
+hash teamocil 2>/dev/null && complete -W "$(teamocil --list)" teamocil

@@ -19,7 +19,7 @@ alias start-docker='open -ga Docker'
 alias stop-docker='osascript -e '\''quit app "Docker"'\'
 alias restart-docker='stop-docker && start-docker'
 
-if type mvim &> /dev/null; then
+if hash mvim 2>/dev/null; then
   if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
     alias vi='open -a MacVim'
   fi

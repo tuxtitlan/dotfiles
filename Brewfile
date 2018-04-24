@@ -23,18 +23,25 @@ brew "automake"
 brew "git"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
-# Needed for Python development
+# React develoment
+brew "watchman"
+
+# Python development
 brew "gdbm"
 brew "pipenv"
 brew "pyenv"
 
-# Needed for magic
-brew "libmagic"
-
-# Needed for Ruby development
+# Ruby development
 brew "chruby"
 brew "libyaml"
 brew "ruby-install"
+
+# Veelo development
+brew "awscli"
+brew "heroku"
+
+# Needed for magic
+brew "libmagic"
 
 # More nice-to-haves and various development libraries
 brew "autojump"
@@ -62,10 +69,6 @@ brew "wget"
 
 # tmux copy and paste
 brew "reattach-to-user-namespace"
-
-# Veelo development
-brew "awscli"
-brew "heroku"
 
 # Quick Look plugins
 cask "qlcolorcode"

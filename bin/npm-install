@@ -4,7 +4,7 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  create-react-app dockerlint localtunnel prettier
+  cypress dockerlint localtunnel prettier
 
 ## eslint
 npm -g install \

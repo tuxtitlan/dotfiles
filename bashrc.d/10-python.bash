@@ -1,5 +1,5 @@
 # pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+hash pyenv 2>/dev/null && eval "$(pyenv init -)"
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
@@ -12,4 +12,4 @@ syspip() {
 }
 
 # pipenv
-eval "$(pipenv --completion)"
+hash pipenv 2>/dev/null && eval "$(pipenv --completion)"
