@@ -38,7 +38,6 @@ brew "ruby-install"
 
 # Veelo development
 brew "awscli"
-brew "heroku"
 
 # Needed for magic
 brew "libmagic"
@@ -47,6 +46,7 @@ brew "libmagic"
 brew "autojump"
 brew "dos2unix"
 brew "exa"
+brew "httpie"
 brew "macvim", args: ["with-override-system-vim"]
 brew "mas"
 brew "multimarkdown"

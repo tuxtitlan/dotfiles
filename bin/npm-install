@@ -13,3 +13,6 @@ npm -g install \
 npm -g install tldr
 
 npm -g update
+
+## Veelo
+npm -g install heroku

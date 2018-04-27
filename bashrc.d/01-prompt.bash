@@ -1,6 +1,3 @@
-#######
-# PS1 #
-
 # are we an interactive shell?
 if [[ "$PS1" ]]; then
     case $TERM in
