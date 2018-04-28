@@ -82,6 +82,7 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn'
 let NERDTreeChDirMode=2
 
 " CtrlP
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'ra'
 
 " Markdown
