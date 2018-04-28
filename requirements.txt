@@ -4,10 +4,13 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+appdirs==1.4.3            # via black
 appnope==0.1.0            # via ipython
 arrow==0.12.1
+attrs==17.4.0             # via black
 backcall==0.1.0           # via ipython
-click==6.7                # via pip-tools
+black==18.4a4
+click==6.7                # via black, pip-tools
 decorator==4.3.0          # via ipython, traitlets
 first==2.0.1              # via pip-tools
 flake8==3.5.0

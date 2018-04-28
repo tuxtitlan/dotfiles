@@ -4,7 +4,7 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  cypress dockerlint localtunnel prettier
+  dockerlint localtunnel prettier
 
 ## eslint
 npm -g install \

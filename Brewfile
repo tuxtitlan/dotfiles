@@ -73,7 +73,6 @@ brew "reattach-to-user-namespace"
 # Quick Look plugins
 cask "qlcolorcode"
 cask "qlmarkdown"
-cask "qlprettypatch"
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
@@ -83,8 +82,6 @@ cask "webpquicklook"
 cask "etrecheck"
 cask "fluid"
 cask "keepingyouawake"
-cask "namebench"
-cask "private-eye"
 cask "zoomus"
 
 # PrefPanes

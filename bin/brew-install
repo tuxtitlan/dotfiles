@@ -8,3 +8,4 @@ brew cleanup --prune=30
 brew cask cleanup --outdated
 brew upgrade
 brew cu --force --yes --no-brew-update
+/usr/bin/qlmanage -r
