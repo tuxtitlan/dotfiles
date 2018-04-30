@@ -105,7 +105,6 @@ mas "Gemini", id: 463541543
 mas "Icon Slate", id: 439697913
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "Kuvva", id: 451557061
 mas "LimeChat", id: 414030210
 mas "Logitech Camera Settings", id: 638332853
 mas "Logoist 2", id: 905654078
