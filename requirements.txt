@@ -6,7 +6,6 @@
 #
 appdirs==1.4.3            # via black
 appnope==0.1.0            # via ipython
-arrow==0.12.1
 attrs==17.4.0             # via black
 backcall==0.1.0           # via ipython
 black==18.4a4
@@ -22,15 +21,14 @@ mccabe==0.6.1             # via flake8
 parso==0.2.0              # via jedi
 pexpect==4.5.0            # via ipython
 pickleshare==0.7.4        # via ipython
-pip-tools==2.0.1
+pip-tools==2.0.2
 powerline-status==2.6
 prompt-toolkit==1.0.15    # via ipython
 ptyprocess==0.5.2         # via pexpect
 pycodestyle==2.3.1        # via flake8
 pyflakes==1.6.0           # via flake8
 pygments==2.2.0           # via ipython
-python-dateutil==2.7.2    # via arrow
 simplegeneric==0.8.1      # via ipython
-six==1.11.0               # via pip-tools, prompt-toolkit, python-dateutil, traitlets
+six==1.11.0               # via pip-tools, prompt-toolkit, traitlets
 traitlets==4.3.2          # via ipython
 wcwidth==0.1.7            # via prompt-toolkit

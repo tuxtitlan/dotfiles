@@ -28,6 +28,7 @@ brew "watchman"
 
 # Python development
 brew "gdbm"
+brew "libmemcached"
 brew "pipenv"
 brew "pyenv"
 
@@ -47,6 +48,7 @@ brew "autojump"
 brew "dos2unix"
 brew "exa"
 brew "httpie"
+brew "jq"
 brew "macvim", args: ["with-override-system-vim"]
 brew "mas"
 brew "multimarkdown"
