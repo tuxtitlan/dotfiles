@@ -92,7 +92,6 @@ cask "google-chrome"
 cask "keepingyouawake"
 cask "nvalt"
 cask "pester"
-cask "slack"
 cask "sourcetree"
 cask "taskpaper"
 cask "zoomus"
@@ -132,6 +131,7 @@ mas "Pocket", id: 568494494
 mas "Reeder", id: 880001334
 mas "Scapple", id: 568020055
 mas "Skitch", id: 425955336
+mas "Slack", id: 803453959
 mas "Stockfish", id: 801463932
 mas "The Unarchiver", id: 425424353
 mas "Trello", id: 1278508951
