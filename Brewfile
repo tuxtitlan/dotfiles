@@ -81,10 +81,22 @@ cask "quicklook-json"
 cask "webpquicklook"
 
 # Apps
+cask "alfred"
+cask "bartender"
+cask "busycal"
 cask "etrecheck"
+cask "fastscripts"
 cask "fluid"
+cask "fluid"
+cask "google-chrome"
 cask "keepingyouawake"
+cask "nvalt"
+cask "pester"
+cask "slack"
+cask "sourcetree"
+cask "taskpaper"
 cask "zoomus"
+cask "zulip"
 
 # PrefPanes
 cask "functionflip"
