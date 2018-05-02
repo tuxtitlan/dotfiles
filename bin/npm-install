@@ -4,15 +4,13 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  dockerlint localtunnel prettier
+  browser-sync dockerlint localtunnel prettier tldr
 
 ## eslint
 npm -g install \
   babel-eslint eslint eslint-config-prettier eslint-plugin-prettier
 
-npm -g install tldr
-
-npm -g update
-
 ## Veelo
 npm -g install heroku
+
+npm -g update
