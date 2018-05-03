@@ -1,8 +1,10 @@
 black
 flake8
+identify
 ipython
 isort
 pip-tools
+pre-commit
 
 # Powerline
 powerline-status
