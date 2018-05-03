@@ -77,7 +77,7 @@ let NERDTreeChDirMode=2
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'rw'
 
 " Markdown
 let g:vim_markdown_folding_disabled=1
