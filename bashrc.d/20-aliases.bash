@@ -8,6 +8,7 @@ alias pgrep='pgrep -f -l'
 alias pkill='pkill -f -l'
 alias reset-wifi='networksetup -setairportpower en0 off && networksetup -setairportpower en0 on'
 alias rm='rm -i'
+alias syspip-sync='PIP_REQUIRE_VIRTUALENV=false pip-sync'
 alias top='top -s 5 -o cpu -stats pid,user,command,cpu,rsize,vsize,threads,state'
 
 alias start-docker='open -ga Docker'
