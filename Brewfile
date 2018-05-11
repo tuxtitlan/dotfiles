@@ -96,6 +96,7 @@ cask "pester"
 cask "soundsource"
 cask "sourcetree"
 cask "taskpaper"
+cask "virtualbox"
 cask "zoomus"
 cask "zulip"
 
