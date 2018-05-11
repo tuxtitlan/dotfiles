@@ -5,6 +5,7 @@ ipython
 isort
 pip-tools
 pre-commit
+titlecase
 
 # Powerline
 powerline-status
