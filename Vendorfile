@@ -11,6 +11,7 @@ folder 'vim/pack/plugins/start' do
   folder 'editorconfig', 'https://github.com/editorconfig/editorconfig-vim.git'
   folder 'emmet', 'https://github.com/mattn/emmet-vim.git'
   folder 'flake8', 'https://github.com/nvie/vim-flake8.git'
+  folder 'flow', 'https://github.com/flowtype/vim-flow.git'
   folder 'fugitive', 'https://github.com/tpope/vim-fugitive.git'
   folder 'gitgutter', 'https://github.com/airblade/vim-gitgutter.git'
   folder 'greplace', 'https://github.com/skwp/greplace.vim.git'
