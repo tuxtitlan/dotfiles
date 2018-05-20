@@ -1,0 +1,9 @@
+name: "general"
+windows:
+  - name: rrh
+    root: ~/src/rrh/ecogold-app
+    layout: even-vertical
+    panes:
+      - commands:
+        - start-docker
+        - open -g -a "Google Chrome"
