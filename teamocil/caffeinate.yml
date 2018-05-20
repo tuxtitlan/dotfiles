@@ -1,8 +1,7 @@
-name: "caffeinate"
+name: "general"
 windows:
   - name: caffeinate
-    layout: even-vertical
-    focus: true
+    root: ~/
     panes:
       - commands:
-        - caffeinate
+        - caffeinate -u -t 5400

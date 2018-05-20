@@ -1,0 +1,12 @@
+name: "general"
+windows:
+  - name: b50
+    root: ~/src/gsong/birky50/
+    layout: even-vertical
+    panes:
+      - commands:
+        - open -g -a "Google Chrome"
+        - npm start
+      - npm test
+      - npm run flow
+      - focus: true
