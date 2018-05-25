@@ -23,7 +23,10 @@ brew "automake"
 brew "git"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
-# React develoment
+# Node
+brew "node@8"
+
+# React develoment (jest)
 brew "watchman"
 
 # Python development
