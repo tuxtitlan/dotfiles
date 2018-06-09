@@ -10,13 +10,13 @@ import string
 import subprocess
 import sys
 
-__VERSION__ = '1.0'
+__VERSION__ = "1.0"
 
 
 # General utils
 ###############
 class Template(string.Template):
-    delimiter = '@'
+    delimiter = "@"
 
 
 def call(cmd):
@@ -25,8 +25,8 @@ def call(cmd):
 
 def open(filename, mode=None, *args, **kwargs):
     if not mode:
-        mode = 'r'
-    return codecs.open(filename, mode, encoding='utf-8', *args, **kwargs)
+        mode = "r"
+    return codecs.open(filename, mode, encoding="utf-8", *args, **kwargs)
 
 
 # Install files
@@ -34,26 +34,26 @@ def open(filename, mode=None, *args, **kwargs):
 def install_files(args):
     replace_all = False
     os.chdir(MY_PATH)
-    for f in glob.iglob('*'):
+    for f in glob.iglob("*"):
         if f in args.ignore:
             continue
-        dst = os.path.join(args.directory, '.%s' % f.replace('.template', ''))
+        dst = os.path.join(args.directory, ".%s" % f.replace(".template", ""))
         if os.path.exists(dst):
             if identical(f, dst):
-                print('identical %s' % dst)
+                print("identical %s" % dst)
             elif replace_all:
                 replace_file(f, dst, args)
             else:
-                r = raw_input('overwrite %s? [YnAq] ' % dst)
-                if r == 'A':
+                r = raw_input("overwrite %s? [YnAq] " % dst)
+                if r == "A":
                     replace_all = True
                     replace_file(f, dst, args)
-                elif r == 'Y':
+                elif r == "Y":
                     replace_file(f, dst, args)
-                elif r.lower() == 'q':
+                elif r.lower() == "q":
                     sys.exit()
                 else:
-                    print('skipping %s' % dst)
+                    print("skipping %s" % dst)
         else:
             link_file(f, dst, args)
 
@@ -61,8 +61,9 @@ def install_files(args):
 def identical(f, dst):
     if os.path.isdir(dst):
         dircmp = filecmp.dircmp(f, dst)
-        if not (len(dircmp.left_only) or len(dircmp.right_only) or
-                len(dircmp.diff_files)):
+        if not (
+            len(dircmp.left_only) or len(dircmp.right_only) or len(dircmp.diff_files)
+        ):
             return True
     return filecmp.cmp(f, dst)
 
@@ -74,19 +75,20 @@ def replace_file(f, dst, args):
 
 def link_file(f, dst, args):
     f = os.path.join(MY_PATH, f)
-    if f.endswith('.template'):
-        print('generating %s' % dst)
-        t = Template(open(f, 'rU').read())
-        with open(dst, 'w+') as of:
+    if f.endswith(".template"):
+        print("generating %s" % dst)
+        t = Template(open(f, "rU").read())
+        with open(dst, "w+") as of:
             while True:
                 try:
                     of.write(t.substitute(args.template_context))
                     break
                 except KeyError as e:
                     args.template_context[e.message] = raw_input(
-                        'Template context "%s"? ' % e.message)
+                        'Template context "%s"? ' % e.message
+                    )
     else:
-        print('linking %s' % dst)
+        print("linking %s" % dst)
         call('ln -s "%s" "%s"' % (f, dst))
 
 
@@ -97,7 +99,7 @@ def is_file(string):
     Type checking utility for ArgumentParser.
     """
     if not os.path.isfile(string):
-        msg = '%s is not a file' % string
+        msg = "%s is not a file" % string
         raise argparse.ArgumentTypeError(msg)
     return string
 
@@ -106,18 +108,27 @@ def setup_parser():
     """
     Setup the command line utility.
     """
-    desc = 'Installs dotfiles into home directory'
+    desc = "Installs dotfiles into home directory"
     parser = argparse.ArgumentParser(
-        description=desc,
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        description=desc, formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
     parser.add_argument(
-        '-v', '--version', action='version', version='%(prog)s ' + __VERSION__)
+        "-v", "--version", action="version", version="%(prog)s " + __VERSION__
+    )
     parser.add_argument(
-        '-c', '--config', metavar='CONFIG_FILE', type=is_file,
-        help='location of the configuration file')
+        "-c",
+        "--config",
+        metavar="CONFIG_FILE",
+        type=is_file,
+        help="location of the configuration file",
+    )
     parser.add_argument(
-        '-d', '--directory', metavar='INSTALL_DIRECTORY', default=HOME,
-        help='directory where the dotfiles should be installed')
+        "-d",
+        "--directory",
+        metavar="INSTALL_DIRECTORY",
+        default=HOME,
+        help="directory where the dotfiles should be installed",
+    )
     return parser
 
 
@@ -136,10 +147,7 @@ def default_args(args):
     """
     Fill args with required defaults if they are missing.
     """
-    defaults = {
-        'ignore': [],
-        'template_context': {}
-    }
+    defaults = {"ignore": [], "template_context": {}}
     for k, v in defaults.iteritems():
         setattr(args, k, getattr(args, k, v))
 
@@ -155,7 +163,7 @@ def main():
     install_files(args)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     MY_PATH = os.path.dirname(os.path.realpath(__file__))
-    HOME = os.environ['HOME']
+    HOME = os.environ["HOME"]
     main()

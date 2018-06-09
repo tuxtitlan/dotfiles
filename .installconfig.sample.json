@@ -1,0 +1,20 @@
+{
+  "ignore": [
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "Vendorfile",
+    "Vendorfile",
+    "install.sh",
+    "install_dotfiles.py",
+    "install_scripts.py",
+    "requirements.in",
+    "requirements.txt",
+    "scripts"
+  ],
+
+  "template_context": {
+    "name": "George Song",
+    "email": "george@55minutes.com"
+  }
+}
