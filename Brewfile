@@ -90,6 +90,7 @@ cask "alfred"
 cask "bartender"
 cask "busycal"
 cask "docker"
+cask "dropbox"
 cask "etrecheck"
 cask "fastscripts"
 cask "firefox"
@@ -107,9 +108,6 @@ cask "sourcetree"
 cask "spotify"
 cask "spotify-notifications"
 cask "taskpaper"
-cask "virtualbox"
-cask "zoomus"
-cask "zulip"
 
 # PrefPanes
 cask "functionflip"
@@ -118,6 +116,9 @@ cask "rcdefaultapp"
 # Veelo
 cask "android-studio"
 cask "chromedriver"
+cask "virtualbox"
+cask "zoomus"
+cask "zulip"
 
 cask "java"
 
