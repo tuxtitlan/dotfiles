@@ -50,6 +50,7 @@ brew "libmagic"
 
 # More nice-to-haves and various development libraries
 brew "autojump"
+brew "direnv"
 brew "dos2unix"
 brew "exa"
 brew "httpie"
@@ -115,6 +116,7 @@ cask "functionflip"
 cask "rcdefaultapp"
 
 # Veelo
+cask "android-studio"
 cask "chromedriver"
 
 cask "java"
