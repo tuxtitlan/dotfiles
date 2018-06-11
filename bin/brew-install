@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+sudo cat /dev/null
+
 brew update
 brew bundle cleanup --force --global
 brew bundle --global --no-upgrade
 brew cleanup --prune=30
 brew cask cleanup --outdated
 brew upgrade
+brew cu --all --yes --no-brew-update
 brew cu --force --yes --no-brew-update
 /usr/bin/qlmanage -r
