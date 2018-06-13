@@ -4,7 +4,7 @@ set -e
 npm -g install npm@latest
 
 npm -g install \
-  prettier tldr
+  localtunnel prettier tldr
 
 ## eslint
 npm -g install \

@@ -4,9 +4,7 @@ windows:
     root: ~/src/gsong/birky50/
     layout: even-vertical
     panes:
-      - commands:
-        - open -g -a "Google Chrome"
-        - npm start
+      - npm start
       - npm test
       - npm run flow
       - npm run eslint:watch
