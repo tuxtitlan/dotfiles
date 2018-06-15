@@ -36,6 +36,7 @@ brew "gdbm"
 brew "libmemcached"
 brew "pipenv"
 brew "pyenv"
+brew "pyenv-virtualenvwrapper"
 
 # Ruby development
 brew "chruby"

@@ -3,6 +3,7 @@ hash pyenv 2>/dev/null && eval "$(pyenv init -)"
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
+hash pyenv && pyenv virtualenvwrapper_lazy
 
 # pip
 export PIP_REQUIRE_VIRTUALENV=true
