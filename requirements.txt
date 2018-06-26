@@ -9,8 +9,8 @@ appnope==0.1.0            # via ipython
 aspy.yaml==1.1.1          # via pre-commit
 attrs==18.1.0             # via black
 backcall==0.1.0           # via ipython
-black==18.6b2
-cached-property==1.4.2    # via pre-commit
+black==18.6b4
+cached-property==1.4.3    # via pre-commit
 cfgv==1.1.0               # via pre-commit
 click==6.7                # via black, pip-tools
 decorator==4.3.0          # via ipython, traitlets
@@ -31,7 +31,7 @@ pip-tools==2.0.2
 powerline-status==2.6
 pre-commit==1.10.2
 prompt-toolkit==1.0.15    # via ipython
-ptyprocess==0.5.2         # via pexpect
+ptyprocess==0.6.0         # via pexpect
 pycodestyle==2.3.1        # via flake8
 pyflakes==1.6.0           # via flake8
 pygments==2.2.0           # via ipython
