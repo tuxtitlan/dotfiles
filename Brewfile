@@ -88,6 +88,7 @@ cask "webpquicklook"
 
 # Apps
 cask "alfred"
+cask "appcleaner"
 cask "bartender"
 cask "busycal"
 cask "docker"
