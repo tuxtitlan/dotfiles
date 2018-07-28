@@ -8,4 +8,5 @@ windows:
       - npm run flow
       - npm run eslint:watch
       - npx cosmos
+      - npm run build:dist:watch
       - focus: true
