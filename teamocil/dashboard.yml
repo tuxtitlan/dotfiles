@@ -5,6 +5,7 @@ windows:
     layout: even-vertical
     panes:
       - npm start
+      - npm test
       - npm run flow
       - npm run eslint:watch
       - npx cosmos
