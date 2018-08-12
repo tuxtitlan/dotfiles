@@ -74,6 +74,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 " NerdTree
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeChDirMode=2
+let g:NERDTreeDirArrowExpandable = '►'
+let g:NERDTreeDirArrowCollapsible = '▼'
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
