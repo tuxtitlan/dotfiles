@@ -1,6 +1,7 @@
 tap "buo/cask-upgrade"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 
@@ -27,6 +28,14 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Node
 brew "node@8"
+
+# node-canvas
+brew "cairo"
+brew "giflib"
+brew "jpeg"
+brew "libpng"
+brew "pango"
+brew "pkg-config"
 
 # React develoment (jest)
 brew "watchman"
@@ -99,6 +108,7 @@ cask "firefox"
 cask "fluid"
 cask "google-chrome"
 cask "google-drive-file-stream"
+cask "java"
 cask "keepingyouawake"
 cask "marked"
 cask "nvalt"
@@ -111,9 +121,16 @@ cask "spotify"
 cask "spotify-notifications"
 cask "taskpaper"
 
+# Color calibration
+brew "argyll-cms"
+cask "displaycal"
+
 # PrefPanes
 cask "functionflip"
 cask "rcdefaultapp"
+
+# Fonts
+cask "font-input"
 
 # Veelo
 cask "android-studio"
@@ -121,8 +138,6 @@ cask "chromedriver"
 cask "virtualbox"
 cask "zoomus"
 cask "zulip"
-
-cask "java"
 
 mas "1Password", id: 443987910
 mas "Backdrop", id: 411461952
