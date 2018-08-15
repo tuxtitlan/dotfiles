@@ -6,7 +6,7 @@ windows:
     panes:
       - npm start
       - npx cosmos
-      - npx json-server src/testUtils/api-data.json -p 3001
+      - npm run start:api-server
       - npm run build:dist:watch
   - name: dashboard-tests
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/dashboard

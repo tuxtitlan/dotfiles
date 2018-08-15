@@ -1,0 +1,13 @@
+name: "general"
+windows:
+  - name: discovery
+    root: ~/src/veelo/veelo/src/air_lms/air_lms/static/discovery
+    layout: even-vertical
+    panes:
+      - commands:
+        - start-docker
+        - cd ~/src/veelo/veelo
+        - docker-compose up -d web
+      - commands:
+        - BROWSER="google chrome" npm run dev
+      - focus: true
