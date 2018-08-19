@@ -52,9 +52,6 @@ brew "chruby"
 brew "libyaml"
 brew "ruby-install"
 
-# Veelo development
-brew "awscli"
-
 # Needed for magic
 brew "libmagic"
 
@@ -100,6 +97,7 @@ cask "alfred"
 cask "appcleaner"
 cask "bartender"
 cask "busycal"
+cask "diskmaker-x"
 cask "docker"
 cask "dropbox"
 cask "etrecheck"
@@ -114,6 +112,7 @@ cask "marked"
 cask "nvalt"
 cask "pester"
 cask "sketch"
+cask "skype"
 cask "slack"
 cask "soundsource"
 cask "sourcetree"
@@ -133,6 +132,7 @@ cask "rcdefaultapp"
 cask "font-input"
 
 # Veelo
+brew "awscli"
 cask "android-studio"
 cask "chromedriver"
 cask "virtualbox"
