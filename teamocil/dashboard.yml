@@ -1,6 +1,6 @@
 name: "general"
 windows:
-  - name: dashboard-services
+  - name: db-services
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/dashboard
     layout: even-vertical
     panes:
@@ -8,7 +8,7 @@ windows:
       - npx cosmos
       - npm run start:api-server
       - npm run build:dist:watch
-  - name: dashboard-tests
+  - name: db-tests
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/dashboard
     layout: even-vertical
     panes:
