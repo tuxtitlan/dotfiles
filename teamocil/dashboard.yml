@@ -6,7 +6,7 @@ windows:
     panes:
       - npm start
       - npx cosmos
-      - npm run start:api-server
+      - npm run start:api:mock-server
       - npm run build:dist:watch
   - name: db-tests
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/dashboard

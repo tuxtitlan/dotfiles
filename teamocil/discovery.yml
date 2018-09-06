@@ -9,5 +9,6 @@ windows:
         - cd ~/src/veelo/veelo
         - docker-compose up -d web
       - commands:
-        - BROWSER="google chrome" npm run dev
+        - npm ci
+        - BROWSER="google chrome" npm run dev:dashboard-api-proxy
       - focus: true
