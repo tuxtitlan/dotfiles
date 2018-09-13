@@ -5,10 +5,10 @@ windows:
     layout: even-vertical
     panes:
       - commands:
-        - start-docker
-        - cd ~/src/veelo/veelo
-        - docker-compose up -d web
-      - commands:
         - npm ci
         - BROWSER="google chrome" npm run dev:dashboard-api-proxy
       - focus: true
+      - commands:
+        - start-docker
+        - cd ~/src/veelo/veelo
+        - docker-compose up -d web
