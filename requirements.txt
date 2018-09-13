@@ -7,18 +7,18 @@
 appdirs==1.4.3            # via black
 appnope==0.1.0            # via ipython
 aspy.yaml==1.1.1          # via pre-commit
-attrs==18.1.0             # via black
+attrs==18.2.0             # via black
 backcall==0.1.0           # via ipython
 black==18.6b4
-cached-property==1.4.3    # via pre-commit
+cached-property==1.5.1    # via pre-commit
 cfgv==1.1.0               # via pre-commit
 click==6.7                # via black, pip-tools
 decorator==4.3.0          # via ipython, traitlets
 first==2.0.1              # via pip-tools
 flake8==3.5.0
-identify==1.1.4
+identify==1.1.5
 ipython-genutils==0.2.0   # via traitlets
-ipython==6.4.0
+ipython==6.5.0
 isort==4.3.4
 jedi==0.12.1              # via ipython
 mccabe==0.6.1             # via flake8
@@ -28,8 +28,8 @@ pbr==4.2.0                # via stevedore
 pexpect==4.6.0            # via ipython
 pickleshare==0.7.4        # via ipython
 pip-tools==2.0.2
-powerline-status==2.6
-pre-commit==1.10.4
+powerline-status==2.7
+pre-commit==1.11.0
 prompt-toolkit==1.0.15    # via ipython
 ptyprocess==0.6.0         # via pexpect
 pycodestyle==2.3.1        # via flake8
@@ -40,7 +40,7 @@ simplegeneric==0.8.1      # via ipython
 six==1.11.0               # via cfgv, pip-tools, pre-commit, prompt-toolkit, stevedore, traitlets
 stevedore==1.29.0         # via virtualenvwrapper
 titlecase==0.12.0
-toml==0.9.4               # via black, pre-commit
+toml==0.9.6               # via black, pre-commit
 traitlets==4.3.2          # via ipython
 virtualenv-clone==0.3.0   # via virtualenvwrapper
 virtualenv==16.0.0        # via pre-commit, virtualenvwrapper
