@@ -1,0 +1,20 @@
+name: "general"
+windows:
+  - name: dr-services
+    root: ~/src/veelo/veelo/src/air_lms/air_lms/static/discovery-react-components
+    layout: even-vertical
+    panes:
+      - npm start
+      - npx cosmos
+      - npm run start:api:mock-server
+      - npm run build:dist:watch
+  - name: dr-tests
+    root: ~/src/veelo/veelo/src/air_lms/air_lms/static/discovery-react-components
+    layout: even-vertical
+    panes:
+      - npm test
+      - npm run flow
+      - commands:
+        - npm run clean:dist
+        - npm run eslint:watch
+      - focus: true

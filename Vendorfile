@@ -24,6 +24,7 @@ folder 'vim/pack/plugins/start' do
   folder 'python-indent', 'https://github.com/Vimjas/vim-python-pep8-indent'
   folder 'sensible', 'https://github.com/tpope/vim-sensible.git'
   folder 'tcomment', 'https://github.com/tomtom/tcomment_vim.git'
+  folder 'yaml-folds', 'https://github.com/pedrohdz/vim-yaml-folds.git'
   folder 'zoomwin', 'https://github.com/vim-scripts/ZoomWin.git'
 end
 
