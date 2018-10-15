@@ -1,6 +1,6 @@
 name: "general"
 windows:
-  - name: dr-services
+  - name: drc-services
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/discovery-react-components
     layout: even-vertical
     panes:
@@ -8,7 +8,7 @@ windows:
       - npx cosmos
       - npm run start:api:mock-server
       - npm run build:dist:watch
-  - name: dr-tests
+  - name: drc-tests
     root: ~/src/veelo/veelo/src/air_lms/air_lms/static/discovery-react-components
     layout: even-vertical
     panes:
