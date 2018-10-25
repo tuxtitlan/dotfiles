@@ -6,10 +6,6 @@ npm -g install npm@latest
 npm -g install \
   localtunnel prettier tldr
 
-## eslint
-npm -g install \
-  babel-eslint eslint eslint-config-prettier eslint-plugin-prettier
-
 ## Veelo
 npm -g install heroku
 
