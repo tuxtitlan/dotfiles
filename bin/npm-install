@@ -6,7 +6,4 @@ npm -g install npm@latest
 npm -g install \
   localtunnel prettier tldr
 
-## Veelo
-npm -g install heroku
-
 npm -g update

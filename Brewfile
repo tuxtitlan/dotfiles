@@ -1,4 +1,5 @@
 tap "buo/cask-upgrade"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -133,6 +134,7 @@ cask "font-input"
 
 # Veelo
 brew "awscli"
+brew "heroku"
 cask "android-studio"
 cask "chromedriver"
 cask "virtualbox"
