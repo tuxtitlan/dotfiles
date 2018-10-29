@@ -6,7 +6,7 @@ windows:
     panes:
       - commands:
         - npm ci
-        - BROWSER="google chrome" NO_GHOST=true npm run dev:mock-api-proxy
+        - BROWSER="google chrome" NO_GHOST=true npm run start:mock-api-proxy
       - focus: true
       - commands:
         - start-docker
