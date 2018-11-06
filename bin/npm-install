@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-npm -g install npm@latest
+npm -g install npm@latest yarn@latest
 
 npm -g install \
   localtunnel prettier tldr

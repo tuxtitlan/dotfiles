@@ -20,6 +20,7 @@ brew "django-completion"
 brew "docker-completion"
 brew "docker-compose-completion"
 brew "pip-completion"
+brew "yarn-completion"
 
 # General development
 tap "universal-ctags/universal-ctags"
@@ -135,6 +136,7 @@ cask "font-input"
 # Veelo
 brew "awscli"
 brew "heroku"
+brew "heroku-node"
 cask "android-studio"
 cask "chromedriver"
 cask "virtualbox"
