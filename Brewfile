@@ -49,6 +49,12 @@ brew "pipenv"
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
 
+# pyenv recommended
+brew "readline"
+brew "sqlite"
+brew "xz"
+brew "zlib"
+
 # Ruby development
 brew "chruby"
 brew "libyaml"
