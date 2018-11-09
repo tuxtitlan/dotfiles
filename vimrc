@@ -82,7 +82,8 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'rw'
 
 " Markdown
-let g:vim_markdown_folding_disabled=1
+" let g:vim_markdown_folding_disabled=1
+set nofoldenable
 
 " localvimrc
 let g:localvimrc_sandbox = 0

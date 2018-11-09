@@ -6,4 +6,3 @@ windows:
     panes:
       - commands:
         - start-docker
-        - open -g -a "Google Chrome"
