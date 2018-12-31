@@ -29,7 +29,7 @@ brew "git"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Node
-brew "node@8"
+brew "node@10"
 
 # node-canvas
 brew "cairo"
@@ -124,8 +124,6 @@ cask "skype"
 cask "slack"
 cask "soundsource"
 cask "sourcetree"
-cask "spotify"
-cask "spotify-notifications"
 cask "taskpaper"
 
 # Color calibration
@@ -136,9 +134,6 @@ cask "displaycal"
 cask "functionflip"
 cask "rcdefaultapp"
 
-# Fonts
-cask "font-input"
-
 # Veelo
 brew "awscli"
 brew "heroku"
@@ -146,6 +141,7 @@ brew "heroku-node"
 cask "android-studio"
 cask "chromedriver"
 cask "virtualbox"
+cask "zeplin"
 cask "zoomus"
 cask "zulip"
 
