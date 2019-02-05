@@ -6,3 +6,9 @@ windows:
     panes:
       - commands:
         - start-docker
+        - make dev-restart
+        - make logs-tools
+      - commands:
+        - sleep 20
+        - make logs-services
+      - focus: true

@@ -1,12 +1,4 @@
-black
-flake8
-identify
-ipython
-isort
-pip-tools
-pre-commit
-titlecase
-virtualenvwrapper
+-r requirements.2.in
 
-# Powerline
-powerline-status
+black
+flake8-bugbear

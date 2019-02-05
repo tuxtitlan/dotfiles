@@ -1,0 +1,11 @@
+flake8
+identify
+ipython
+isort
+pip-tools
+pre-commit
+titlecase
+virtualenvwrapper
+
+# Powerline
+powerline-status
