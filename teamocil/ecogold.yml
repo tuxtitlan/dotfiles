@@ -11,4 +11,7 @@ windows:
       - commands:
         - sleep 20
         - make logs-services
+      - commands:
+        - sleep 20
+        - make webapp-shell
       - focus: true

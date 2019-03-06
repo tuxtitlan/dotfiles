@@ -4,6 +4,6 @@ set -e
 npm -g install npm@latest yarn@latest
 
 npm -g install \
-  localtunnel prettier tldr
+  browser-sync localtunnel mermaid.cli prettier tldr
 
 npm -g update

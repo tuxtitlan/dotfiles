@@ -25,6 +25,7 @@ brew "yarn-completion"
 # General development
 tap "universal-ctags/universal-ctags"
 brew "automake"
+brew "ctop"
 brew "git"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
@@ -44,8 +45,6 @@ brew "watchman"
 
 # Python development
 brew "gdbm"
-brew "libmemcached"
-brew "pipenv"
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
 
@@ -125,6 +124,7 @@ cask "slack"
 cask "soundsource"
 cask "sourcetree"
 cask "taskpaper"
+cask "whatsapp"
 
 # Color calibration
 brew "argyll-cms"
@@ -138,6 +138,8 @@ cask "rcdefaultapp"
 brew "awscli"
 brew "heroku"
 brew "heroku-node"
+brew "libmemcached"
+brew "libxmlsec1"
 cask "android-studio"
 cask "chromedriver"
 cask "virtualbox"

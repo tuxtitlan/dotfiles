@@ -1,7 +1,6 @@
-export HISTCONTROL=ignoredups:erasedups
-export HISTFILESIZE=10000
+export HISTCONTROL=ignoredups:erasedups:ignorespace
 export HISTIGNORE="&:?:??:exit:history:[j ]*:tmux"
-export HISTSIZE=1000
+export HISTSIZE=10000
 shopt -s histappend
 bind '"\e[A"':history-search-backward # up arrow
 bind '"\e[B"':history-search-forward  # down arrow

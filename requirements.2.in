@@ -3,6 +3,7 @@ identify
 ipython
 isort
 pip-tools
+pipenv
 pre-commit
 titlecase
 virtualenvwrapper

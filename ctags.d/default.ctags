@@ -1,3 +1,5 @@
+--exclude=build
+--exclude=dist
 --exclude=node_modules
 --recurse=yes
 --tag-relative=yes
