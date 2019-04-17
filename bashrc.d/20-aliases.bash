@@ -1,3 +1,4 @@
+alias npx='pnpx'
 alias chrome='open -a "google chrome.app"'
 alias diff=colordiff
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'

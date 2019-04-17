@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-npm -g install npm@latest yarn@latest
+npm -g install npm@latest pnpm@latest
 
-npm -g install \
-  browser-sync localtunnel mermaid.cli prettier tldr
+pnpm -g install \
+  gitlab-ci-lint localtunnel mermaid.cli prettier tldr
 
-npm -g update
+pnpm -g update
