@@ -2,6 +2,7 @@ flake8
 identify
 ipython
 isort
+linode-cli
 pip-tools
 pipenv
 pre-commit
