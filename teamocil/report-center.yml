@@ -1,11 +1,11 @@
 name: "general"
 windows:
   - name: reports
-    root: ~/src/veelo/veelo/src/air_lms/air_lms/static/reports
+    root: ~/src/veelo/veelo/src/air_lms/air_lms/static/report-center
     layout: even-vertical
     panes:
-      - npx cosmos
       - npm test
       - npm run flow
       - npm run eslint:watch
+      - npm start
       - focus: true
