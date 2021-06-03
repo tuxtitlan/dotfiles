@@ -8,7 +8,6 @@ sudo apt-get install -y gdebi \
   gufw \
   chrome-gnome-shell \
   chromium-browser \
-  gdebi \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -36,7 +35,8 @@ sudo apt-get install -y gdebi \
   network-manager-openvpn-gnome \
   exuberant-ctags \
   tree \
-  neofetch
+  neofetch \
+  tilix
 
 echo "Installing pyenv dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
