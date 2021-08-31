@@ -52,8 +52,9 @@ echo "Adding Paper icons PPA"
 sudo add-apt-repository -u ppa:snwh/ppa -y
 
 echo "Adding Typora repo"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-sudo add-apt-repository -y 'deb https://typora.io/linux ./'
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
 
 echo "Adding Docker repo"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
