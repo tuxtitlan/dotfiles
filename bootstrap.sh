@@ -136,16 +136,16 @@ fi
 
 # ----------------------------------------------------------- runtime defaults
 if command -v pyenv >/dev/null 2>&1; then
-  # Prefix match: any installed 3.10.x satisfies the default
-  pyenv versions --bare | grep -q '^3\.10\.' || { info "Installing Python 3.10 via pyenv..."; pyenv install -s 3.10; }
-  pyenv global 3.10   # modern pyenv resolves the prefix to the latest installed 3.10.x
+  # Prefix match: any installed 3.13.x satisfies the default
+  pyenv versions --bare | grep -q '^3\.13\.' || { info "Installing Python 3.13 via pyenv..."; pyenv install -s 3.13; }
+  pyenv global 3.13   # modern pyenv resolves the prefix to the latest installed 3.13.x
 fi
 if [ -s "$HOME/.nvm/nvm.sh" ]; then
   # nvm is a shell function — must be sourced before use in a script
   set +u
   . "$HOME/.nvm/nvm.sh"
-  nvm version v20.19.0 >/dev/null 2>&1 || { info "Installing Node v20.19.0 via nvm..."; nvm install v20.19.0; }
-  nvm alias default v20.19.0
+  nvm version v24.16.0 >/dev/null 2>&1 || { info "Installing Node v24.16.0 via nvm..."; nvm install v24.16.0; }
+  nvm alias default v24.16.0
   set -u
 fi
 

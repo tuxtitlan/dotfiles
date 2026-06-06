@@ -18,7 +18,7 @@ The bootstrap is idempotent — re-run it any time. It:
 5. Installs oh-my-zsh and nvm (official installers) if missing
 6. Symlinks the configs below into place — existing real files are backed up once to `<name>.backup`
 7. macOS only: links the iTerm2 dynamic profile and applies [`macos/defaults.sh`](macos/defaults.sh)
-8. Sets runtime defaults: `pyenv global 3.10`, `nvm alias default v20.19.0`
+8. Sets runtime defaults: `pyenv global 3.13`, `nvm alias default v24.16.0`
 
 ## What's tracked
 
