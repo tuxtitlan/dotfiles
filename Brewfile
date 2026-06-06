@@ -17,7 +17,7 @@ brew "htop"
 brew "jmeter"
 brew "jq"
 brew "mtr"
-brew "neofetch"
+brew "fastfetch"  # neofetch successor (neofetch archived upstream, formula removed)
 brew "pkgconf"
 brew "poppler"
 brew "postgresql@14"
@@ -42,5 +42,4 @@ cargo "cargo-watch"
 
 npm "@google/gemini-cli"
 npm "@shopify/cli"
-npm "corepack"
-npm "pnpm"
+npm "corepack"  # provides the pnpm/yarn shims — do not also `npm "pnpm"` (EEXIST conflict)
