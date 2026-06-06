@@ -1,0 +1,4 @@
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+# Machine-local overrides (untracked)
+[ -f "$HOME/.zshenv.local" ] && . "$HOME/.zshenv.local"
