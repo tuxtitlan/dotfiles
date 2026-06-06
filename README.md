@@ -53,8 +53,8 @@ for both), VS Code extensions (Settings Sync owns them), Mac App Store apps.
 ## iTerm2 (manual, macOS)
 
 - **Capture** (on the source machine): Settings → Profiles → Other Actions… →
-  *Save Profile as JSON…*, then wrap it as `{"Profiles": [<export>]}` and commit as
-  `iterm2/profiles.json` (DynamicProfiles requires the wrapper). Color presets:
+  *Save All Profiles as JSON…* → commit as `iterm2/profiles.json` (this export is
+  already in the `{"Profiles": [...]}` format DynamicProfiles requires). Color presets:
   Profiles → Colors → Color Presets… → *Export…* → commit as `iterm2/cobalt2.itermcolors`.
 - **Restore**: the bootstrap links `profiles.json` into DynamicProfiles automatically;
   the profile's powerline font installs via the Brewfile (`font-meslo-for-powerline`).
