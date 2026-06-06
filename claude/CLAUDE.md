@@ -24,7 +24,7 @@ PR templates) lives in untracked local context — keep it out of this file.
 - Output a link in the format of a markdown anchor with the PR title as label
 
 ## Working with Git Worktrees
-- Create worktrees in the directory corresponding to the project in directory `../<project-name>.worktrees/`. E.g., for `my-project`, the directory should be `../my-project.worktrees/`
+- Create worktrees in the directory corresponding to the project in directory `../<project-name>.worktrees/`. E.g., for `dotfiles`, the directory should be `../dotfiles.worktrees/`
 - After creating a worktree, if a `.python-version` file exists in the repo root, copy it to the worktree directory
 
 ## Project knowledge stores
