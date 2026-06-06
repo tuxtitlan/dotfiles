@@ -1,0 +1,49 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[color]
+	ui = True
+[color "branch"]
+	remote = yellow
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = magenta bold
+[push]
+	default = current
+[advice]
+	statusHints = False
+[alias]
+	st = status -sb
+	lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	co = checkout
+	br = branch
+	ru = remote update
+	hm = "!f() { for k in `git branch|perl -pe s/^..//`;do echo `git show --pretty=format:'%Cgreen%ci %Cblue%cr%Creset' $k|head -n 1` \\\t$k; done | sort -r; }; f"
+	rg = "!f() { for branch in $(git branch -vv | grep \": gone]\" | sed \"s/^[* +]*//\" | awk \"{print \\$1}\"); do wt=$(git worktree list | grep \"\\[$branch\\]\" | awk \"{print \\$1}\"); if [ -n \"$wt\" ]; then echo \"Removing worktree: $wt\"; git worktree remove --force \"$wt\"; fi; echo \"$(git branch -D \"$branch\")\"; done; }; f"
+	touched = "!f() { echo `git diff --name-only --diff-filter=d $GIT_TARGET_BRANCH | grep '.py$'`; }; f"
+	cp = cherry-pick
+[cola]
+	spellcheck = false
+[includeIf "gitdir:/home/me/dev/work/"]
+	path = /home/me/dev/work/.gitconfig_include
+[includeIf "gitdir:/Users/me/dev/work/"]
+	path = /Users/me/dev/work/.gitconfig_include
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
+[init]
+	defaultBranch = main
+
+# Machine-local identity and overrides (untracked): user.name, user.email,
+# and any signing configuration live in ~/.gitconfig.local
+[include]
+	path = ~/.gitconfig.local
