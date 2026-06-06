@@ -1,0 +1,6 @@
+# Hard stops: credential files that must never be tracked, even if copied in by mistake
+config/gh/hosts.yml
+config/graphite/user_config
+# Local/state noise
+.DS_Store
+*.backup
