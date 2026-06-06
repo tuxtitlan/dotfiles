@@ -35,6 +35,7 @@ if OS.mac?
   tap "noovolari/brew"
   brew "pinentry-mac"
   brew "noovolari/brew/leapp-cli-darwin-arm64"  # darwin-arm64 binary
+  cask "font-meslo-for-powerline"               # non-ASCII font used by the iTerm2 Cobalt2 profile (agnoster glyphs)
 end
 
 cargo "cargo-watch"
