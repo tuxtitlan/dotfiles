@@ -25,6 +25,7 @@ info() { printf '\033[1;34m==>\033[0m %s\n' "$*"; }
 if [ "$IS_MAC" = 1 ]; then
   if ! xcode-select -p >/dev/null 2>&1; then
     info "Installing Xcode Command Line Tools (a dialog may appear)..."
+    info "Waiting for installation to finish — Ctrl-C to abort if you cancelled the dialog."
     xcode-select --install || true
     until xcode-select -p >/dev/null 2>&1; do sleep 5; done
   fi
@@ -135,8 +136,9 @@ fi
 
 # ----------------------------------------------------------- runtime defaults
 if command -v pyenv >/dev/null 2>&1; then
-  pyenv versions --bare | grep -qx "3.10" || { info "Installing Python 3.10 via pyenv..."; pyenv install -s 3.10; }
-  pyenv global 3.10
+  # Prefix match: any installed 3.10.x satisfies the default
+  pyenv versions --bare | grep -q '^3\.10\.' || { info "Installing Python 3.10 via pyenv..."; pyenv install -s 3.10; }
+  pyenv global 3.10   # modern pyenv resolves the prefix to the latest installed 3.10.x
 fi
 if [ -s "$HOME/.nvm/nvm.sh" ]; then
   # nvm is a shell function — must be sourced before use in a script

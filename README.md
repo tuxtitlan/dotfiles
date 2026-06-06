@@ -31,7 +31,7 @@ The bootstrap is idempotent — re-run it any time. It:
 | `config/graphite/aliases` | `~/.config/graphite/aliases` | symlink |
 | `config/htop/htoprc`, `config/neofetch/config.conf` | `~/.config/...` | symlink |
 | `claude/CLAUDE.md`, `claude/settings.json` | `~/.claude/...` | **seed** (copy once) |
-| `iterm2/profiles.json` | iTerm2 `DynamicProfiles/` | symlink (macOS) |
+| `iterm2/profiles.json` | iTerm2 `DynamicProfiles/` | symlink (macOS; pending first manual export — see below) |
 
 Claude Code files are *seeded*, not symlinked: the app rewrites `settings.json` at
 runtime, and machine-local changes must not flow back into a public repo.
