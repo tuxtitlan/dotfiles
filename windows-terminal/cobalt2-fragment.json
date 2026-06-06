@@ -1,0 +1,28 @@
+{
+    "$help": "https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions",
+    "schemes": [
+        {
+            "name": "Cobalt2",
+            "background": "#1E3346",
+            "foreground": "#FFFFFF",
+            "cursorColor": "#EFD447",
+            "selectionBackground": "#294460",
+            "black": "#000000",
+            "red": "#ED4124",
+            "green": "#72DC4E",
+            "yellow": "#FBE84D",
+            "blue": "#3876D4",
+            "purple": "#ED4472",
+            "cyan": "#54C2C6",
+            "white": "#C7C7C7",
+            "brightBlack": "#686868",
+            "brightRed": "#E5422F",
+            "brightGreen": "#70D149",
+            "brightYellow": "#ECD146",
+            "brightBlue": "#6A71F7",
+            "brightPurple": "#F07FF8",
+            "brightCyan": "#95E5F8",
+            "brightWhite": "#FFFFFF"
+        }
+    ]
+}

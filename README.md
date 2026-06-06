@@ -66,3 +66,15 @@ for both), VS Code extensions (Settings Sync owns them), Mac App Store apps.
   build prerequisites: `sudo apt-get install build-essential procps curl file git` (Debian/Ubuntu)
 - macOS-only pieces (casks, iTerm2, `defaults.sh`) are skipped automatically
 - The gitconfig's work `includeIf` paths cover both `/Users/me/...` and `/home/me/...`
+- **WSL / Windows Terminal**: the Cobalt2 scheme lives in
+  [`windows-terminal/cobalt2-fragment.json`](windows-terminal/cobalt2-fragment.json)
+  (converted from `iterm2/cobalt2.itermcolors`). Install it from inside WSL:
+
+  ```sh
+  mkdir -p "/mnt/c/Users/<winuser>/AppData/Local/Microsoft/Windows Terminal/Fragments/dotfiles"
+  cp windows-terminal/cobalt2-fragment.json \
+    "/mnt/c/Users/<winuser>/AppData/Local/Microsoft/Windows Terminal/Fragments/dotfiles/cobalt2.json"
+  ```
+
+  then set `"colorScheme": "Cobalt2"` under `profiles.defaults` in Windows
+  Terminal settings (Settings → Defaults → Appearance, or `settings.json`).
