@@ -2,24 +2,20 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
-      "Bash(docker compose run:*)",
       "Bash(gh pr diff:*)",
       "Bash(gh pr view:*)",
-      "Bash(git checkout:*)",
-      "Bash(git fetch:*)",
+      "Bash(git checkout -b *)",
+      "Bash(git checkout main)",
+      "Bash(git fetch)",
       "Bash(git log:*)",
-      "Bash(git pull:*)",
+      "Bash(git pull)",
+      "Bash(git pull --ff-only)",
       "Bash(python -m py_compile:*)"
     ],
     "deny": [
       "Bash(brew:*)"
     ],
     "defaultMode": "default"
-  },
-  "sandbox": {
-    "excludedCommands": [
-      "gh"
-    ]
   },
   "effortLevel": "medium",
   "preferredNotifChannel": "iterm2_with_bell"
