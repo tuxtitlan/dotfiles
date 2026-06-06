@@ -78,3 +78,19 @@ for both), VS Code extensions (Settings Sync owns them), Mac App Store apps.
 
   then set `"colorScheme": "Cobalt2"` under `profiles.defaults` in Windows
   Terminal settings (Settings → Defaults → Appearance, or `settings.json`).
+- **WSL powerline font**: agnoster's glyphs need a patched font *on the Windows
+  side* (Windows Terminal ignores Linux fonts; its bundled Cascadia draws the
+  segment arrows itself but lacks the branch `U+E0A0` glyph). Install
+  [MesloLGS Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip)
+  per-user — copy the `MesloLGSNerdFont-{Regular,Bold,Italic,BoldItalic}.ttf`
+  variants to `C:\Users\<winuser>\AppData\Local\Microsoft\Windows\Fonts\` and
+  register each (no admin needed):
+
+  ```sh
+  /mnt/c/Windows/System32/reg.exe add 'HKCU\Software\Microsoft\Windows NT\CurrentVersion\Fonts' \
+    /v 'MesloLGS Nerd Font (TrueType)' /t REG_SZ \
+    /d 'C:\Users\<winuser>\AppData\Local\Microsoft\Windows\Fonts\MesloLGSNerdFont-Regular.ttf' /f
+  ```
+
+  then set `"font": {"face": "MesloLGS Nerd Font"}` under `profiles.defaults`
+  and restart Windows Terminal.
