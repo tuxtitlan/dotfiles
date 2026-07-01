@@ -15,7 +15,7 @@ The bootstrap is idempotent — re-run it any time. It:
 2. Installs Xcode CLT (macOS) or checks for `curl`/`git` (Linux)
 3. Installs Homebrew if missing — pinned installer, SHA256-verified
 4. Installs everything in [`Brewfile`](Brewfile) (`if OS.mac?` entries skipped on Linux)
-5. Installs oh-my-zsh and nvm (official installers) if missing
+5. Installs nvm (official installer) and clones the Powerlevel10k prompt + zsh plugins into `~/.zsh` (no framework)
 6. Symlinks the configs below into place — existing real files are backed up once to `<name>.backup`
 7. macOS only: links the iTerm2 dynamic profile and applies [`macos/defaults.sh`](macos/defaults.sh)
 8. Sets runtime defaults: `pyenv global 3.13`, `nvm alias default v24.16.0`
@@ -25,7 +25,7 @@ The bootstrap is idempotent — re-run it any time. It:
 | Repo | Destination | Mode |
 |---|---|---|
 | `zsh/zshrc`, `zshenv`, `zprofile` | `~/.zshrc` etc. | symlink |
-| `zsh/omz-custom/` | `~/.oh-my-zsh/custom` | symlink |
+| `zsh/p10k.zsh` | `~/.p10k.zsh` | symlink |
 | `git/gitconfig`, `gitignore_global` | `~/.gitconfig`, `~/.gitignore_global` | symlink |
 | `config/gh/config.yml` | `~/.config/gh/config.yml` | symlink |
 | `config/graphite/aliases` | `~/.config/graphite/aliases` | symlink |

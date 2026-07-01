@@ -65,12 +65,22 @@ fi
 info "Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES/Brewfile"
 
-# ------------------------------------------------------------------ oh-my-zsh
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  info "Installing oh-my-zsh..."
-  RUNZSH=no KEEP_ZSHRC=yes sh -c \
-    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
+# ---------------------------------------------------------------- zsh plugins
+# Prompt + plugins live in ~/.zsh — no framework. Clone each (or fast-forward
+# if already present). ~/.zshrc sources them by path.
+info "Installing zsh prompt + plugins into ~/.zsh..."
+mkdir -p "$HOME/.zsh"
+clone_or_update() {
+  local url="$1" dst="$HOME/.zsh/$2"
+  if [ -d "$dst/.git" ]; then
+    git -C "$dst" pull --ff-only --quiet || true
+  else
+    git clone --depth=1 "$url" "$dst"
+  fi
+}
+clone_or_update https://github.com/romkatv/powerlevel10k.git             powerlevel10k
+clone_or_update https://github.com/zsh-users/zsh-autosuggestions.git     zsh-autosuggestions
+clone_or_update https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting
 
 # ------------------------------------------------------------------------ nvm
 # Official installer (the brew formula does not manage ~/.nvm).
@@ -110,7 +120,7 @@ info "Linking dotfiles..."
 link zsh/zshrc                "$HOME/.zshrc"
 link zsh/zshenv               "$HOME/.zshenv"
 link zsh/zprofile             "$HOME/.zprofile"
-link zsh/omz-custom           "$HOME/.oh-my-zsh/custom"
+link zsh/p10k.zsh             "$HOME/.p10k.zsh"
 link git/gitconfig            "$HOME/.gitconfig"
 link git/gitignore_global     "$HOME/.gitignore_global"
 link config/gh/config.yml     "$HOME/.config/gh/config.yml"

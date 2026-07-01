@@ -7,8 +7,11 @@ tap "hashicorp/tap"
 tap "snyk/tap"
 tap "withgraphite/tap"
 
+brew "bat"          # `cat` replacement (aliased in ~/.zsh_aliases)
 brew "ctop"
 brew "direnv"
+brew "eza"          # `ls` replacement (aliased in ~/.zsh_aliases)
+brew "fzf"          # fuzzy finder — sourced by ~/.zshrc (Ctrl-R / Ctrl-T / Alt-C)
 brew "gh"
 brew "git"
 brew "git-gui"
@@ -24,6 +27,7 @@ brew "postgresql@14"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "tfenv"
+brew "zoxide"       # smart `cd` (`z`) — sourced by ~/.zshrc
 brew "snyk/tap/snyk"
 brew "withgraphite/tap/graphite"
 
@@ -35,7 +39,7 @@ if OS.mac?
   tap "noovolari/brew"
   brew "pinentry-mac"
   brew "noovolari/brew/leapp-cli-darwin-arm64"  # darwin-arm64 binary
-  cask "font-meslo-for-powerline"               # non-ASCII font used by the iTerm2 Cobalt2 profile (agnoster glyphs)
+  cask "font-meslo-for-powerline"               # powerline glyph font for the iTerm2 Cobalt2 profile / Powerlevel10k prompt
 end
 
 cargo "cargo-watch"
