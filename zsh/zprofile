@@ -1,13 +1,22 @@
-# Homebrew shellenv — macOS (Apple Silicon) or Linux (Linuxbrew)
+# ~/.zprofile — login-shell environment: the home for PATH & tool bootstrap.
+# Runs once per login shell, AFTER macOS /etc/zprofile (path_helper), so these
+# prepends reliably win PATH ordering. Universal env (cargo) is in ~/.zshenv;
+# interactive config (aliases, prompt, completions) is in ~/.zshrc.
+
+# --- Homebrew — macOS (Apple Silicon) or Linux (Linuxbrew) ------------------
 if [ -x /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 elif [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# --- pyenv — login PATH / shims (interactive `pyenv init -` is in ~/.zshrc) --
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init --path)"
 
-# Machine-local overrides (untracked)
+# --- User-local binaries ----------------------------------------------------
+export PATH="$HOME/.local/bin:$PATH"
+
+# --- Machine-local overrides (untracked) ------------------------------------
 [ -f "$HOME/.zprofile.local" ] && . "$HOME/.zprofile.local"

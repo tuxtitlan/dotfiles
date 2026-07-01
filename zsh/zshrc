@@ -1,144 +1,217 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# ============================================================================
+#  ~/.zshrc — interactive shell config (oh-my-zsh-free).
+#  The handful of OMZ lib defaults worth keeping are inlined below; the
+#  framework, its unused libs, and the auto-update nag are gone.
+#  Prompt + plugins live in ~/.zsh (cloned by bootstrap.sh).
+#  Login-shell PATH/env is in ~/.zprofile; universal env in ~/.zshenv.
+# ============================================================================
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv pip docker docker-compose npm)
-# plugins=(git pyenv pip ssh-agent docker docker-compose npm)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-if [[ -f "${HOME}/.zsh_aliases" ]]; then
-    source "${HOME}/.zsh_aliases"
+# --- Powerlevel10k instant prompt (must stay near the top) ------------------
+# Any code needing console input (password/[y/n] prompts) must go ABOVE this.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+ZSH_PLUGIN_DIR="$HOME/.zsh"
 
-# export PYENV_ROOT="$HOME/.pyenv"
-# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+# --- History (was: omz lib/history.zsh) -------------------------------------
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt extended_history        # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first  # trim duplicates first when HISTFILE exceeds HISTSIZE
+setopt hist_ignore_dups        # don't record a command identical to the previous
+setopt hist_ignore_space       # don't record commands that start with a space
+setopt hist_verify             # show expanded history before running it
+setopt share_history           # share history across concurrent sessions
 
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-
-#compdef gt
-###-begin-gt-completions-###
-#
-# yargs command completion script
-#
-# Installation: gt completion >> ~/.zshrc
-#    or gt completion >> ~/.zprofile on OSX.
-#
-_gt_yargs_completions() {
-    local reply
-    local si=$IFS
-    IFS=$'
-' reply=($(COMP_CWORD="$((CURRENT - 1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" gt --get-yargs-completions "${words[@]}"))
-    IFS=$si
-    _describe 'values' reply
+# --- Directories (was: omz lib/directories.zsh) -----------------------------
+setopt auto_cd                 # `foo/` alone cds into foo
+setopt auto_pushd              # cd pushes onto the dir stack
+setopt pushd_ignore_dups
+setopt pushdminus
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+alias -- -='cd -'
+for i in {1..9}; do alias "$i"="cd -$i"; done; unset i
+alias md='mkdir -p'
+alias rd=rmdir
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+function d () {
+  if [[ -n $1 ]]; then dirs "$@"; else dirs -v | head -n 10; fi
 }
-compdef _gt_yargs_completions gt
-###-end-gt-completions-###
+compdef _dirs d 2>/dev/null
 
-export PATH="$HOME/.local/bin:$PATH"
+# --- Misc options (was: omz lib/misc.zsh) -----------------------------------
+setopt long_list_jobs          # long-format job notifications
+setopt interactive_comments    # allow `# comments` in interactive shell
+export PAGER="${PAGER:-less}"
+export LESS="${LESS:--R}"
+alias egrep='grep -E'          # avoid the deprecated egrep binary's warning
+alias fgrep='grep -F'
+alias history='fc -l 1'        # list full history (OMZ's richer omz_history dropped)
 
+# --- Colors (was: omz lib/theme-and-appearance.zsh) -------------------------
+autoload -U colors && colors
+setopt prompt_subst            # allow command substitution in prompts
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+: ${LS_COLORS:="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"}
+export LS_COLORS
+# colorized diff, when supported
+if command diff --color /dev/null /dev/null &>/dev/null; then
+  function diff { command diff --color "$@"; }
+fi
+
+# --- Completion (was: omz lib/completion.zsh + omz.sh's compinit) -----------
+zmodload -i zsh/complist
+WORDCHARS=''
+setopt auto_menu               # menu on second Tab
+setopt complete_in_word
+setopt always_to_end
+unsetopt menu_complete
+unsetopt flowcontrol
+
+ZSH_CACHE_DIR="$HOME/.cache/zsh"
+[[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
+ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump-${HOST}-${ZSH_VERSION}"
+autoload -Uz compinit
+# Rebuild the dump at most once a day; otherwise load the cache with -C (fast).
+if [[ -n ${ZSH_COMPDUMP}(#qN.mh+24) ]]; then
+  compinit -d "$ZSH_COMPDUMP"
+  touch "$ZSH_COMPDUMP"
+else
+  compinit -C -d "$ZSH_COMPDUMP"
+fi
+autoload -U +X bashcompinit && bashcompinit
+
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path "$ZSH_CACHE_DIR"
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm -w -w"
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle '*' single-ignored show
+bindkey -M menuselect '^o' accept-and-infer-next-history
+
+# COMPLETION_WAITING_DOTS: show red dots on the line while completions load
+expand-or-complete-with-dots() {
+  printf '\e[?7l%s\e[?7h' "${(%):-%F{red}…%f}"
+  zle expand-or-complete
+  zle redisplay
+}
+zle -N expand-or-complete-with-dots
+bindkey -M emacs "^I" expand-or-complete-with-dots
+bindkey -M viins "^I" expand-or-complete-with-dots
+
+# --- Key bindings (was: omz lib/key-bindings.zsh) ---------------------------
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init()   { echoti smkx }
+  function zle-line-finish() { echoti rmkx }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
+bindkey -e
+[[ -n "${terminfo[kpp]}" ]] && bindkey "${terminfo[kpp]}" up-line-or-history      # PageUp
+[[ -n "${terminfo[knp]}" ]] && bindkey "${terminfo[knp]}" down-line-or-history    # PageDown
+# Up/Down: search history for lines matching what's already typed
+autoload -U up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search;   [[ -n "${terminfo[kcuu1]}" ]] && bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search; [[ -n "${terminfo[kcud1]}" ]] && bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+[[ -n "${terminfo[khome]}" ]] && bindkey "${terminfo[khome]}" beginning-of-line   # Home
+[[ -n "${terminfo[kend]}"  ]] && bindkey "${terminfo[kend]}"  end-of-line         # End
+[[ -n "${terminfo[kcbt]}"  ]] && bindkey "${terminfo[kcbt]}"  reverse-menu-complete # Shift-Tab
+bindkey '^?' backward-delete-char
+if [[ -n "${terminfo[kdch1]}" ]]; then
+  bindkey "${terminfo[kdch1]}" delete-char                                        # Delete
+else
+  bindkey "^[[3~" delete-char
+fi
+bindkey '^[[3;5~' kill-word          # Ctrl-Delete
+bindkey '^[[1;5C' forward-word       # Ctrl-Right
+bindkey '^[[1;5D' backward-word      # Ctrl-Left
+bindkey '^r' history-incremental-search-backward
+bindkey ' ' magic-space             # Space expands !history but not glob
+bindkey '^[w' kill-region           # Esc-w: kill from cursor to mark
+bindkey -s '^[l' '^q ls\n'          # Esc-l: run `ls`
+bindkey '^[m' copy-prev-shell-word  # Esc-m: copy previous shell word
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line     # Ctrl-x Ctrl-e: edit command in $EDITOR
+
+# --- Personal aliases (machine-local, untracked) ----------------------------
+if [[ -f "${HOME}/.zsh_aliases" ]]; then
+  source "${HOME}/.zsh_aliases"
+fi
+
+# --- Node / nvm: lazy-load (defer ~0.58s until first node/npm/npx/nvm) -------
+export NVM_DIR="$HOME/.nvm"
+lazy_nvm() {
+  unset -f node npm npx nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # nvm bash_completion
+}
+for cmd in node npm npx nvm; do
+  eval "$cmd() { lazy_nvm; $cmd \"\$@\"; }"
+done
+unset cmd
+
+# --- pyenv: login-shell PATH is in ~/.zprofile (`pyenv init --path`).
+#     Here: interactive integration (`pyenv shell`, completions, virtualenvs).
+if command -v pyenv >/dev/null; then
+  eval "$(pyenv init -)"
+  command -v pyenv-virtualenv-init >/dev/null 2>&1 && eval "$(pyenv virtualenv-init -)"
+fi
+
+# --- Graphite (gt) completion -----------------------------------------------
+if command -v gt >/dev/null; then
+  #compdef gt
+  ###-begin-gt-completions-###
+  #
+  # yargs command completion script
+  #
+  # Installation: gt completion >> ~/.zshrc
+  #    or gt completion >> ~/.zprofile on OSX.
+  #
+  _gt_yargs_completions() {
+      local reply
+      local si=$IFS
+      IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT - 1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" gt --get-yargs-completions "${words[@]}"))
+      IFS=$si
+      _describe 'values' reply
+  }
+  compdef _gt_yargs_completions gt
+  ###-end-gt-completions-###
+fi
+
+# --- env --------------------------------------------------------------------
+# (PATH is consolidated in ~/.zprofile; universal env in ~/.zshenv)
 export GPG_TTY=$(tty)
 
-# Machine-local overrides (untracked) — aliases, work-specific env, credentials
+# --- Modern CLI tools -------------------------------------------------------
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"  # `z <dir>` smart cd, `zi` picker
+command -v fzf    >/dev/null && source <(fzf --zsh)        # Ctrl-R history, Ctrl-T files, Alt-C cd
+
+# --- Prompt (Powerlevel10k) -------------------------------------------------
+[[ -r "$ZSH_PLUGIN_DIR/powerlevel10k/powerlevel10k.zsh-theme" ]] && \
+  source "$ZSH_PLUGIN_DIR/powerlevel10k/powerlevel10k.zsh-theme"
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# --- Plugins: autosuggestions, then syntax-highlighting LAST ----------------
+[[ -r "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && \
+  source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+[[ -r "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
+  source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# --- Machine-local overrides (untracked) — work env, credentials, extra bits -
 [[ -f "${HOME}/.zshrc.local" ]] && source "${HOME}/.zshrc.local"
