@@ -36,9 +36,7 @@ brew "withgraphite/tap/graphite"
 # not manage ~/.nvm).
 
 if OS.mac?
-  tap "noovolari/brew"
   brew "pinentry-mac"
-  brew "noovolari/brew/leapp-cli-darwin-arm64"  # darwin-arm64 binary
   cask "font-meslo-for-powerline"               # powerline glyph font for the iTerm2 Cobalt2 profile / Powerlevel10k prompt
 end
 
