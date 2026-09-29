@@ -62,6 +62,15 @@ if ! command -v brew >/dev/null 2>&1; then
   brew_env
 fi
 
+# Homebrew 6+ refuses to load formulae from third-party taps until trusted.
+# Trust every tap declared in the Brewfile so `brew bundle` runs non-interactively.
+if brew trust --help >/dev/null 2>&1; then
+  info "Trusting third-party taps declared in Brewfile..."
+  grep -E '^[[:space:]]*tap[[:space:]]' "$DOTFILES/Brewfile" \
+    | sed -E 's/^[[:space:]]*tap[[:space:]]+"([^"]+)".*/\1/' \
+    | while read -r t; do brew trust --tap "$t"; done
+fi
+
 info "Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES/Brewfile"
 
