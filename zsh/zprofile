@@ -15,6 +15,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init --path)"
 
+# --- Docker Desktop CLI tools (appended, as Docker Desktop does) -------------
+[ -d "$HOME/.docker/bin" ] && export PATH="$PATH:$HOME/.docker/bin"
+
 # --- User-local binaries ----------------------------------------------------
 export PATH="$HOME/.local/bin:$PATH"
 
