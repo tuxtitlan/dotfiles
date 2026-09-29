@@ -8,9 +8,6 @@ PR templates) lives in untracked local context — keep it out of this file.
 ## `git` usage
 - Avoid chaining git commands.
 
-## Output style
-- Prefix your messages with a date and time using the format YYYY-mm-DD HH:MM:ss, localized to `America/Mexico_City`.
-
 ## Create commits
 - Write meaningful commit messages that explain the "why"
 - If pre-commit hooks change files, add those files exclusively to the staging area and try again to commit
