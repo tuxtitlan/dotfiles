@@ -4,3 +4,4 @@ config/graphite/user_config
 # Local/state noise
 .DS_Store
 *.backup
+config/htop/htop_history
