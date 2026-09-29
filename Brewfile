@@ -37,6 +37,7 @@ brew "withgraphite/tap/graphite"
 
 if OS.mac?
   brew "pinentry-mac"
+  cask "1password-cli"                          # `op` — 1Password CLI
   cask "font-meslo-for-powerline"               # powerline glyph font for the iTerm2 Cobalt2 profile / Powerlevel10k prompt
 end
 
