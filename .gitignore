@@ -5,3 +5,5 @@ config/graphite/user_config
 .DS_Store
 *.backup
 config/htop/htop_history
+# Local planning notes (brainstorms, plans)
+docs/

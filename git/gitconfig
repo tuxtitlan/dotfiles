@@ -25,10 +25,6 @@
 	cp = cherry-pick
 [cola]
 	spellcheck = false
-[includeIf "gitdir:/home/me/dev/work/"]
-	path = /home/me/dev/work/.gitconfig_include
-[includeIf "gitdir:/Users/me/dev/work/"]
-	path = /Users/me/dev/work/.gitconfig_include
 [credential "https://github.com"]
 	helper =
 	helper = !gh auth git-credential
