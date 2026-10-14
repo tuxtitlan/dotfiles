@@ -17,6 +17,10 @@
     ],
     "defaultMode": "default"
   },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "effortLevel": "medium",
   "preferredNotifChannel": "iterm2_with_bell"
 }
