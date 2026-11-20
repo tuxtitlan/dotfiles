@@ -141,6 +141,7 @@ link config/neofetch/config.conf "$HOME/.config/neofetch/config.conf"
 # runtime, and machine-local additions must not flow back into the repo.
 seed claude/CLAUDE.md      "$HOME/.claude/CLAUDE.md"
 seed claude/settings.json  "$HOME/.claude/settings.json"
+seed claude/statusline-command.sh "$HOME/.claude/statusline-command.sh"
 seed claude/keybindings.json "$HOME/.claude/keybindings.json"  # self-guarded: no-op while the file is untracked
 
 # ----------------------------------------------------------------- macOS only

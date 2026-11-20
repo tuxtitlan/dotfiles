@@ -1,5 +1,29 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "effortLevel": "medium",
+  "enabledPlugins": {
+    "compound-engineering@compound-engineering-plugin": true,
+    "ponytail@ponytail": true
+  },
+  "extraKnownMarketplaces": {
+    "compound-engineering-plugin": {
+      "source": {
+        "repo": "EveryInc/compound-engineering-plugin",
+        "source": "github"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "source": "github"
+      }
+    }
+  },
+  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(gh pr diff:*)",
@@ -12,15 +36,24 @@
       "Bash(git pull --ff-only)",
       "Bash(python -m py_compile:*)"
     ],
+    "defaultMode": "default",
     "deny": [
       "Bash(brew:*)"
-    ],
-    "defaultMode": "default"
+    ]
   },
-  "attribution": {
-    "commit": "",
-    "pr": ""
+  "pluginConfigs": {
+    "ponytail@ponytail": {
+      "options": {
+        "ledger": true,
+        "sendNames": true
+      }
+    }
   },
-  "effortLevel": "medium",
-  "preferredNotifChannel": "iterm2_with_bell"
+  "preferredNotifChannel": "iterm2_with_bell",
+  "statusLine": {
+    "command": "bash ~/.claude/statusline-command.sh",
+    "type": "command"
+  },
+  "theme": "dark",
+  "tui": "fullscreen"
 }
