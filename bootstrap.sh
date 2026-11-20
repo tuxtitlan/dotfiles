@@ -99,6 +99,13 @@ if [ ! -d "$HOME/.nvm" ]; then
     "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)"
 fi
 
+# ---------------------------------------------------------------- Claude Code
+# Native installer: puts claude in ~/.local/bin (on PATH via zprofile) and auto-updates.
+if [ ! -x "$HOME/.local/bin/claude" ]; then
+  info "Installing Claude Code..."
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
+
 # ------------------------------------------------------------------- symlinks
 # link <repo-relative source> <absolute destination>
 link() {
