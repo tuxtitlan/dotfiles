@@ -22,7 +22,7 @@ brew "mtr"
 brew "fastfetch"  # neofetch successor (neofetch archived upstream, formula removed)
 brew "pkgconf"
 brew "poppler"
-brew "postgresql@17"
+brew "libpq"  # postgres client tools only (psql, pg_dump); no server
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "tfenv"

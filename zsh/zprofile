@@ -9,6 +9,8 @@ if [ -x /opt/homebrew/bin/brew ]; then
 elif [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+# libpq (psql, pg_dump, …) is keg-only, so brew doesn't link it onto PATH
+[ -d "$HOMEBREW_PREFIX/opt/libpq/bin" ] && export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
 
 # --- pyenv — login PATH / shims (interactive `pyenv init -` is in ~/.zshrc) --
 export PYENV_ROOT="$HOME/.pyenv"
