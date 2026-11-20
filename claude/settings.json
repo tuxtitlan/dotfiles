@@ -37,7 +37,7 @@
       "Bash(python -m py_compile:*)"
     ],
     "defaultMode": "default",
-    "deny": [
+    "ask": [
       "Bash(brew:*)"
     ]
   },
